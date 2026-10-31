@@ -42,3 +42,6 @@ L'onglet Import propose un profil par manuel (dossier `profiles/`) : il fixe la 
 
 ## Ajouter des ressources à la main
 Onglet Import > « Ajouter à la main » : transcription, corrigé, texte du manuel ou note, rattachés à une leçon (et à une question au choix). Le texte peut être collé ou lu depuis des pages d'un PDF. Dans la leçon, ces ressources s'ouvrent sous la question ; un corrigé n'apparaît qu'après la vérification de la réponse.
+
+## Études extra avec l'IA
+Dans l'onglet Leçons, la carte « Études extra avec l'IA » se débloque quand toutes les leçons du manuel sont réussies à 70 % ou plus (ou en l'ouvrant quand même). L'utilisateur saisit sa clé API (Gemini, Mistral, Groq, OpenRouter, DeepSeek ou autre fournisseur compatible OpenAI) ; elle reste dans le navigateur de l'appareil, jamais dans le dépôt. L'IA génère des leçons jouables, des textes de compréhension, des sujets d'essai ou des jeux de rôle, toujours marqués « généré par l'IA, à vérifier ».
