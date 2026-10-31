@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Édito C1, thème 1</title>
+<title>DALF Lab</title><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#0b7a82"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png">
 <style>
 :root{--bg:#f3f6f6;--cd:#fff;--tx:#14302f;--mu:#587170;--ac:#0b7a82;--on:#fff;--ok:#237a4b;--okb:#dcf3e5;--ko:#b73a3a;--kob:#fae1e1;--ln:#cfdddc;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1819;--cd:#162526;--tx:#e5f0ef;--mu:#93aaa9;--ac:#45c3c8;--on:#052224;--ok:#59c98a;--okb:#143a29;--ko:#ff8585;--kob:#432122;--ln:#2a3f40}}
@@ -47,6 +47,7 @@ textarea:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
 nav button{padding:10px 2px;font-size:.88rem}
 input[type=file]{margin:6px 0 14px}
 #im h3{margin:20px 0 6px}
+select{width:100%;padding:13px 14px;margin-bottom:14px;font:inherit;background:var(--cd);color:var(--tx);border:1.5px solid var(--ln);border-radius:10px}
 </style></head><body><main id="app"></main><script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script>
 const L=[
@@ -126,8 +127,8 @@ else{h+=`<button class="sec" onclick="mo('${id}')">${O[id]?"Masquer":"Voir"} le 
 return h+`<br><button class="sec" disabled>Correction par l’IA (appli complète)</button>`}
 function wr(id){S.w[id]=$("#w-"+id).value;save();$("#i-"+id).innerHTML=stats(id)}
 function mo(id){O[id]=!O[id];$("#i-"+id).innerHTML=stats(id)}
-let IM=null;
-function importer(){return `<p class="mu">Choisis le PDF du manuel (ou d’un thème), puis tes fichiers audio et vidéo si tu en as. Rien n’est envoyé : l’analyse se fait sur ton appareil.</p><p class="mu">PDF</p><input id="fp" type="file" accept="application/pdf" multiple><p class="mu">Audio et vidéo (seuls les noms de fichiers sont lus)</p><input id="fm" type="file" accept="audio/*,video/*" multiple><button class="pri" onclick="runImp()">Analyser</button><div id="im">${IM?imHtml():""}</div>`}
+let IM=null,PF=null;const PFS={};["edito-c1","cosmopolite-5"].forEach(id=>fetch("profiles/"+id+".json").then(r=>r.json()).then(j=>{PFS[id]=j}).catch(()=>{}));
+function importer(){return `<p class="mu">Choisis le PDF du manuel (ou d’un thème), puis tes fichiers audio et vidéo si tu en as. Rien n’est envoyé : l’analyse se fait sur ton appareil.</p><p class="mu">Profil du manuel</p><select id="pf" onchange="PF=PFS[this.value]||null"><option value="">Détection automatique</option>${Object.keys(PFS).map(k=>`<option value="${k}" ${PF&&PF.id==k?"selected":""}>${esc(PFS[k].titre)}</option>`).join("")}</select><p class="mu">PDF</p><input id="fp" type="file" accept="application/pdf" multiple><p class="mu">Audio et vidéo (seuls les noms de fichiers sont lus)</p><input id="fm" type="file" accept="audio/*,video/*" multiple><button class="pri" onclick="runImp()">Analyser</button><div id="im">${IM?imHtml():""}</div>`}
 async function runImp(){const out=$("#im"),pf=[...$("#fp").files],mf=[...$("#fm").files];
 if(!pf.length){out.textContent="Choisis d’abord au moins un PDF.";return}
 if(!window.pdfjsLib){out.textContent="La bibliothèque de lecture des PDF n’a pas pu se charger. Vérifie ta connexion.";return}
@@ -148,12 +149,12 @@ p.it.forEach((s,j)=>{const m=s.match(/^Page\s+(\d+),\s*([A-Z])\s*[–-]\s*(.*)$/
 const nums=p.num.slice(-E.length||p.num.length);
 E.forEach((e,i)=>{e.ic=nums.length==E.length?+nums[i]:0;const b=P.find(q=>q.k=="livre"&&e.titre&&q.it.some(s=>nz(s).includes(nz(e.titre))));e.bk=b?b.n:0;R.ent.push(e)})}});
 fl.forEach(name=>{const m=name.match(/(piste|audio|track)[ _-]*0*(\d+)/i),v=name.match(/vid[eé]o[ _-]*0*(\d+)/i),k=m?"audio":v?"video":/\.(mp4|webm|mov)$/i.test(name)?"video":"audio",n=m?+m[2]:v?+v[1]:0;
-const src=/(^|[_ -])ca[_ -]/i.test(name)?"cahier":"livre";R.med.push({name,k,n,src,e:n&&src=="livre"?R.ent.find(e=>e.k==k&&e.ic==n):null})});
+let src=/(^|[_ -])ca[_ -]/i.test(name)?"cahier":"livre",nn=n;if(PF&&PF.audio){const A=PF.audio;for(const [s,r] of [["livre",A.nom_fichier||A.nom_fichier_livre],["cahier",A.nom_fichier_cahier]]){const q=r&&name.match(new RegExp(r,"i"));if(q){src=s;nn=+q[1];break}}}R.med.push({name,k,n:nn,src,e:nn&&src=="livre"?R.ent.find(e=>e.k==k&&e.ic==nn):null})});
 return R}
 function comp(R){const a=R.ent.filter(e=>e.k=="audio").length,v=R.ent.filter(e=>e.k=="video").length,c=R.cor.length,sm=R.med.filter(m=>!m.e).length,
 st=n=>n?`<b style="color:var(--ok)">${n} trouvé${n>1?"s":""}</b>`:`<b style="color:var(--ko)">aucun trouvé</b>`;
 return `<h3>Ce que contiennent ces fichiers</h3><div class="row"><span>Transcriptions audio</span>${st(a)}</div><div class="row"><span>Transcriptions vidéo</span>${st(v)}</div><div class="row"><span>Corrigés</span>${st(c)}</div>`
-+((!a||!v||!c||sm)?`<p class="mu">Ce qui manque pourra être ajouté plus tard en important un autre PDF. Sinon, l’IA pourra le proposer (transcription à partir de l’audio, corrigés à partir des exercices), avec la mention « généré par IA, à vérifier ». Un corrigé du manuel passe toujours avant celui de l’IA.</p><button class="sec" disabled>Générer avec l’IA (appli complète)</button>`:"")}
++(PF&&PF.transcriptions&&PF.transcriptions.remarque?`<p class="mu">Profil ${esc(PF.titre)} : ${esc(PF.transcriptions.remarque)}.</p>`:"")+((!a||!v||!c||sm)?`<p class="mu">Ce qui manque pourra être ajouté plus tard en important un autre PDF. Sinon, l’IA pourra le proposer (transcription à partir de l’audio, corrigés à partir des exercices), avec la mention « généré par IA, à vérifier ». Un corrigé du manuel passe toujours avant celui de l’IA.</p><button class="sec" disabled>Générer avec l’IA (appli complète)</button>`:"")}
 function imHtml(){const R=IM;
 return comp(R)+`<h3>Transcriptions trouvées (${R.ent.length})</h3>`+R.ent.map(e=>`<div class="row"><span>${e.k=="audio"?"Audio":"Vidéo"} n° ${e.ic||"?"}, livre p. ${e.page} (document ${e.doc}) : ${esc(e.titre)}<em>transcription en page ${e.pdf} du PDF, ${e.bk?"texte du livre retrouvé en page "+e.bk:"texte du livre non retrouvé"}</em></span><b>${e.ic?"Confiance haute":"à vérifier"}</b></div>`).join("")
 +`<h3>Corrigés (${R.cor.length})</h3>`+R.cor.map(c=>`<div class="row"><span>Livre p. ${c.page} : ${esc(c.s)}<em>corrigé en page ${c.pdf} du PDF</em></span></div>`).join("")
@@ -176,5 +177,6 @@ if(q[0]=="c")document.querySelectorAll(".opt").forEach((o,j)=>{o.disabled=true;i
 const f=$("#fb");f.className="fb "+(g?"g":"b");
 f.innerHTML=(g?"Correct.":"Pas tout à fait.")+(q[0]=="t"?`<small>Corrigé : ${c}</small>`:(g?"":`<small>Réponse attendue : ${c}</small>`));
 $("#go").textContent="Continuer"}
+if("serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
 home();
 </script></body></html>

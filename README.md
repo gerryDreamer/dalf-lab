@@ -32,3 +32,10 @@ Ouvrir `index.html` dans un navigateur, ou :
 3. Correction IA des productions écrites
 4. Débats et jeux de rôle avec l'IA
 5. Groupes simulés par l'IA
+
+## Installer l'appli sur le téléphone (PWA)
+Ouvrir l'adresse GitHub Pages dans Chrome, puis menu > « Installer l'application » (ou « Ajouter à l'écran d'accueil »). L'appli fonctionne ensuite hors ligne.
+À chaque mise à jour, changer la version du cache dans `sw.js` (ligne `const C="dalf-v1"`) pour que les téléphones récupèrent la nouvelle version.
+
+## Profils de manuel
+L'onglet Import propose un profil par manuel (dossier `profiles/`) : il fixe la lecture des noms de fichiers audio (livre ou cahier) et affiche ce que le manuel ne contient pas.
