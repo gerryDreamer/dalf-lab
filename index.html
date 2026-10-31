@@ -136,10 +136,13 @@ pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/p
 const P=[];
 try{for(const f of pf){const d=await pdfjsLib.getDocument({data:await f.arrayBuffer()}).promise;
 for(let i=1;i<=d.numPages;i++){out.textContent=f.name+" : page "+i+" sur "+d.numPages;
-const c=await(await d.getPage(i)).getTextContent(),it=c.items.map(x=>x.str.trim()).filter(Boolean);
+const c=await(await d.getPage(i)).getTextContent(),it=seg(c.items);
 P.push({f:f.name,n:i,it,num:it.filter(s=>/^\d{1,2}$/.test(s))})}}}
 catch(e){out.textContent="Lecture impossible : "+e.message;return}
 IM=analyse(P,mf.map(f=>f.name));out.innerHTML=imHtml()}
+function seg(I){const L=[];I.forEach(x=>{if(!x.str)return;const y=x.transform[5],h=Math.abs(x.transform[3])||10;let r=L.find(q=>Math.abs(q.y-y)<=h*.4);if(!r){r={y,a:[]};L.push(r)}r.a.push({s:x.str,x:x.transform[4],w:x.width,h})});
+const out=[];L.sort((a,b)=>b.y-a.y).forEach(r=>{r.a.sort((p,q)=>p.x-q.x);let cur="",end=null,h=10;r.a.forEach(t=>{if(end!=null){const g=t.x-end;if(g>h*1.5){out.push(cur);cur=""}else if(g>h*.15&&!/\s$/.test(cur)&&!/^\s/.test(t.s))cur+=" "}cur+=t.s;end=t.x+t.w;h=t.h});out.push(cur)});
+return out.map(s=>s.replace(/\s+/g," ").trim()).filter(Boolean)}
 function analyse(P,fl){const R={ent:[],cor:[],med:[]};
 P.forEach(p=>{const z=p.it.map(nz),h=r=>z.some(s=>r.test(s));p.k=h(/\baudios?\b/)&&h(/\btranscriptions?\b/)?"audio":h(/\bvideos?\b/)&&h(/\btranscriptions?\b/)?"video":h(/^corriges?$/)||(h(/corriges/)&&p.it.filter(s=>/^Page\s+\d+,/.test(s)).length>1)?"corrige":"livre"});
 P.forEach(p=>{
