@@ -1,6 +1,6 @@
 # DALF Lab
 
-Appli type Duolingo pour préparer le DALF C1/C2 : elle transforme des manuels (PDF, audios, vidéos, transcriptions, corrigés) en exercices interactifs et relie automatiquement les ressources entre elles.
+Appli type Duolingo pour préparer le DALF C1/C2 : elle transforme des manuels (PDF, audios, vidéos, transcriptions, corrigés) en exercices interactifs et relie automatiquement les ressources entre elles. Voila!
 
 ## État actuel
 Prototype statique (`index.html`), sans serveur :

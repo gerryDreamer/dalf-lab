@@ -137,23 +137,24 @@ const P=[];
 try{for(const f of pf){const d=await pdfjsLib.getDocument({data:await f.arrayBuffer()}).promise;
 for(let i=1;i<=d.numPages;i++){out.textContent=f.name+" : page "+i+" sur "+d.numPages;
 const c=await(await d.getPage(i)).getTextContent(),it=c.items.map(x=>x.str.trim()).filter(Boolean);
-P.push({n:i,it,num:it.filter(s=>/^\d{1,2}$/.test(s))})}}}
+P.push({f:f.name,n:i,it,num:it.filter(s=>/^\d{1,2}$/.test(s))})}}}
 catch(e){out.textContent="Lecture impossible : "+e.message;return}
 IM=analyse(P,mf.map(f=>f.name));out.innerHTML=imHtml()}
 function analyse(P,fl){const R={ent:[],cor:[],med:[]};
-P.forEach(p=>{const it=p.it;p.k=it.some(s=>/Documents audios/.test(s))?"audio":it.some(s=>/Documents vid/.test(s))?"video":it.includes("Corrigés")?"corrige":"livre"});
+P.forEach(p=>{const z=p.it.map(nz),h=r=>z.some(s=>r.test(s));p.k=h(/\baudios?\b/)&&h(/\btranscriptions?\b/)?"audio":h(/\bvideos?\b/)&&h(/\btranscriptions?\b/)?"video":h(/^corriges?$/)||(h(/corriges/)&&p.it.filter(s=>/^Page\s+\d+,/.test(s)).length>1)?"corrige":"livre"});
 P.forEach(p=>{
 if(p.k=="corrige")p.it.forEach(s=>{const m=s.match(/^Page\s+(\d+),\s*(.+)$/);if(m)R.cor.push({page:+m[1],s:m[2],pdf:p.n})});
 if(p.k=="audio"||p.k=="video"){const E=[];
-p.it.forEach((s,j)=>{const m=s.match(/^Page\s+(\d+),\s*([A-Z])\s*[–-]\s*(.*)$/);if(m)E.push({k:p.k,page:+m[1],doc:m[2],titre:(m[3]||p.it[j+1]||"").trim(),pdf:p.n})});
+p.it.forEach((s,j)=>{const m=s.match(/^Page\s+(\d+),\s*([A-Z])\b\s*(?:[–—-]\s*(.*))?$/);if(m)E.push({k:p.k,page:+m[1],doc:m[2],titre:(m[3]||p.it[j+1]||"").replace(/^[–—-]\s*/,"").trim(),pdf:p.n})});
 const nums=p.num.slice(-E.length||p.num.length);
 E.forEach((e,i)=>{e.ic=nums.length==E.length?+nums[i]:0;const b=P.find(q=>q.k=="livre"&&e.titre&&q.it.some(s=>nz(s).includes(nz(e.titre))));e.bk=b?b.n:0;R.ent.push(e)})}});
 fl.forEach(name=>{const m=name.match(/(piste|audio|track)[ _-]*0*(\d+)/i),v=name.match(/vid[eé]o[ _-]*0*(\d+)/i),k=m?"audio":v?"video":/\.(mp4|webm|mov)$/i.test(name)?"video":"audio",n=m?+m[2]:v?+v[1]:0;
 let src=/(^|[_ -])ca[_ -]/i.test(name)?"cahier":"livre",nn=n;if(PF&&PF.audio){const A=PF.audio;for(const [s,r] of [["livre",A.nom_fichier||A.nom_fichier_livre],["cahier",A.nom_fichier_cahier]]){const q=r&&name.match(new RegExp(r,"i"));if(q){src=s;nn=+q[1];break}}}R.med.push({name,k,n:nn,src,e:nn&&src=="livre"?R.ent.find(e=>e.k==k&&e.ic==nn):null})});
-return R}
+R.diag=D(P);return R}
+function D(P){const f={};P.forEach(p=>{const d=f[p.f]=f[p.f]||{pages:0,avecTexte:0,types:{},extrait:[],lignesPage:[]};d.pages++;if(p.it.length){d.avecTexte++;if(!d.extrait.length)d.extrait=p.it.slice(0,10)}d.types[p.k]=(d.types[p.k]||0)+1;p.it.forEach(s=>{if(/^page\s*\d+/i.test(s)&&d.lignesPage.length<6)d.lignesPage.push(s)})});return f}
 function comp(R){const a=R.ent.filter(e=>e.k=="audio").length,v=R.ent.filter(e=>e.k=="video").length,c=R.cor.length,sm=R.med.filter(m=>!m.e).length,
 st=n=>n?`<b style="color:var(--ok)">${n} trouvé${n>1?"s":""}</b>`:`<b style="color:var(--ko)">aucun trouvé</b>`;
-return `<h3>Ce que contiennent ces fichiers</h3><div class="row"><span>Transcriptions audio</span>${st(a)}</div><div class="row"><span>Transcriptions vidéo</span>${st(v)}</div><div class="row"><span>Corrigés</span>${st(c)}</div>`
+return `<h3>Fichiers lus</h3>${Object.keys(R.diag||{}).map(k=>`<div class="row"><span>${esc(k)}<em>${R.diag[k].pages} pages lues, ${R.diag[k].avecTexte} avec du texte${R.diag[k].avecTexte?"":" : aucun texte lisible, le PDF est peut-être une image"}</em></span></div>`).join("")}<h3>Ce que contiennent ces fichiers</h3><div class="row"><span>Transcriptions audio</span>${st(a)}</div><div class="row"><span>Transcriptions vidéo</span>${st(v)}</div><div class="row"><span>Corrigés</span>${st(c)}</div>`
 +(PF&&PF.transcriptions&&PF.transcriptions.remarque?`<p class="mu">Profil ${esc(PF.titre)} : ${esc(PF.transcriptions.remarque)}.</p>`:"")+((!a||!v||!c||sm)?`<p class="mu">Ce qui manque pourra être ajouté plus tard en important un autre PDF. Sinon, l’IA pourra le proposer (transcription à partir de l’audio, corrigés à partir des exercices), avec la mention « généré par IA, à vérifier ». Un corrigé du manuel passe toujours avant celui de l’IA.</p><button class="sec" disabled>Générer avec l’IA (appli complète)</button>`:"")}
 function imHtml(){const R=IM;
 return comp(R)+`<h3>Transcriptions trouvées (${R.ent.length})</h3>`+R.ent.map(e=>`<div class="row"><span>${e.k=="audio"?"Audio":"Vidéo"} n° ${e.ic||"?"}, livre p. ${e.page} (document ${e.doc}) : ${esc(e.titre)}<em>transcription en page ${e.pdf} du PDF, ${e.bk?"texte du livre retrouvé en page "+e.bk:"texte du livre non retrouvé"}</em></span><b>${e.ic?"Confiance haute":"à vérifier"}</b></div>`).join("")
