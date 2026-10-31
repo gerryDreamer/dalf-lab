@@ -1,0 +1,14 @@
+# Contenus protégés : ne jamais publier les manuels ni les médias
+manuels/
+audio/
+video/
+*.pdf
+*.mp3
+*.mp4
+*.wav
+# Secrets
+.env
+*.key
+# Système
+node_modules/
+.DS_Store

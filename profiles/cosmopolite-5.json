@@ -1,0 +1,17 @@
+{
+  "id": "cosmopolite-5",
+  "titre": "Cosmopolite 5 (C1-C2)",
+  "a_valider": true,
+  "fichiers": { "livre": "PDF séparé (226 pages)", "cahier": "PDF séparé (146 pages)" },
+  "unites": { "nom": "dossier", "nombre": 12, "lecons_par_unite": 4 },
+  "transcriptions": { "statut": "non trouvées", "remarque": "à ajouter si retrouvées, sinon génération IA à vérifier" },
+  "corriges": { "statut": "non trouvés", "remarque": "à ajouter si retrouvés, sinon génération IA à vérifier" },
+  "audio": {
+    "series": ["livre", "cahier"],
+    "nom_fichier_livre": "LE_COSMO_5_PISTE(\\d+)",
+    "nom_fichier_cahier": "Cosmo_5_CA_piste(\\d+)",
+    "numero_piste": "dans l'icône de casque de l'activité"
+  },
+  "renvois": ["doc\\. (\\d+)", "act\\. (\\d+)", "p\\. (\\d+)"],
+  "sections_cahier": ["vocabulaire", "grammaire", "style", "stratégies", "textes et exploitation", "épreuves d'entraînement DALF C1 et C2 (p. 124)"]
+}

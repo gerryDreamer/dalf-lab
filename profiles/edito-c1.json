@@ -1,0 +1,17 @@
+{
+  "id": "edito-c1",
+  "titre": "Édito C1 (2e édition, 2024)",
+  "fichiers": { "livre_et_cahier": "un seul PDF, livre et cahier imbriqués par thème" },
+  "unites": { "nom": "thème", "nombre": 12, "detection": "Thème (\\d+)" },
+  "transcriptions": {
+    "emplacement": "fin du PDF",
+    "audio": "Documents audios",
+    "video": "Documents vidéos",
+    "entree": "^Page (\\d+), ([A-Z]) [–-] (.*)$"
+  },
+  "corriges": { "emplacement": "fin du PDF", "page_titre": "Corrigés", "entree": "^Page (\\d+), (.+)$" },
+  "audio": {
+    "nom_fichier": "editoc1_piste_(\\d+)",
+    "numero_piste": "icône lue comme un chiffre isolé sur la page de transcription"
+  }
+}
