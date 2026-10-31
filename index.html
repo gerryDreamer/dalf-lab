@@ -46,6 +46,8 @@ textarea:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
 .sec{background:none;border:0;color:var(--ac);font:inherit;font-weight:700;padding:8px 0;cursor:pointer}.sec:disabled{color:var(--mu);cursor:default}
 nav button{padding:10px 2px;font-size:.88rem}
 input[type=file]{margin:6px 0 14px}
+.rs{margin:14px 0;padding:10px 12px;background:var(--cd);border:1.5px solid var(--ln);border-radius:10px}.rs summary{cursor:pointer;font-weight:600;color:var(--ac)}.rs p{margin:10px 0 0;font-size:.93rem}
+.row .sec{padding:4px 0 4px 8px}
 #im h3{margin:20px 0 6px}
 select{width:100%;padding:13px 14px;margin-bottom:14px;font:inherit;background:var(--cd);color:var(--tx);border:1.5px solid var(--ln);border-radius:10px}
 </style></head><body><main id="app"></main><script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
@@ -98,7 +100,7 @@ const LK=[
 ["Vocabulaire p. 15, cahier ex. 1 à 5","même thème, mots communs","Moyenne"],
 ["Grammaire p. 16, cahier ex. 6 à 9","renvoi « Cahier, p. 18 »","Haute"]]}
 ];
-let S={xp:0,done:{},ok:{},txt:"",hl:{},w:{},m:{}};
+let S={xp:0,done:{},ok:{},txt:"",hl:{},w:{},m:{},res:[]};
 try{Object.assign(S,JSON.parse(localStorage.getItem("dalf1")||"{}"))}catch(e){}
 const save=()=>{try{localStorage.setItem("dalf1",JSON.stringify(S))}catch(e){}};
 const $=s=>document.querySelector(s),app=$("#app");
@@ -128,7 +130,22 @@ return h+`<br><button class="sec" disabled>Correction par l’IA (appli complèt
 function wr(id){S.w[id]=$("#w-"+id).value;save();$("#i-"+id).innerHTML=stats(id)}
 function mo(id){O[id]=!O[id];$("#i-"+id).innerHTML=stats(id)}
 let IM=null,PF=null;const PFS={};["edito-c1","cosmopolite-5"].forEach(id=>fetch("profiles/"+id+".json").then(r=>r.json()).then(j=>{PFS[id]=j}).catch(()=>{}));
-function importer(){return `<p class="mu">Choisis le PDF du manuel (ou d’un thème), puis tes fichiers audio et vidéo si tu en as. Rien n’est envoyé : l’analyse se fait sur ton appareil.</p><p class="mu">Profil du manuel</p><select id="pf" onchange="PF=PFS[this.value]||null"><option value="">Détection automatique</option>${Object.keys(PFS).map(k=>`<option value="${k}" ${PF&&PF.id==k?"selected":""}>${esc(PFS[k].titre)}</option>`).join("")}</select><p class="mu">PDF</p><input id="fp" type="file" accept="application/pdf" multiple><p class="mu">Audio et vidéo (seuls les noms de fichiers sont lus)</p><input id="fm" type="file" accept="audio/*,video/*" multiple><button class="pri" onclick="runImp()">Analyser</button><div id="im">${IM?imHtml():""}</div>`}
+const TY={transcription:"Transcription",corrige:"Corrigé",texte:"Texte du manuel",note:"Note"};
+let IT="f";
+function rl(){const a=S.res.filter(r=>r.l==cur.id&&(!r.q||r.q==qi+1)&&(lock||r.t!="corrige"));if(!a.length)return"";
+return `<details class="rs"><summary>Ressources de cette étape (${a.length})</summary>${a.map(r=>`<p><b>${TY[r.t]}</b>${r.r?" : "+esc(r.r):""}<br>${esc(r.x).replace(/\n/g,"<br>")}</p>`).join("")}</details>`}
+function adder(){const o=Object.keys(TY).map(k=>`<option value="${k}">${TY[k]}</option>`).join(""),ls=`<option value="0">Aucune (général)</option>`+L.map(l=>`<option value="${l.id}">${esc(l.t)}</option>`).join("");
+return `<p class="mu">Ajoute à la main ce que le manuel contient pour une étape : transcription, corrigé, texte ou note. Tout reste sur ton appareil. Un corrigé n’apparaît dans la leçon qu’après avoir vérifié ta réponse.</p><p class="mu">Type</p><select id="xt">${o}</select><p class="mu">Étape (leçon)</p><select id="xl">${ls}</select><p class="mu">Numéro de question (facultatif)</p><input id="xq" type="number" min="1" placeholder="ex. 3"><p class="mu">Référence dans le manuel (facultatif)</p><input id="xr" type="text" placeholder="ex. livre p. 14, document C"><p class="mu">Texte</p><textarea id="xx" aria-label="Texte de la ressource" placeholder="Colle le texte ici"></textarea><p class="mu">Ou lis-le depuis un PDF (pages de … à …)</p><input id="xf" type="file" accept="application/pdf"><input id="xa" type="number" min="1" placeholder="page de"><br><br><input id="xb" type="number" min="1" placeholder="page à"><button class="sec" onclick="fromPdf()">Lire le texte du PDF</button><button class="pri" onclick="addRes()">Enregistrer la ressource</button><h3>Ressources ajoutées (${S.res.length})</h3>`+S.res.map((r,i)=>`<div class="row"><span>${TY[r.t]}${r.r?" : "+esc(r.r):""}<em>${r.l?esc((L.find(l=>l.id==r.l)||{t:""}).t):"général"}${r.q?", question "+r.q:""}, ${r.x.length} caractères</em></span><b>${r.t=="texte"?`<button class="sec" onclick="rd(${i})">Lire</button> `:""}<button class="sec" onclick="dl(${i})">Supprimer</button></b></div>`).join("")}
+function addRes(){const x=$("#xx").value.trim();if(!x){$("#xx").focus();return}if(x.length>150000){alert("Texte trop long (150 000 caractères au maximum).");return}
+S.res.push({t:$("#xt").value,l:+$("#xl").value,q:+$("#xq").value||0,r:$("#xr").value.trim(),x});save();home("i")}
+function dl(i){S.res.splice(i,1);save();home("i")}
+function rd(i){S.txt=S.res[i].x;S.hl={};save();home("t")}
+async function fromPdf(){const f=$("#xf").files[0];if(!f)return;if(!window.pdfjsLib){alert("La lecture des PDF n’a pas pu se charger.");return}
+pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+try{const d=await pdfjsLib.getDocument({data:await f.arrayBuffer()}).promise,a=+$("#xa").value||1,b=Math.min(+$("#xb").value||a,d.numPages),t=[];
+for(let i=a;i<=b;i++)t.push(seg((await(await d.getPage(i)).getTextContent()).items).join("\n"));$("#xx").value=t.join("\n\n")}catch(e){alert("Lecture impossible : "+e.message)}}
+function importer(){return `<nav><button class="${IT=="f"?"on":""}" onclick="IT='f';home('i')">Importer un fichier</button><button class="${IT=="a"?"on":""}" onclick="IT='a';home('i')">Ajouter à la main</button></nav>`+(IT=="a"?adder():impF())}
+function impF(){return `<p class="mu">Choisis le PDF du manuel (ou d’un thème), puis tes fichiers audio et vidéo si tu en as. Rien n’est envoyé : l’analyse se fait sur ton appareil.</p><p class="mu">Profil du manuel</p><select id="pf" onchange="PF=PFS[this.value]||null"><option value="">Détection automatique</option>${Object.keys(PFS).map(k=>`<option value="${k}" ${PF&&PF.id==k?"selected":""}>${esc(PFS[k].titre)}</option>`).join("")}</select><p class="mu">PDF</p><input id="fp" type="file" accept="application/pdf" multiple><p class="mu">Audio et vidéo (seuls les noms de fichiers sont lus)</p><input id="fm" type="file" accept="audio/*,video/*" multiple><button class="pri" onclick="runImp()">Analyser</button><div id="im">${IM?imHtml():""}</div>`}
 async function runImp(){const out=$("#im"),pf=[...$("#fp").files],mf=[...$("#fm").files];
 if(!pf.length){out.textContent="Choisis d’abord au moins un PDF.";return}
 if(!window.pdfjsLib){out.textContent="La bibliothèque de lecture des PDF n’a pas pu se charger. Vérifie ta connexion.";return}
@@ -170,7 +187,7 @@ function start(i){cur=L[i];qi=0;sc=0;show()}
 function show(){
 if(qi>=cur.q.length){S.done[cur.id]=Math.max(S.done[cur.id]||0,sc);S.xp+=sc*10;save();app.innerHTML=`<div class="end"><h2>Leçon terminée</h2><p>${sc} sur ${cur.q.length}, +${sc*10} XP</p><button class="pri" onclick="home()">Revenir aux leçons</button></div>`;return}
 const q=cur.q[qi];ans=null;lock=false;
-app.innerHTML=`<button class="x" aria-label="Quitter" onclick="home()">✕</button><div class="bar"><i style="width:${qi/cur.q.length*100}%"></i></div><small>${cur.s}</small><h2>${q[1]}</h2>`+(q[0]=="c"?`<div class="opts">${q[2].map((o,j)=>`<button class="opt" onclick="pick(${j},this)">${o}</button>`).join("")}</div>`:`<input id="in" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Écris ta réponse" onkeydown="if(event.key=='Enter')check()">`)+`<div id="fb"></div><button id="go" class="pri" onclick="check()">Vérifier</button>`}
+app.innerHTML=`<button class="x" aria-label="Quitter" onclick="home()">✕</button><div class="bar"><i style="width:${qi/cur.q.length*100}%"></i></div><small>${cur.s}</small><h2>${q[1]}</h2>`+(q[0]=="c"?`<div class="opts">${q[2].map((o,j)=>`<button class="opt" onclick="pick(${j},this)">${o}</button>`).join("")}</div>`:`<input id="in" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Écris ta réponse" onkeydown="if(event.key=='Enter')check()">`)+`<div id="fb"></div><div id="rs">${rl()}</div><button id="go" class="pri" onclick="check()">Vérifier</button>`}
 function pick(j,b){if(lock)return;ans=j;document.querySelectorAll(".opt").forEach(o=>o.classList.remove("sel"));b.classList.add("sel")}
 function check(){
 if(lock){qi++;show();return}
@@ -180,7 +197,7 @@ lock=true;if(g)sc++;
 if(q[0]=="c")document.querySelectorAll(".opt").forEach((o,j)=>{o.disabled=true;if(j==q[3])o.classList.add("good");else if(j==ans)o.classList.add("bad")});else $("#in").disabled=true;
 const f=$("#fb");f.className="fb "+(g?"g":"b");
 f.innerHTML=(g?"Correct.":"Pas tout à fait.")+(q[0]=="t"?`<small>Corrigé : ${c}</small>`:(g?"":`<small>Réponse attendue : ${c}</small>`));
-$("#go").textContent="Continuer"}
+$("#go").textContent="Continuer";$("#rs").innerHTML=rl()}
 if("serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
 home();
 </script></body></html>

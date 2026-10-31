@@ -1,6 +1,6 @@
 # DALF Lab
 
-Appli type Duolingo pour préparer le DALF C1/C2 : elle transforme des manuels (PDF, audios, vidéos, transcriptions, corrigés) en exercices interactifs et relie automatiquement les ressources entre elles. Voila!
+Appli type Duolingo pour préparer le DALF C1/C2 : elle transforme des manuels (PDF, audios, vidéos, transcriptions, corrigés) en exercices interactifs et relie automatiquement les ressources entre elles.
 
 ## État actuel
 Prototype statique (`index.html`), sans serveur :
@@ -39,3 +39,6 @@ Ouvrir l'adresse GitHub Pages dans Chrome, puis menu > « Installer l'applicatio
 
 ## Profils de manuel
 L'onglet Import propose un profil par manuel (dossier `profiles/`) : il fixe la lecture des noms de fichiers audio (livre ou cahier) et affiche ce que le manuel ne contient pas.
+
+## Ajouter des ressources à la main
+Onglet Import > « Ajouter à la main » : transcription, corrigé, texte du manuel ou note, rattachés à une leçon (et à une question au choix). Le texte peut être collé ou lu depuis des pages d'un PDF. Dans la leçon, ces ressources s'ouvrent sous la question ; un corrigé n'apparaît qu'après la vérification de la réponse.

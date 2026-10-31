@@ -1,5 +1,5 @@
 // Changer le numéro de version à chaque mise à jour de l'appli pour renouveler le cache.
-const C="dalf-v3",A=["./","index.html","manifest.json","icon-192.png","icon-512.png","profiles/edito-c1.json","profiles/cosmopolite-5.json"];
+const C="dalf-v4",A=["./","index.html","manifest.json","icon-192.png","icon-512.png","profiles/edito-c1.json","profiles/cosmopolite-5.json"];
 self.addEventListener("install",e=>e.waitUntil(caches.open(C).then(c=>c.addAll(A)).then(()=>self.skipWaiting())));
 self.addEventListener("activate",e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!=C).map(x=>caches.delete(x)))).then(()=>self.clients.claim())));
 self.addEventListener("fetch",e=>{
