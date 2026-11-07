@@ -279,7 +279,7 @@
             },
             {
               "type": "vocabulaire",
-              "page": null,
+              "page": 17,
               "questions": []
             }
           ]
@@ -287,7 +287,7 @@
         {
           "etiquette": "C",
           "titre": "c. « Quand les auteurs vous disent que vous n'êtes pas - o u - - - - - , d'entendre ça de la part des",
-          "page": null,
+          "page": 17,
           "sections": [
             {
               "type": "grammaire",
@@ -304,7 +304,7 @@
         {
           "etiquette": "C",
           "titre": "de privilégiés par certains codétenus.",
-          "page": null,
+          "page": 19,
           "sections": [
             {
               "type": "à_bâtons_rompus",
@@ -318,7 +318,7 @@
             },
             {
               "type": "produire",
-              "page": null,
+              "page": 21,
               "questions": []
             }
           ]
@@ -373,7 +373,7 @@
         {
           "etiquette": "L",
           "titre": "social. Donnez des exemples pour illustrer vos idées.",
-          "page": null,
+          "page": 25,
           "sections": [
             {
               "type": "compréhension_écrite",
@@ -516,7 +516,7 @@
             },
             {
               "type": "grammaire",
-              "page": null,
+              "page": 29,
               "questions": [
                 {
                   "n": 1,
@@ -537,11 +537,11 @@
         {
           "etiquette": "L",
           "titre": "d'un choix politique heureux ou malheureux.",
-          "page": null,
+          "page": 29,
           "sections": [
             {
               "type": "production_orale",
-              "page": null,
+              "page": 29,
               "questions": [
                 {
                   "n": 4,
@@ -567,7 +567,7 @@
             },
             {
               "type": "vocabulaire",
-              "page": null,
+              "page": 31,
               "questions": []
             }
           ]
@@ -575,11 +575,11 @@
         {
           "etiquette": "C",
           "titre": "g. La démocratie technocratique 1",
-          "page": null,
+          "page": 31,
           "sections": [
             {
               "type": "grammaire",
-              "page": null,
+              "page": 33,
               "questions": []
             }
           ]
@@ -587,16 +587,16 @@
         {
           "etiquette": "R",
           "titre": "e. Bien que les citoyens",
-          "page": null,
+          "page": 33,
           "sections": [
             {
               "type": "à_bâtons_rompus",
-              "page": null,
+              "page": 35,
               "questions": []
             },
             {
               "type": "produire",
-              "page": null,
+              "page": 35,
               "questions": []
             }
           ]
@@ -604,7 +604,7 @@
         {
           "etiquette": "R",
           "titre": "IEHAC",
-          "page": null,
+          "page": 37,
           "sections": [
             {
               "type": "documents",
@@ -612,7 +612,7 @@
               "questions": [
                 {
                   "n": 38,
-                  "texte": "I trente-huit [] [] 3 Thème Osé, le changement ! Objectifs o Comprendre le concept de changement o exposé oral Cahier S'interroger o Débattre du changement p. 48 d sur la capacité à changer 'activités o Distinguer les différentes valeurs de tout"
+                  "texte": "I trente-huit"
                 }
               ]
             }
@@ -729,7 +729,7 @@
         },
         {
           "type": "compréhension_orale",
-          "page": null,
+          "page": 25,
           "questions": [
             {
               "n": 1,
@@ -763,7 +763,7 @@
         },
         {
           "type": "production_orale",
-          "page": null,
+          "page": 25,
           "questions": [
             {
               "n": 8,
@@ -777,7 +777,7 @@
         },
         {
           "type": "production_écrite",
-          "page": null,
+          "page": 25,
           "questions": [
             {
               "n": 10,
@@ -798,7 +798,7 @@
         {
           "etiquette": "T",
           "titre": "peut-on l'interpréter ? Quel autre titre pourriez-",
-          "page": null,
+          "page": 41,
           "sections": [
             {
               "type": "compréhension_orale",
@@ -910,7 +910,7 @@
         {
           "etiquette": "T",
           "titre": "avec un regard critique pour",
-          "page": null,
+          "page": 43,
           "sections": [
             {
               "type": "grammaire",
@@ -954,7 +954,7 @@
             },
             {
               "type": "vocabulaire",
-              "page": null,
+              "page": 45,
               "questions": []
             }
           ]
@@ -962,7 +962,7 @@
         {
           "etiquette": "C",
           "titre": "b. Pour la course de samedi, Manon a changé sa voiture : elle a mis des pneus tout neufs et elle a repeint la carrosserie.",
-          "page": null,
+          "page": 45,
           "sections": [
             {
               "type": "grammaire",
@@ -979,7 +979,7 @@
         {
           "etiquette": "R",
           "titre": "- Alors ce changement de boulot ce n'est qu'une formalité en fait ?",
-          "page": null,
+          "page": 47,
           "sections": [
             {
               "type": "à_bâtons_rompus",
@@ -1002,27 +1002,27 @@
       "sections_directes": [
         {
           "type": "compréhension_orale",
-          "page": null,
+          "page": 5,
           "questions": []
         },
         {
           "type": "production_orale",
-          "page": null,
+          "page": 5,
           "questions": []
         },
         {
           "type": "compréhension_écrite",
-          "page": null,
+          "page": 5,
           "questions": []
         },
         {
           "type": "production_écrite",
-          "page": null,
+          "page": 5,
           "questions": []
         },
         {
           "type": "produire",
-          "page": null,
+          "page": 5,
           "questions": []
         },
         {
@@ -1041,7 +1041,7 @@
         },
         {
           "type": "production_orale",
-          "page": null,
+          "page": 41,
           "questions": [
             {
               "n": 10,
@@ -1059,12 +1059,12 @@
         },
         {
           "type": "compréhension_écrite",
-          "page": null,
+          "page": 41,
           "questions": []
         },
         {
           "type": "production_écrite",
-          "page": null,
+          "page": 41,
           "questions": [
             {
               "n": 1,
@@ -1131,11 +1131,11 @@
         {
           "etiquette": "L",
           "titre": "c. Les chercheurs sont unanimes sur le fait que",
-          "page": null,
+          "page": 55,
           "sections": [
             {
               "type": "production_orale",
-              "page": null,
+              "page": 55,
               "questions": [
                 {
                   "n": 4,
@@ -1152,7 +1152,7 @@
         {
           "etiquette": "T",
           "titre": "nombreuses études et enquêtes scientifi ques.",
-          "page": null,
+          "page": 55,
           "sections": [
             {
               "type": "compréhension_orale",
@@ -1214,7 +1214,7 @@
             },
             {
               "type": "compréhension_orale",
-              "page": null,
+              "page": 57,
               "questions": [
                 {
                   "n": 1,
@@ -1244,7 +1244,7 @@
             },
             {
               "type": "production_écrite",
-              "page": null,
+              "page": 57,
               "questions": [
                 {
                   "n": 7,
@@ -1254,7 +1254,7 @@
             },
             {
               "type": "compréhension_audiovisuelle",
-              "page": null,
+              "page": 57,
               "questions": [
                 {
                   "n": 1,
@@ -1267,7 +1267,7 @@
         {
           "etiquette": "L",
           "titre": "a. Pour éviter le mélange d'eau salée et d'eau douce.",
-          "page": null,
+          "page": 57,
           "sections": [
             {
               "type": "production_orale",
@@ -1317,7 +1317,7 @@
             },
             {
               "type": "grammaire",
-              "page": null,
+              "page": 59,
               "questions": [
                 {
                   "n": 1,
@@ -1335,7 +1335,7 @@
             },
             {
               "type": "production_orale",
-              "page": null,
+              "page": 59,
               "questions": [
                 {
                   "n": 3,
@@ -1348,11 +1348,11 @@
         {
           "etiquette": "T",
           "titre": "d. Si on veut vraiment atteindre nos objectifs d'émissions d'ici 2050, on devra toucher au totem de la voiture",
-          "page": null,
+          "page": 59,
           "sections": [
             {
               "type": "vocabulaire",
-              "page": null,
+              "page": 61,
               "questions": []
             }
           ]
@@ -1360,11 +1360,11 @@
         {
           "etiquette": "T",
           "titre": "h. Les mots doux qu'elle me murmure me font craquer…",
-          "page": null,
+          "page": 61,
           "sections": [
             {
               "type": "grammaire",
-              "page": null,
+              "page": 63,
               "questions": [
                 {
                   "n": 1,
@@ -1377,7 +1377,7 @@
         {
           "etiquette": "T",
           "titre": "soixante-trois I 63",
-          "page": null,
+          "page": 63,
           "sections": [
             {
               "type": "à_bâtons_rompus",
@@ -1391,7 +1391,7 @@
             },
             {
               "type": "produire",
-              "page": null,
+              "page": 65,
               "questions": []
             }
           ]
@@ -1399,7 +1399,7 @@
         {
           "etiquette": "R",
           "titre": "IEHAC",
-          "page": null,
+          "page": 67,
           "sections": [
             {
               "type": "documents",
@@ -1407,7 +1407,7 @@
               "questions": [
                 {
                   "n": 68,
-                  "texte": "I soixante-huit [] [] 5 Thème Les nouveaux visages de la culture Objectifs o Pointer les défi s de la modernisation de la culture o écriture créative Cahier Créer o Identifi er des initiatives culturelles en faveur des publics p. 78 d un épisode de série o Décrire ses pratiques culturelles avec précision 'activités culturelle o Utiliser la mise en relief pour souligner des propos"
+                  "texte": "I soixante-huit"
                 }
               ]
             }
@@ -1417,37 +1417,37 @@
       "sections_directes": [
         {
           "type": "compréhension_orale",
-          "page": null,
+          "page": 5,
           "questions": []
         },
         {
           "type": "production_orale",
-          "page": null,
+          "page": 5,
           "questions": []
         },
         {
           "type": "compréhension_écrite",
-          "page": null,
+          "page": 5,
           "questions": []
         },
         {
           "type": "production_écrite",
-          "page": null,
+          "page": 5,
           "questions": []
         },
         {
           "type": "francophonie",
-          "page": null,
+          "page": 5,
           "questions": []
         },
         {
           "type": "produire",
-          "page": null,
+          "page": 5,
           "questions": []
         },
         {
           "type": "atelier_médiation",
-          "page": null,
+          "page": 5,
           "questions": []
         },
         {
@@ -1513,7 +1513,7 @@
         },
         {
           "type": "compréhension_écrite",
-          "page": null,
+          "page": 55,
           "questions": [
             {
               "n": 3,
@@ -1538,11 +1538,11 @@
         {
           "etiquette": "R",
           "titre": "Écoutez un extrait du podcast de France Culture L'Art est le musée qui",
-          "page": null,
+          "page": 71,
           "sections": [
             {
               "type": "compréhension_orale",
-              "page": null,
+              "page": 71,
               "questions": []
             }
           ]
@@ -1550,7 +1550,7 @@
         {
           "etiquette": "T",
           "titre": "démocratie culturelle ?",
-          "page": null,
+          "page": 71,
           "sections": [
             {
               "type": "production_orale",
@@ -1604,7 +1604,7 @@
             },
             {
               "type": "grammaire",
-              "page": null,
+              "page": 73,
               "questions": [
                 {
                   "n": 1,
@@ -1625,11 +1625,11 @@
         {
           "etiquette": "R",
           "titre": "un public plus jeune. Pour convaincre votre auditoire, mettez en relief les éléments importants qui",
-          "page": null,
+          "page": 73,
           "sections": [
             {
               "type": "production_orale",
-              "page": null,
+              "page": 73,
               "questions": [
                 {
                   "n": 4,
@@ -1659,7 +1659,7 @@
             },
             {
               "type": "vocabulaire",
-              "page": null,
+              "page": 75,
               "questions": []
             }
           ]
@@ -1667,7 +1667,7 @@
         {
           "etiquette": "C",
           "titre": "la meilleure photo, et les musées instagrammables l'ont bien compris.",
-          "page": null,
+          "page": 75,
           "sections": [
             {
               "type": "grammaire",
@@ -1684,7 +1684,7 @@
         {
           "etiquette": "C",
           "titre": "meèhT5",
-          "page": null,
+          "page": 77,
           "sections": [
             {
               "type": "à_bâtons_rompus",
@@ -1745,12 +1745,12 @@
         },
         {
           "type": "compréhension_écrite",
-          "page": null,
+          "page": 71,
           "questions": []
         },
         {
           "type": "production_orale",
-          "page": null,
+          "page": 71,
           "questions": [
             {
               "n": 1,
@@ -1788,7 +1788,7 @@
         },
         {
           "type": "production_écrite",
-          "page": null,
+          "page": 71,
           "questions": [
             {
               "n": 9,
@@ -1809,11 +1809,11 @@
         {
           "etiquette": "R",
           "titre": "quel combat féministe y est actuellement",
-          "page": null,
+          "page": 83,
           "sections": [
             {
               "type": "production_écrite",
-              "page": null,
+              "page": 83,
               "questions": [
                 {
                   "n": 10,
@@ -1830,7 +1830,7 @@
         {
           "etiquette": "T",
           "titre": "combat.",
-          "page": null,
+          "page": 83,
           "sections": [
             {
               "type": "compréhension_orale",
@@ -1928,7 +1928,7 @@
             },
             {
               "type": "production_orale",
-              "page": null,
+              "page": 85,
               "questions": [
                 {
                   "n": 9,
@@ -1957,7 +1957,7 @@
         {
           "etiquette": "T",
           "titre": "cocasse, délirant, un point c'est tout. À toi d'apprendre",
-          "page": null,
+          "page": 85,
           "sections": [
             {
               "type": "compréhension_écrite",
@@ -2076,7 +2076,7 @@
         {
           "etiquette": "T",
           "titre": "• le stéréotype",
-          "page": null,
+          "page": 87,
           "sections": [
             {
               "type": "grammaire",
@@ -2120,7 +2120,7 @@
             },
             {
               "type": "vocabulaire",
-              "page": null,
+              "page": 89,
               "questions": []
             }
           ]
@@ -2128,11 +2128,11 @@
         {
           "etiquette": "H",
           "titre": "à une catégorie",
-          "page": null,
+          "page": 89,
           "sections": [
             {
               "type": "grammaire",
-              "page": null,
+              "page": 91,
               "questions": []
             }
           ]
@@ -2140,16 +2140,16 @@
         {
           "etiquette": "R",
           "titre": "e. -iste",
-          "page": null,
+          "page": 91,
           "sections": [
             {
               "type": "à_bâtons_rompus",
-              "page": null,
+              "page": 93,
               "questions": []
             },
             {
               "type": "produire",
-              "page": null,
+              "page": 93,
               "questions": []
             }
           ]
@@ -2201,7 +2201,7 @@
                 },
                 {
                   "n": 98,
-                  "texte": "I quatre-vingt-dix-huit []"
+                  "texte": "I quatre-vingt-dix-huit"
                 }
               ]
             }
@@ -2324,7 +2324,7 @@
         },
         {
           "type": "production_orale",
-          "page": null,
+          "page": 83,
           "questions": [
             {
               "n": 8,
@@ -2334,7 +2334,7 @@
         },
         {
           "type": "compréhension_écrite",
-          "page": null,
+          "page": 83,
           "questions": [
             {
               "n": 1,
@@ -2371,7 +2371,7 @@
         {
           "etiquette": "T",
           "titre": "• être vieux jeu",
-          "page": null,
+          "page": 103,
           "sections": [
             {
               "type": "grammaire",
@@ -2411,7 +2411,7 @@
             },
             {
               "type": "vocabulaire",
-              "page": null,
+              "page": 105,
               "questions": []
             }
           ]
@@ -2419,7 +2419,7 @@
         {
           "etiquette": "C",
           "titre": "d. Pour parler de l'argent investi dans les jeux :",
-          "page": null,
+          "page": 105,
           "sections": [
             {
               "type": "grammaire",
@@ -2431,7 +2431,7 @@
         {
           "etiquette": "C",
           "titre": "meèhT 7",
-          "page": null,
+          "page": 107,
           "sections": [
             {
               "type": "à_bâtons_rompus",
@@ -2449,27 +2449,27 @@
       "sections_directes": [
         {
           "type": "compréhension_orale",
-          "page": null,
+          "page": 7,
           "questions": []
         },
         {
           "type": "production_orale",
-          "page": null,
+          "page": 7,
           "questions": []
         },
         {
           "type": "compréhension_écrite",
-          "page": null,
+          "page": 7,
           "questions": []
         },
         {
           "type": "production_écrite",
-          "page": null,
+          "page": 7,
           "questions": []
         },
         {
           "type": "produire",
-          "page": null,
+          "page": 7,
           "questions": []
         },
         {
@@ -2492,7 +2492,7 @@
         },
         {
           "type": "compréhension_écrite",
-          "page": null,
+          "page": 101,
           "questions": [
             {
               "n": 1,
@@ -2530,7 +2530,7 @@
         },
         {
           "type": "production_orale",
-          "page": null,
+          "page": 101,
           "questions": [
             {
               "n": 9,
@@ -2548,7 +2548,7 @@
         },
         {
           "type": "production_écrite",
-          "page": null,
+          "page": 101,
           "questions": [
             {
               "n": 12,
@@ -2667,7 +2667,7 @@
         {
           "etiquette": "T",
           "titre": "cent treize I 113",
-          "page": null,
+          "page": 113,
           "sections": [
             {
               "type": "production_écrite",
@@ -2699,7 +2699,7 @@
             },
             {
               "type": "compréhension_écrite",
-              "page": null,
+              "page": 115,
               "questions": [
                 {
                   "n": 1,
@@ -2732,7 +2732,7 @@
         {
           "etiquette": "R",
           "titre": "Associez.",
-          "page": null,
+          "page": 115,
           "sections": [
             {
               "type": "production_orale",
@@ -2829,7 +2829,7 @@
         {
           "etiquette": "T",
           "titre": "• la valeur éducative",
-          "page": null,
+          "page": 117,
           "sections": [
             {
               "type": "grammaire",
@@ -2865,7 +2865,7 @@
             },
             {
               "type": "vocabulaire",
-              "page": null,
+              "page": 119,
               "questions": []
             }
           ]
@@ -2873,11 +2873,11 @@
         {
           "etiquette": "C",
           "titre": "demander un droit de",
-          "page": null,
+          "page": 119,
           "sections": [
             {
               "type": "grammaire",
-              "page": null,
+              "page": 121,
               "questions": []
             }
           ]
@@ -2885,11 +2885,11 @@
         {
           "etiquette": "T",
           "titre": "déconstruit que Reyhan ?",
-          "page": null,
+          "page": 121,
           "sections": [
             {
               "type": "à_bâtons_rompus",
-              "page": null,
+              "page": 123,
               "questions": []
             }
           ]
@@ -2897,7 +2897,7 @@
         {
           "etiquette": "T",
           "titre": "une table. Mais",
-          "page": null,
+          "page": 123,
           "sections": [
             {
               "type": "produire",
@@ -2909,7 +2909,7 @@
         {
           "etiquette": "T",
           "titre": "Exemples: «c'est-à-dire» = 1 mot; «une bonne idée» = 3 mots; «Je ne l'ai pas vue avant-hier.» = 6 mots.",
-          "page": null,
+          "page": 125,
           "sections": [
             {
               "type": "documents",
@@ -2922,37 +2922,37 @@
       "sections_directes": [
         {
           "type": "compréhension_orale",
-          "page": null,
+          "page": 7,
           "questions": []
         },
         {
           "type": "production_orale",
-          "page": null,
+          "page": 7,
           "questions": []
         },
         {
           "type": "compréhension_écrite",
-          "page": null,
+          "page": 7,
           "questions": []
         },
         {
           "type": "production_écrite",
-          "page": null,
+          "page": 7,
           "questions": []
         },
         {
           "type": "francophonie",
-          "page": null,
+          "page": 7,
           "questions": []
         },
         {
           "type": "produire",
-          "page": null,
+          "page": 7,
           "questions": []
         },
         {
           "type": "atelier_médiation",
-          "page": null,
+          "page": 7,
           "questions": []
         },
         {
@@ -3022,7 +3022,7 @@
         },
         {
           "type": "compréhension_orale",
-          "page": null,
+          "page": 113,
           "questions": [
             {
               "n": 1,
@@ -3056,7 +3056,7 @@
         },
         {
           "type": "production_orale",
-          "page": null,
+          "page": 113,
           "questions": [
             {
               "n": 8,
@@ -3066,7 +3066,7 @@
         },
         {
           "type": "compréhension_audiovisuelle",
-          "page": null,
+          "page": 113,
           "questions": [
             {
               "n": 1,
@@ -3107,7 +3107,7 @@
         {
           "etiquette": "L",
           "titre": "75 aucune envie d'oublier cette matinée où, marchant dans 130 le dessus. On se fait de plus en plus con ance. Ce sentiment",
-          "page": null,
+          "page": 129,
           "sections": [
             {
               "type": "compréhension_écrite",
@@ -3247,7 +3247,7 @@
           "sections": [
             {
               "type": "vocabulaire",
-              "page": null,
+              "page": 133,
               "questions": []
             }
           ]
@@ -3255,7 +3255,7 @@
         {
           "etiquette": "H",
           "titre": "jeunesse et de la vieillesse /",
-          "page": null,
+          "page": 133,
           "sections": [
             {
               "type": "grammaire",
@@ -3267,7 +3267,7 @@
         {
           "etiquette": "R",
           "titre": "Concrètement, des jeunes âgés de 18 à 30 ans sont hébergés chez des retraités ou actifs de plus de 60 ans,",
-          "page": null,
+          "page": 135,
           "sections": [
             {
               "type": "à_bâtons_rompus",
@@ -3284,11 +3284,11 @@
         {
           "etiquette": "R",
           "titre": "II.1. Le vieillissement de la population est un défi économique",
-          "page": null,
+          "page": 137,
           "sections": [
             {
               "type": "production_écrite",
-              "page": null,
+              "page": 139,
               "questions": []
             },
             {
@@ -3341,7 +3341,7 @@
             },
             {
               "type": "production_orale",
-              "page": null,
+              "page": 143,
               "questions": [
                 {
                   "n": 9,
@@ -3362,7 +3362,7 @@
         {
           "etiquette": "L",
           "titre": "chez leurs employés et leurs collaborateurs. En moins d'un",
-          "page": null,
+          "page": 143,
           "sections": [
             {
               "type": "compréhension_écrite",
@@ -3602,11 +3602,11 @@
         {
           "etiquette": "L",
           "titre": "puis justifi ez le choix des temps.",
-          "page": null,
+          "page": 147,
           "sections": [
             {
               "type": "production_écrite",
-              "page": null,
+              "page": 147,
               "questions": [
                 {
                   "n": 4,
@@ -3632,7 +3632,7 @@
             },
             {
               "type": "vocabulaire",
-              "page": null,
+              "page": 149,
               "questions": []
             }
           ]
@@ -3640,11 +3640,11 @@
         {
           "etiquette": "T",
           "titre": "deux semaines pour réapprendre à voir, à appréhender les distances, etc.",
-          "page": null,
+          "page": 149,
           "sections": [
             {
               "type": "grammaire",
-              "page": null,
+              "page": 151,
               "questions": []
             }
           ]
@@ -3652,16 +3652,16 @@
         {
           "etiquette": "T",
           "titre": "progrès. 1",
-          "page": null,
+          "page": 151,
           "sections": [
             {
               "type": "à_bâtons_rompus",
-              "page": null,
+              "page": 153,
               "questions": []
             },
             {
               "type": "produire",
-              "page": null,
+              "page": 153,
               "questions": []
             }
           ]
@@ -3766,7 +3766,7 @@
         },
         {
           "type": "grammaire",
-          "page": null,
+          "page": 147,
           "questions": [
             {
               "n": 1,
@@ -3879,7 +3879,7 @@
             },
             {
               "type": "grammaire",
-              "page": null,
+              "page": 161,
               "questions": [
                 {
                   "n": 1,
@@ -3901,7 +3901,7 @@
             },
             {
               "type": "production_écrite",
-              "page": null,
+              "page": 161,
               "questions": [
                 {
                   "n": 4,
@@ -3931,7 +3931,7 @@
             },
             {
               "type": "vocabulaire",
-              "page": null,
+              "page": 163,
               "questions": []
             }
           ]
@@ -3939,7 +3939,7 @@
         {
           "etiquette": "T",
           "titre": "b. l'érosion du lien social",
-          "page": null,
+          "page": 163,
           "sections": [
             {
               "type": "grammaire",
@@ -3948,12 +3948,12 @@
             },
             {
               "type": "vocabulaire",
-              "page": null,
+              "page": 165,
               "questions": []
             },
             {
               "type": "vocabulaire",
-              "page": null,
+              "page": 165,
               "questions": []
             }
           ]
@@ -3961,7 +3961,7 @@
         {
           "etiquette": "T",
           "titre": "des phrases",
-          "page": null,
+          "page": 165,
           "sections": [
             {
               "type": "à_bâtons_rompus",
@@ -3970,7 +3970,7 @@
             },
             {
               "type": "produire",
-              "page": null,
+              "page": 167,
               "questions": []
             }
           ]
@@ -3979,27 +3979,27 @@
       "sections_directes": [
         {
           "type": "compréhension_orale",
-          "page": null,
+          "page": 9,
           "questions": []
         },
         {
           "type": "production_orale",
-          "page": null,
+          "page": 9,
           "questions": []
         },
         {
           "type": "compréhension_écrite",
-          "page": null,
+          "page": 9,
           "questions": []
         },
         {
           "type": "production_écrite",
-          "page": null,
+          "page": 9,
           "questions": []
         },
         {
           "type": "produire",
-          "page": null,
+          "page": 9,
           "questions": []
         },
         {
@@ -4076,6 +4076,16 @@
               "texte": "Que signifi e « autrui », utilisé quatre fois par lieux, besoins, objectifs, ressources humaines et l'auteure ? Qu'apporte-t-il au texte ? matérielles) et dites pourquoi vous l'avez choisi. B Poursuivi pour délit de solidarité…"
             }
           ]
+        },
+        {
+          "type": "vocabulaire",
+          "page": 235,
+          "questions": []
+        },
+        {
+          "type": "vocabulaire",
+          "page": 235,
+          "questions": []
         }
       ]
     },
@@ -4090,7 +4100,7 @@
         {
           "etiquette": "T",
           "titre": "une vision globale d'un",
-          "page": null,
+          "page": 175,
           "sections": [
             {
               "type": "grammaire",
@@ -4122,7 +4132,7 @@
             },
             {
               "type": "vocabulaire",
-              "page": null,
+              "page": 177,
               "questions": []
             }
           ]
@@ -4130,11 +4140,11 @@
         {
           "etiquette": "C",
           "titre": ", elle contribuerait à la lutte contre le réchauffement climatique. En outre,",
-          "page": null,
+          "page": 177,
           "sections": [
             {
               "type": "grammaire",
-              "page": null,
+              "page": 179,
               "questions": []
             }
           ]
@@ -4142,7 +4152,7 @@
         {
           "etiquette": "T",
           "titre": "e. Les capacités cognitives sont observées. 1",
-          "page": null,
+          "page": 179,
           "sections": [
             {
               "type": "à_bâtons_rompus",
@@ -4151,7 +4161,7 @@
             },
             {
               "type": "produire",
-              "page": null,
+              "page": 181,
               "questions": []
             }
           ]
@@ -4159,7 +4169,7 @@
         {
           "etiquette": "R",
           "titre": "IEHAC",
-          "page": null,
+          "page": 183,
           "sections": [
             {
               "type": "documents",
@@ -4173,7 +4183,7 @@
             },
             {
               "type": "production_orale",
-              "page": null,
+              "page": 185,
               "questions": []
             }
           ]
@@ -4182,37 +4192,37 @@
       "sections_directes": [
         {
           "type": "compréhension_orale",
-          "page": null,
+          "page": 9,
           "questions": []
         },
         {
           "type": "production_orale",
-          "page": null,
+          "page": 9,
           "questions": []
         },
         {
           "type": "compréhension_écrite",
-          "page": null,
+          "page": 9,
           "questions": []
         },
         {
           "type": "production_écrite",
-          "page": null,
+          "page": 9,
           "questions": []
         },
         {
           "type": "francophonie",
-          "page": null,
+          "page": 9,
           "questions": []
         },
         {
           "type": "produire",
-          "page": null,
+          "page": 9,
           "questions": []
         },
         {
           "type": "atelier_médiation",
-          "page": null,
+          "page": 9,
           "questions": []
         },
         {
@@ -4281,7 +4291,7 @@
         },
         {
           "type": "compréhension_orale",
-          "page": null,
+          "page": 173,
           "questions": [
             {
               "n": 1,
@@ -4291,7 +4301,7 @@
         },
         {
           "type": "production_écrite",
-          "page": null,
+          "page": 173,
           "questions": [
             {
               "n": 7,
@@ -4313,7 +4323,7 @@
         },
         {
           "type": "production_orale",
-          "page": null,
+          "page": 173,
           "questions": [
             {
               "n": 5,
@@ -4331,7 +4341,7 @@
         },
         {
           "type": "compréhension_audiovisuelle",
-          "page": null,
+          "page": 173,
           "questions": [
             {
               "n": 1,

@@ -1,14 +1,11 @@
 #!/usr/bin/env python3
 """
-tools/label-txt.py — Parsing du TXT Édito C1 (v5).
+tools/label-txt.py — Parsing du TXT Édito C1 (v7).
 
-Version 5 : corrige les bugs de détection de pages/transcriptions/corrigés.
-
-Structure du TXT :
-- Pages séparées par des lignes de tirets (--------)
-- Chaque page se termine par "NNN I mot" (ex. "198 I cent quatre-vingt-dix-huit")
-- Transcriptions : "Page 14, C – Titre" (parfois fusionné avec d'autres colonnes)
-- Corrigés : "Page 17, Vocabulaire" (parfois fusionné)
+Version 7 :
+- page_n = n (pas n - 1) : le pied de page indique la page elle-même
+- RE_CORRIGE stricte : liste de titres connus
+- Essayer transcription ET corrigé sur chaque ligne
 
 Usage :
     python3 tools/label-txt.py [txt_path]
@@ -42,14 +39,13 @@ RANGES = {
 
 # ─── Regex ───
 
-# Marque de page : "12 I douze", "198 I cent quatre-vingt-dix-huit"
-# Accepte "12 I douze" et "12 Idouze" et "12 I  douze"
+# Marque de page : "12 I douze", "198 I cent..."
 RE_PAGE_MARK = re.compile(r"(\d{1,3})\s+I\s*\w+")
 
-# Conteneur : ligne isolée "A", "B", "C" (pas "À", "É")
+# Conteneur : ligne isolée "A", "B", "C"
 RE_CONTAINER = re.compile(r"^[A-Z]$")
 
-# Section : avec préfixe numérique collé "1 Compréhension audiovisuelle"
+# Section
 RE_SECTION = re.compile(
     r"^\s*(?:\d+\s+)?(Compréhension audiovisuelle|Compréhension orale|Compréhension écrite|"
     r"Production orale|Production écrite|Grammaire|Vocabulaire|Francophonie|"
@@ -58,15 +54,19 @@ RE_SECTION = re.compile(
     re.I,
 )
 
-# Question : 1+ espaces après le numéro, commence par majuscule
+# Question
 RE_QUESTION = re.compile(r"^\s*(\d{1,2})\s+([A-ZÀ-Ý].{5,})$")
 
-# Transcriptions : "Page 14, C – Titre" (search, pas match)
-# Capture non-greedy jusqu'à 2+ espaces ou fin de ligne
-RE_TRANSCRIPTION = re.compile(r"Page\s+(\d+),\s*([A-Z])\s*[–\-]\s*(.+?)(?:\s{2,}|$)")
+# Transcription : "Page 14, C – Titre"
+RE_TRANSCRIPTION = re.compile(r"Page\s+(\d+),\s*([A-Z])\s*[–\-]\s*(.+)$")
 
-# Corrigés : "Page 17, Vocabulaire" (search, pas match)
-RE_CORRIGE = re.compile(r"Page\s+(\d+),\s*([A-Za-zÀ-ÿ][\w\s\-'’]*?)(?:\s{2,}|$)")
+# Corrigé : "Page 17, Vocabulaire" — titres connus uniquement
+RE_CORRIGE = re.compile(
+    r"Page\s+(\d+),\s*(Vocabulaire|Grammaire|À bâtons rompus|Produire|"
+    r"Compréhension orale|Compréhension écrite|Production orale|Production écrite|"
+    r"Francophonie|Fiche méthodologique|Atelier médiation)\b",
+    re.I,
+)
 
 # Thème
 RE_THEME = re.compile(r"^Th[eè]me\s+(\d+)\s+p\.\s*(\d+)", re.I)
@@ -74,7 +74,6 @@ RE_THEME_SIMPLE = re.compile(r"^Th[eè]me\s+(\d+)\s*$", re.I)
 
 
 def normalize_line(line):
-    """Nettoie une ligne : espaces insécables, ligatures, apostrophes."""
     line = line.replace("\u00a0", " ").replace("\u202f", " ").replace("\u200b", " ")
     line = line.replace("ﬁ", "fi").replace("ﬂ", "fl")
     line = line.replace("ﬀ", "ff").replace("ﬃ", "ffi").replace("ﬄ", "ffl")
@@ -94,27 +93,6 @@ def theme_of_page(page_n):
     return None
 
 
-def detect_range_type(page_n):
-    if page_n is None:
-        return "livre"
-    for rtype, (a, b) in RANGES.items():
-        if a <= page_n <= b:
-            return rtype
-    return "livre"
-
-
-def detect_rtype_by_content(page_lines):
-    """Fallback : détecter le type de page par le contenu."""
-    text = " ".join(page_lines).lower()
-    if "documents audios" in text or ("transcriptions" in text and "audios" in text):
-        return "transcription_audio"
-    if "documents vidéos" in text or ("transcriptions" in text and "vidéos" in text):
-        return "transcription_video"
-    if "corrigés" in text:
-        return "corrige"
-    return "livre"
-
-
 def parse_txt(txt_path):
     with open(txt_path, encoding="utf-8") as f:
         raw = f.read()
@@ -128,11 +106,11 @@ def parse_txt(txt_path):
 
     # Debug
     n_trans_lines = sum(1 for l in raw.split("\n") if re.search(r"Page\s+\d+,\s*[A-Z]\s*[–\-]", l))
-    n_corr_lines = sum(1 for l in raw.split("\n") if re.search(r"Page\s+\d+,\s*[A-Za-zÀ-ÿ]", l) and not re.search(r"Page\s+\d+,\s*[A-Z]\s*[–\-]", l))
+    n_corr_lines = sum(1 for l in raw.split("\n") if re.search(r"Page\s+\d+,\s*(Vocabulaire|Grammaire|À bâtons rompus|Produire)", l, re.I))
     print(f"  Lignes 'Page XX, [A-Z] - ...' : {n_trans_lines}")
     print(f"  Lignes 'Page XX, Titre'       : {n_corr_lines}")
 
-    # Découper par pages : séparateur = 10+ tirets
+    # Découper par pages
     pages_raw = re.split(r"-{10,}", raw.replace("\f", "\n--------PAGE--------\n"))
     print(f"  {len(pages_raw)} pages détectées")
 
@@ -148,6 +126,7 @@ def parse_txt(txt_path):
     current_conteneur = None
     current_section = None
     pending_question = None
+    last_page_n = None
 
     def flush_question():
         nonlocal pending_question
@@ -175,23 +154,22 @@ def parse_txt(txt_path):
         if not page_lines:
             continue
 
-        # Détecter le numéro de page : chercher dans TOUTE la page, prendre le dernier
+        # Détecter le numéro de page : prendre le MAX
         page_n = None
         for line in page_lines:
             m = RE_PAGE_MARK.search(line)
             if m:
                 n = int(m.group(1))
-                if 1 <= n <= 250:
+                if 1 <= n <= 250 and (page_n is None or n > page_n):
                     page_n = n
 
-        # Détecter le type : par page_n si trouvé, sinon par le contenu
+        # Pas de -1 : le pied de page indique la page elle-même
+        if page_n is None and last_page_n is not None:
+            page_n = last_page_n + 1
         if page_n is not None:
-            rtype = detect_range_type(page_n)
-        else:
-            rtype = detect_rtype_by_content(page_lines)
+            last_page_n = page_n
 
         page_theme = theme_of_page(page_n)
-
         if page_theme is not None and current_theme != page_theme:
             flush_conteneur()
             current_theme = page_theme
@@ -206,46 +184,40 @@ def parse_txt(txt_path):
                     current_theme = n
                 continue
 
-            # ── Transcriptions ──
-            if rtype in ("transcription_audio", "transcription_video"):
-                m = RE_TRANSCRIPTION.search(line)
-                if m:
-                    # Vérifier qu'on n'a pas déjà cette transcription
-                    page_livre = int(m.group(1))
-                    titre = m.group(3).strip()
-                    if not any(t["page_livre"] == page_livre and t["titre"] == titre for t in transcriptions):
-                        transcriptions.append({
-                            "page_livre": page_livre,
-                            "document": m.group(2),
-                            "titre": titre,
-                            "page_pdf": page_n,
-                            "source": "audio" if rtype == "transcription_audio" else "video",
-                            "theme": theme_of_page(page_livre),
-                            "texte": [],
-                        })
-                    continue
-                if transcriptions and len(line) > 3 and not RE_PAGE_MARK.match(line):
-                    transcriptions[-1]["texte"].append(line)
-                    continue
+            # ── Essayer transcription ET corrigé sur chaque ligne ──
+            m = RE_TRANSCRIPTION.search(line)
+            if m and len(m.group(3)) > 3:
+                page_livre = int(m.group(1))
+                titre = m.group(3).strip()
+                # Déduire source (audio ou video)
+                source = "audio"
+                if page_n and 218 <= page_n <= 221:
+                    source = "video"
+                if not any(t["page_livre"] == page_livre and t["titre"] == titre for t in transcriptions):
+                    transcriptions.append({
+                        "page_livre": page_livre,
+                        "document": m.group(2),
+                        "titre": titre,
+                        "page_pdf": page_n,
+                        "source": source,
+                        "theme": theme_of_page(page_livre),
+                        "texte": [],
+                    })
+                continue
 
-            # ── Corrigés ──
-            if rtype == "corrige":
-                m = RE_CORRIGE.search(line)
-                if m:
-                    page_livre = int(m.group(1))
-                    titre = m.group(2).strip()
-                    if not any(c["page_livre"] == page_livre and c["titre"] == titre for c in corriges):
-                        corriges.append({
-                            "page_livre": page_livre,
-                            "titre": titre,
-                            "page_pdf": page_n,
-                            "theme": theme_of_page(page_livre),
-                            "texte": [],
-                        })
-                    continue
-                if corriges and len(line) > 3 and not RE_PAGE_MARK.match(line):
-                    corriges[-1]["texte"].append(line)
-                    continue
+            m = RE_CORRIGE.search(line)
+            if m:
+                page_livre = int(m.group(1))
+                titre = m.group(2).strip()
+                if not any(c["page_livre"] == page_livre and c["titre"] == titre for c in corriges):
+                    corriges.append({
+                        "page_livre": page_livre,
+                        "titre": titre,
+                        "page_pdf": page_n,
+                        "theme": theme_of_page(page_livre),
+                        "texte": [],
+                    })
+                continue
 
             # ── Contenu du manuel ──
             if current_theme is None:
@@ -262,7 +234,7 @@ def parse_txt(txt_path):
                 }
                 continue
 
-            # Titre du conteneur en attente
+            # Titre du conteneur
             if current_conteneur and not current_conteneur["titre"]:
                 if line in ("À", "[]", "Documents", "A", "B", "C") or len(line) < 5:
                     continue
@@ -280,11 +252,7 @@ def parse_txt(txt_path):
                 target = (current_conteneur["sections"]
                           if current_conteneur
                           else themes_data[current_theme]["sections_directes"])
-                target.append({
-                    "type": sec_name,
-                    "page": page_n,
-                    "questions": [],
-                })
+                target.append({"type": sec_name, "page": page_n, "questions": []})
                 current_section = target[-1]
                 continue
 
@@ -295,7 +263,6 @@ def parse_txt(txt_path):
                 pending_question = {"n": int(m.group(1)), "texte": m.group(2).strip()}
                 continue
 
-            # Continuation
             if pending_question is not None:
                 pending_question["texte"] += " " + line
 
