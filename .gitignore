@@ -12,3 +12,7 @@ video/
 # Système
 node_modules/
 .DS_Store
+oldapp.js
+oldindex.html
+*.cassé
+*.casse
