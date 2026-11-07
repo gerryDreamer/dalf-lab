@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-tools/label-txt.py — Parsing du TXT Édito C1 (v7).
+tools/label-txt.py — Parsing du TXT Édito C1 (v8).
 
-Version 7 :
-- page_n = n (pas n - 1) : le pied de page indique la page elle-même
-- RE_CORRIGE stricte : liste de titres connus
-- Essayer transcription ET corrigé sur chaque ligne
+Version 8 :
+- Whitelist conteneurs (A-G) : ignore T, I, etc.
+- Filtrer les pages vides
+- Fusionner les conteneurs en double (même étiquette)
+- Dédupliquer les sections directes par type
 
 Usage :
     python3 tools/label-txt.py [txt_path]
@@ -37,15 +38,12 @@ RANGES = {
     "corrige":             (222, 237),
 }
 
+# Conteneurs valides : A, B, C, D, E, F, G (pas T, I, etc.)
+VALID_CONTAINERS = {"A", "B", "C", "D", "E", "F", "G"}
+
 # ─── Regex ───
-
-# Marque de page : "12 I douze", "198 I cent..."
 RE_PAGE_MARK = re.compile(r"(\d{1,3})\s+I\s*\w+")
-
-# Conteneur : ligne isolée "A", "B", "C"
-RE_CONTAINER = re.compile(r"^[A-Z]$")
-
-# Section
+RE_CONTAINER = re.compile(r"^([A-Z])$")
 RE_SECTION = re.compile(
     r"^\s*(?:\d+\s+)?(Compréhension audiovisuelle|Compréhension orale|Compréhension écrite|"
     r"Production orale|Production écrite|Grammaire|Vocabulaire|Francophonie|"
@@ -53,22 +51,14 @@ RE_SECTION = re.compile(
     r"Produire|À bâtons rompus)\s*$",
     re.I,
 )
-
-# Question
 RE_QUESTION = re.compile(r"^\s*(\d{1,2})\s+([A-ZÀ-Ý].{5,})$")
-
-# Transcription : "Page 14, C – Titre"
 RE_TRANSCRIPTION = re.compile(r"Page\s+(\d+),\s*([A-Z])\s*[–\-]\s*(.+)$")
-
-# Corrigé : "Page 17, Vocabulaire" — titres connus uniquement
 RE_CORRIGE = re.compile(
     r"Page\s+(\d+),\s*(Vocabulaire|Grammaire|À bâtons rompus|Produire|"
     r"Compréhension orale|Compréhension écrite|Production orale|Production écrite|"
     r"Francophonie|Fiche méthodologique|Atelier médiation)\b",
     re.I,
 )
-
-# Thème
 RE_THEME = re.compile(r"^Th[eè]me\s+(\d+)\s+p\.\s*(\d+)", re.I)
 RE_THEME_SIMPLE = re.compile(r"^Th[eè]me\s+(\d+)\s*$", re.I)
 
@@ -97,22 +87,21 @@ def parse_txt(txt_path):
     with open(txt_path, encoding="utf-8") as f:
         raw = f.read()
 
-    # Normalisation globale
     raw = raw.replace("\u00a0", " ").replace("\u202f", " ").replace("\u200b", " ")
     raw = raw.replace("ﬁ", "fi").replace("ﬂ", "fl")
     raw = raw.replace("ﬀ", "ff").replace("ﬃ", "ffi").replace("ﬄ", "ffl")
     raw = raw.replace("’", "'").replace("‘", "'")
     raw = raw.replace("–", "-").replace("—", "-")
 
-    # Debug
     n_trans_lines = sum(1 for l in raw.split("\n") if re.search(r"Page\s+\d+,\s*[A-Z]\s*[–\-]", l))
     n_corr_lines = sum(1 for l in raw.split("\n") if re.search(r"Page\s+\d+,\s*(Vocabulaire|Grammaire|À bâtons rompus|Produire)", l, re.I))
     print(f"  Lignes 'Page XX, [A-Z] - ...' : {n_trans_lines}")
     print(f"  Lignes 'Page XX, Titre'       : {n_corr_lines}")
 
-    # Découper par pages
     pages_raw = re.split(r"-{10,}", raw.replace("\f", "\n--------PAGE--------\n"))
-    print(f"  {len(pages_raw)} pages détectées")
+    # Filtrer les pages vides
+    pages_raw = [p for p in pages_raw if p.strip()]
+    print(f"  {len(pages_raw)} pages détectées (non vides)")
 
     themes_data = {t["n"]: {
         "n": t["n"], "titre": t["titre"], "pages": t["pages"],
@@ -144,7 +133,20 @@ def parse_txt(txt_path):
         flush_section()
         if current_conteneur and current_conteneur["sections"]:
             if current_theme is not None:
-                themes_data[current_theme]["conteneurs"].append(current_conteneur)
+                # Fusionner avec un conteneur existant de même étiquette
+                existing = None
+                for c in themes_data[current_theme]["conteneurs"]:
+                    if c["etiquette"] == current_conteneur["etiquette"]:
+                        existing = c
+                        break
+                if existing:
+                    # Fusionner les sections
+                    for s in current_conteneur["sections"]:
+                        existing["sections"].append(s)
+                    if not existing.get("titre") and current_conteneur.get("titre"):
+                        existing["titre"] = current_conteneur["titre"]
+                else:
+                    themes_data[current_theme]["conteneurs"].append(current_conteneur)
         current_conteneur = None
 
     for page_idx, page_raw in enumerate(pages_raw):
@@ -154,7 +156,6 @@ def parse_txt(txt_path):
         if not page_lines:
             continue
 
-        # Détecter le numéro de page : prendre le MAX
         page_n = None
         for line in page_lines:
             m = RE_PAGE_MARK.search(line)
@@ -163,7 +164,6 @@ def parse_txt(txt_path):
                 if 1 <= n <= 250 and (page_n is None or n > page_n):
                     page_n = n
 
-        # Pas de -1 : le pied de page indique la page elle-même
         if page_n is None and last_page_n is not None:
             page_n = last_page_n + 1
         if page_n is not None:
@@ -175,7 +175,6 @@ def parse_txt(txt_path):
             current_theme = page_theme
 
         for line in page_lines:
-            # Thème explicite
             m = RE_THEME.match(line) or RE_THEME_SIMPLE.match(line)
             if m:
                 n = int(m.group(1))
@@ -184,12 +183,11 @@ def parse_txt(txt_path):
                     current_theme = n
                 continue
 
-            # ── Essayer transcription ET corrigé sur chaque ligne ──
+            # Transcription
             m = RE_TRANSCRIPTION.search(line)
             if m and len(m.group(3)) > 3:
                 page_livre = int(m.group(1))
                 titre = m.group(3).strip()
-                # Déduire source (audio ou video)
                 source = "audio"
                 if page_n and 218 <= page_n <= 221:
                     source = "video"
@@ -205,6 +203,7 @@ def parse_txt(txt_path):
                     })
                 continue
 
+            # Corrigé
             m = RE_CORRIGE.search(line)
             if m:
                 page_livre = int(m.group(1))
@@ -219,15 +218,14 @@ def parse_txt(txt_path):
                     })
                 continue
 
-            # ── Contenu du manuel ──
             if current_theme is None:
                 continue
 
-            # Conteneur ?
-            if RE_CONTAINER.match(line):
+            # Conteneur ? (whitelist A-G)
+            if RE_CONTAINER.match(line) and line.strip() in VALID_CONTAINERS:
                 flush_conteneur()
                 current_conteneur = {
-                    "etiquette": line,
+                    "etiquette": line.strip(),
                     "titre": "",
                     "page": page_n,
                     "sections": [],
@@ -244,7 +242,7 @@ def parse_txt(txt_path):
                     current_conteneur["titre"] = line
                     continue
 
-            # Section ?
+            # Section
             m = RE_SECTION.match(line)
             if m:
                 flush_section()
@@ -256,7 +254,7 @@ def parse_txt(txt_path):
                 current_section = target[-1]
                 continue
 
-            # Question ?
+            # Question
             m = RE_QUESTION.match(line)
             if m and current_section is not None:
                 flush_question()
@@ -267,6 +265,18 @@ def parse_txt(txt_path):
                 pending_question["texte"] += " " + line
 
     flush_conteneur()
+
+    # Dédupliquer les sections directes par type (fusionner les questions)
+    for th_n, th_data in themes_data.items():
+        seen = {}
+        deduped = []
+        for s in th_data["sections_directes"]:
+            if s["type"] in seen:
+                seen[s["type"]]["questions"].extend(s["questions"])
+            else:
+                seen[s["type"]] = s
+                deduped.append(s)
+        th_data["sections_directes"] = deduped
 
     for t in transcriptions + corriges:
         t["texte"] = "\n".join(t["texte"]).strip()
@@ -294,14 +304,22 @@ def main(txt_path, out_dir="data"):
 
     print(f"\n✅ Écrit dans {out_dir}/")
     print(f"\n📊 Statistiques :")
+    total_q = 0
+    total_c = 0
+    total_s = 0
     for t in manuel["themes"]:
         nq = sum(len(s["questions"]) for c in t["conteneurs"] for s in c["sections"])
-        ns = sum(len(c["sections"]) for c in t["conteneurs"])
-        nd = len(t["sections_directes"])
-        print(f"  Thème {t['n']:2} : {len(t['conteneurs'])} conteneurs, {ns} sections, {nq} questions, {nd} sections directes")
+        nq += sum(len(s["questions"]) for s in t["sections_directes"])
+        ns = sum(len(c["sections"]) for c in t["conteneurs"]) + len(t["sections_directes"])
+        nc = len(t["conteneurs"])
+        total_q += nq
+        total_c += nc
+        total_s += ns
+        print(f"  Thème {t['n']:2} : {nc} conteneurs, {ns} sections, {nq} questions")
 
     print(f"\n  Transcriptions : {len(transcriptions)}")
     print(f"  Corrigés       : {len(corriges)}")
+    print(f"  Total          : {total_c} conteneurs, {total_s} sections, {total_q} questions")
 
 
 if __name__ == "__main__":

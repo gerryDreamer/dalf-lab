@@ -112,8 +112,8 @@ def rattacher_transcriptions_aux_conteneurs(theme_data, trans_du_theme):
             })
 
 
-def gen_lecons(manuel, ressources):
-    """Génère le squelette lecons.json."""
+"""def gen_lecons(manuel, ressources):
+    #Génère le squelette lecons.json.
     themes = manuel["themes"]
     trans_par_theme, corr_par_theme = rattacher_ressources(ressources, themes)
 
@@ -207,7 +207,111 @@ def gen_lecons(manuel, ressources):
         lecons["themes"].append(theme_data)
 
     return lecons
+"""
 
+def gen_lecons(manuel, ressources):
+    """Génère le squelette lecons.json."""
+    themes = manuel["themes"]
+    trans_par_theme, corr_par_theme = rattacher_ressources(ressources, themes)
+
+    lecons = {
+        "meta": {
+            "manuel": "Édito C1 (2e édition, 2024)",
+            "source": "text-edito.txt",
+            "date_generation": datetime.now().strftime("%Y-%m-%d"),
+            "version": "1.0",
+            "description": "Squelette généré depuis manuel.json et ressources.json. QCM vides (à remplir à l'atelier)."
+        },
+        "themes": [],
+    }
+
+    seen_ids = set()  # ← AJOUTER
+
+    for t in themes:
+        n = t["n"]
+        theme_data = {
+            "n": n,
+            "titre": t["titre"],
+            "pages": t["pages"],
+            "conteneurs": [],
+            "sections_directes": [],
+            "ressources": {
+                "transcriptions": trans_par_theme.get(n, []),
+                "corriges": corr_par_theme.get(n, []),
+            },
+        }
+
+        rattacher_transcriptions_aux_conteneurs(theme_data, trans_par_theme.get(n, []))
+
+        for cont in t.get("conteneurs", []):
+            cont_data = {
+                "etiquette": cont.get("etiquette"),
+                "titre": cont.get("titre", ""),
+                "page": cont.get("page"),
+                "sections": [],
+                "transcriptions": cont.get("transcriptions", []),
+            }
+
+            for sec in cont.get("sections", []):
+                sec_type = sec.get("type", "")
+                sec_short = short_type(sec_type)
+                sec_id = f"T{n}-{cont.get('etiquette', '?')}-{sec_short}"
+
+                questions = []
+                for q in sec.get("questions", []):
+                    q_id = f"{sec_id}-q{q.get('n', 0)}"
+                    if q_id in seen_ids:  # ← AJOUTER
+                        continue
+                    seen_ids.add(q_id)
+                    questions.append({
+                        "id": q_id,
+                        "n": q.get("n"),
+                        "texte": q.get("texte", ""),
+                        "qcm": [],
+                    })
+
+                if questions:  # ← ne garder que les sections non vides
+                    sec_data = {
+                        "id": sec_id,
+                        "type": sec_type,
+                        "page": sec.get("page"),
+                        "questions": questions,
+                    }
+                    cont_data["sections"].append(sec_data)
+
+            theme_data["conteneurs"].append(cont_data)
+
+        # Sections directes
+        for sec in t.get("sections_directes", []):
+            sec_type = sec.get("type", "")
+            sec_short = short_type(sec_type)
+            sec_id = f"T{n}-direct-{sec_short}"
+
+            questions = []
+            for q in sec.get("questions", []):
+                q_id = f"{sec_id}-q{q.get('n', 0)}"
+                if q_id in seen_ids:  # ← AJOUTER
+                    continue
+                seen_ids.add(q_id)
+                questions.append({
+                    "id": q_id,
+                    "n": q.get("n"),
+                    "texte": q.get("texte", ""),
+                    "qcm": [],
+                })
+
+            if questions:
+                sec_data = {
+                    "id": sec_id,
+                    "type": sec_type,
+                    "page": sec.get("page"),
+                    "questions": questions,
+                }
+                theme_data["sections_directes"].append(sec_data)
+
+        lecons["themes"].append(theme_data)
+
+    return lecons
 
 def main(out_dir="data"):
     manuel_path = os.path.join(out_dir, "edito-c1.manuel.json")
