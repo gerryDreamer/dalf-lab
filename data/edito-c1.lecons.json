@@ -1,0 +1,93 @@
+{
+  "id": "edito-c1",
+  "sujet": "Justice, quelles alternatives ?",
+  "lecons": [
+    {
+      "id": 1, "t": "Vocabulaire de la justice",
+      "s": "Cahier p. 17 (ex. 1 et 2), corrigé p. 222",
+      "q": [
+        ["c","Dans le synopsis du film, quel synonyme de « punir » ?",["condamner","relaxer","acquitter","délibérer"],0],
+        ["c","Synonyme de « agressions sexuelles »",["viols","fraudes","attentats","escroqueries"],0],
+        ["c","Synonyme de « processus »",["dispositif","préjudice","réquisitoire","plainte"],0],
+        ["c","Synonyme de « attaque à main armée »",["évasion","braquage","corruption","enlèvement"],1],
+        ["c","Les conseillers pénitentiaires aident les … à se réinsérer socialement.",["détenus","magistrats","victimes","greffiers"],0],
+        ["c","Leur rôle est aussi de … (ex. 2)",["prévenir la récidive","obtenir réparation","plaider","délibérer"],0]
+      ]
+    },
+    {
+      "id": 2, "t": "Le procès pénal en France",
+      "s": "Cahier p. 18 (ex. 4), corrigé p. 222",
+      "q": [
+        ["c","Un délit est jugé devant le tribunal…",["de police","correctionnel","administratif"],1],
+        ["c","Un crime est jugé devant la cour…",["d’assises","d’appel","de cassation"],0],
+        ["c","La présomption … fait partie des droits de la défense.",["de culpabilité","d’innocence"],1],
+        ["c","Le représentant … prend des réquisitions.",["du ministère public","des jurés"],0],
+        ["c","Le tribunal se retire pour…",["débattre","délibérer"],1],
+        ["c","Si la culpabilité n’est pas établie, le tribunal … la personne.",["relaxe","relâche"],0],
+        ["c","Devant la cour d’assises, on parle d’…",["acquittement","non-lieu"],0]
+      ]
+    },
+    {
+      "id": 3, "t": "Transformer à la voix passive",
+      "s": "Cahier p. 19 (ex. 8), corrigé p. 222",
+      "q": [
+        ["t","« On peut surmonter la violence par la justice restaurative. »","La violence peut être surmontée par la justice restaurative."],
+        ["t","« Redevenir acteur de sa propre vie, c’est ce que propose la justice restaurative. »","Redevenir acteur de sa propre vie, c’est ce qui est proposé par la justice restaurative."],
+        ["t","« L’Institut Français pour la Justice Restaurative forme des personnes pour encadrer ces mesures. »","Des personnes sont formées par l’Institut Français pour la Justice Restaurative pour encadrer ces mesures."],
+        ["t","« Par la préparation, on avait créé un espace de parole sécurisé pour pouvoir échanger et avancer. »","Par la préparation, un espace de parole sécurisé avait été créé pour échanger et avancer."],
+        ["t","« Des études ont prouvé que la médiation animale permettait aux personnes détenues de s’ouvrir, voire d’entamer une démarche thérapeutique. »","Il a été prouvé grâce à des études que la médiation animale permettait aux personnes détenues de s’ouvrir, voire d’entamer une démarche thérapeutique."]
+      ]
+    },
+    {
+      "id": 4, "t": "Participes passés des verbes pronominaux",
+      "s": "Cahier p. 19 (ex. 9), corrigé p. 222",
+      "q": [
+        ["t","Les personnels pénitentiaires (se voir proposer) une mission.","se sont vu proposer"],
+        ["t","Quelques gardiens (se sentir pousser) des ailes.","se sont senti pousser"],
+        ["t","Ils (se laisser dire) que ces mesures pouvaient avoir des effets bénéfiques.","s’étaient laissé dire / se sont laissé dire"],
+        ["t","Certaines (se voir refuser) l’accès à l’atelier.","se sont vu refuser"],
+        ["t","Les participants (se laisser surprendre) par les émotions.","se sont laissé surprendre"],
+        ["t","Certains (se sentir renaître).","se sont sentis renaître"],
+        ["t","Ils (s’entendre traiter) de privilégiés.","se sont entendu traiter"]
+      ]
+    }
+  ],
+  "liens": [
+    {"h":"Piste audio 2 : l’équithérapie en prison","f":"Fichier editoc1_piste_02.mp3 reçu","r":[
+      ["Livre p. 14, document C (questions 1 à 12)","icône d’écouteurs n° 2 et nom du fichier","Haute"],
+      ["Transcription p. 198","intitulé « Page 14, C »","Haute"],
+      ["Cahier ex. 10 (p. 20), corrigé p. 222","même sujet et même vocabulaire","Moyenne"]
+    ]},
+    {"h":"Vidéo 1 : bande-annonce de « Je verrai toujours vos visages »","f":"Fichier vidéo non fourni","r":[
+      ["Livre p. 12, document A (questions 1 à 10)","icône de clap n° 1","Haute"],
+      ["Transcription vidéo p. 218","intitulé « Page 12, A »","Haute"],
+      ["Cahier ex. 11 (p. 20-21), corrigé p. 222","consigne « Visionnez la bande-annonce »","Haute"]
+    ]},
+    {"h":"Tribune « Vers un horizon d’apaisement »","f":"Texte du livre, p. 12-13 (lignes 1 à 119)","r":[
+      ["Cahier ex. 7 (p. 18-19)","renvoi « tribune p. 12 » et numéros de ligne","Haute"],
+      ["Cahier ex. 12 à 15, corrigé p. 222-223","plages de lignes (L. 9 à 14, etc.)","Haute"],
+      ["Fiche méthodologique 2, p. 188","renvoi explicite dans le cahier","Haute"]
+    ]},
+    {"h":"Vocabulaire et grammaire","f":"Livre p. 15 et p. 16","r":[
+      ["Vocabulaire p. 15, cahier ex. 1 à 5","même thème, mots communs","Moyenne"],
+      ["Grammaire p. 16, cahier ex. 6 à 9","renvoi « Cahier, p. 18 »","Haute"]
+    ]}
+  ],
+  "sujets_ia": [
+    "S’informer sur la justice restaurative",
+    "Argumenter sur la place de la médiation animale en prison",
+    "Choisir la voix active ou passive pour servir son propos",
+    "Vocabulaire de la justice (acteurs, faits, lieux, procédure pénale)"
+  ],
+  "types_ia": {
+    "qcm": "Exercices (leçon jouable)",
+    "texte": "Texte de compréhension écrite avec questions",
+    "essai": "Sujets d’essai argumenté DALF",
+    "debat": "Jeu de rôle ou débat à préparer"
+  },
+  "taches": [
+    {"id":"r","t":"Résumé de la tribune","n":233,"m":1,"c":"Rédige un résumé de la tribune du Monde (p. 12) : environ un quart du texte d’origine, avec des connecteurs pour enchaîner les idées.","s":"Cahier p. 21, fiche méthodologique 2 (p. 188), corrigé p. 223"},
+    {"id":"e","t":"Essai argumenté (DALF C1)","n":250,"m":0,"c":"Certains affirment que la médiation animale n’a pas sa place en prison. Donne ton point de vue en structurant ton argumentation.","s":"Livre p. 14 (ex. 12)"}
+  ],
+  "connecteurs": ["de plus","en effet","cependant","toutefois","néanmoins","ainsi","par ailleurs","en outre","c’est pourquoi","alors que","bien que","certes","en revanche","d’une part","d’autre part","par conséquent","en conclusion"]
+}
