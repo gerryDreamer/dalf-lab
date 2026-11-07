@@ -3,13 +3,33 @@
   "titre": "Édito C1 (2e édition, 2024)",
   "fichiers": { "livre_et_cahier": "un seul PDF, livre et cahier imbriqués par thème" },
   "unites": { "nom": "thème", "nombre": 12, "detection": "Thème (\\d+)" },
+  "themes": [
+    { "n": 1,  "titre": "Justice, quelles alternatives ?",          "pages": [11, 22] },
+    { "n": 2,  "titre": "SOS démocratie",                           "pages": [23, 38] },
+    { "n": 3,  "titre": "Souffler le chaud et le froid",            "pages": [39, 50] },
+    { "n": 4,  "titre": "Travail en cours",                         "pages": [51, 68] },
+    { "n": 5,  "titre": "Les nouveaux visages de la culture",       "pages": [69, 80] },
+    { "n": 6,  "titre": "La vie privée : un droit, une liberté ?",  "pages": [81, 98] },
+    { "n": 7,  "titre": "Jouons cartes sur table !",                "pages": [99, 110] },
+    { "n": 8,  "titre": "Ma belle famille !",                       "pages": [111, 126] },
+    { "n": 9,  "titre": "Villes en mouvement, vies en transition",  "pages": [127, 144] },
+    { "n": 10, "titre": "Santé 3.0",                                "pages": [145, 156] },
+    { "n": 11, "titre": "Solidarité, un bel élan !",                "pages": [157, 168] },
+    { "n": 12, "titre": "Protéger la terre, réparer le vivant",     "pages": [169, 188] }
+  ],
   "transcriptions": {
     "emplacement": "fin du PDF",
     "audio": "Documents audios",
     "video": "Documents vidéos",
-    "entree": "^Page (\\d+), ([A-Z]) [–-] (.*)$"
+    "entree": "^Page (\\d+), ([A-Z]) [–-] (.*)$",
+    "pages": { "audio": [198, 217], "video": [218, 221] }
   },
-  "corriges": { "emplacement": "fin du PDF", "page_titre": "Corrigés", "entree": "^Page (\\d+), (.+)$" },
+  "corriges": {
+    "emplacement": "fin du PDF",
+    "page_titre": "Corrigés",
+    "entree": "^Page (\\d+), (.+)$",
+    "pages": [222, 237]
+  },
   "audio": {
     "nom_fichier": "editoc1_piste_(\\d+)",
     "numero_piste": "icône lue comme un chiffre isolé sur la page de transcription"
