@@ -18,3 +18,14 @@ oldindex.html
 *.casse
 old.sw.js
 python-server.txt
+tools/extract.v1.py.bak
+tools/extract.v2.py.bak
+text-editor.txt
+text-edito.txt
+text-edito.txt
+old-text-edito.txt
+__pycache__/
+*.pyc
+tools/__pycache__/
+edito.html
+oldREADME.md

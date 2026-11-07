@@ -91,7 +91,7 @@
             },
             {
               "type": "compréhension_écrite",
-              "page": null,
+              "page": 9,
               "questions": [
                 {
                   "n": 5,
@@ -120,7 +120,7 @@
         {
           "etiquette": "T",
           "titre": "justice restaurative est-elle nécessaire à côté de",
-          "page": null,
+          "page": 9,
           "sections": [
             {
               "type": "production_orale",
@@ -239,7 +239,7 @@
         {
           "etiquette": "T",
           "titre": "• l'évasion fi scale (f.)",
-          "page": null,
+          "page": 5,
           "sections": [
             {
               "type": "grammaire",
@@ -377,7 +377,7 @@
           "sections": [
             {
               "type": "compréhension_écrite",
-              "page": null,
+              "page": 1,
               "questions": [
                 {
                   "n": 1,
@@ -407,7 +407,7 @@
             },
             {
               "type": "production_orale",
-              "page": null,
+              "page": 1,
               "questions": [
                 {
                   "n": 7,
@@ -421,7 +421,7 @@
             },
             {
               "type": "production_écrite",
-              "page": null,
+              "page": 1,
               "questions": [
                 {
                   "n": 9,
@@ -431,7 +431,7 @@
             },
             {
               "type": "compréhension_orale",
-              "page": null,
+              "page": 1,
               "questions": [
                 {
                   "n": 1,
@@ -444,7 +444,7 @@
         {
           "etiquette": "T",
           "titre": "a. L'utilisation d'un langage incompréhensible.",
-          "page": null,
+          "page": 1,
           "sections": [
             {
               "type": "production_orale",
@@ -1101,6 +1101,20 @@
             {
               "n": 8,
               "texte": "Quelle conclusion l'auteur tire-t-il sur le"
+            }
+          ]
+        },
+        {
+          "type": "production_orale",
+          "page": 45,
+          "questions": [
+            {
+              "n": 8,
+              "texte": "En groupes ! Faites des recherches sur d'autres types de communication développés par les arbres ou les plantes. Présentez leur fonctionnement à la classe lors d'un exposé de 10 minutes."
+            },
+            {
+              "n": 9,
+              "texte": "Débat DALFC1 Pensez-vous que l'établissement d'un rapport différent de l'être humain avec"
             }
           ]
         }
@@ -2143,7 +2157,7 @@
         {
           "etiquette": "C",
           "titre": "• Installez-vous dans un endroit calme et enregistrez-vous !",
-          "page": null,
+          "page": 1,
           "sections": [
             {
               "type": "documents",
@@ -3195,7 +3209,7 @@
             },
             {
               "type": "grammaire",
-              "page": null,
+              "page": 1,
               "questions": [
                 {
                   "n": 1,
@@ -3212,11 +3226,11 @@
         {
           "etiquette": "L",
           "titre": "Entraînement",
-          "page": null,
+          "page": 1,
           "sections": [
             {
               "type": "production_écrite",
-              "page": null,
+              "page": 1,
               "questions": [
                 {
                   "n": 3,
@@ -3229,7 +3243,7 @@
         {
           "etiquette": "T",
           "titre": "une personne célèbre âgée de plus de 70 ans. Puis lisez votre texte",
-          "page": null,
+          "page": 1,
           "sections": [
             {
               "type": "vocabulaire",
@@ -3434,7 +3448,7 @@
             },
             {
               "type": "compréhension_orale",
-              "page": null,
+              "page": 2,
               "questions": [
                 {
                   "n": 1,
@@ -3460,7 +3474,7 @@
             },
             {
               "type": "production_écrite",
-              "page": null,
+              "page": 2,
               "questions": [
                 {
                   "n": 6,
@@ -3470,12 +3484,12 @@
             },
             {
               "type": "production_orale",
-              "page": null,
+              "page": 2,
               "questions": []
             },
             {
               "type": "compréhension_audiovisuelle",
-              "page": null,
+              "page": 2,
               "questions": []
             }
           ]
@@ -3772,7 +3786,7 @@
     },
     {
       "n": 11,
-      "titre": "Solidarit頻é, un bel élan !",
+      "titre": "Solidarité, un bel élan !",
       "pages": [
         157,
         168
@@ -3781,11 +3795,11 @@
         {
           "etiquette": "E",
           "titre": "",
-          "page": null,
+          "page": 3,
           "sections": [
             {
               "type": "compréhension_orale",
-              "page": null,
+              "page": 3,
               "questions": []
             }
           ]
@@ -3793,7 +3807,7 @@
         {
           "etiquette": "R",
           "titre": "Écoutez l'interview de France Bleu et répondez à la première question,",
-          "page": null,
+          "page": 3,
           "sections": [
             {
               "type": "production_écrite",
@@ -3960,27 +3974,6 @@
               "questions": []
             }
           ]
-        },
-        {
-          "etiquette": "R",
-          "titre": "d. Qu'apprend-on du personnage qui s'exprime ? A-t-il une identité, un âge, une profession ?",
-          "page": null,
-          "sections": [
-            {
-              "type": "production_orale",
-              "page": null,
-              "questions": [
-                {
-                  "n": 8,
-                  "texte": "En groupes ! Faites des recherches sur d'autres types de communication développés par les arbres ou les plantes. Présentez leur fonctionnement à la classe lors d'un exposé de 10 minutes."
-                },
-                {
-                  "n": 9,
-                  "texte": "Débat DALFC1 Pensez-vous que l'établissement d'un rapport différent de l'être humain avec"
-                }
-              ]
-            }
-          ]
         }
       ],
       "sections_directes": [
@@ -4029,12 +4022,12 @@
         },
         {
           "type": "compréhension_écrite",
-          "page": null,
+          "page": 3,
           "questions": []
         },
         {
           "type": "production_orale",
-          "page": null,
+          "page": 3,
           "questions": [
             {
               "n": 1,
@@ -4068,7 +4061,7 @@
         },
         {
           "type": "production_écrite",
-          "page": null,
+          "page": 3,
           "questions": [
             {
               "n": 11,
@@ -4083,16 +4076,6 @@
               "texte": "Que signifi e « autrui », utilisé quatre fois par lieux, besoins, objectifs, ressources humaines et l'auteure ? Qu'apporte-t-il au texte ? matérielles) et dites pourquoi vous l'avez choisi. B Poursuivi pour délit de solidarité…"
             }
           ]
-        },
-        {
-          "type": "vocabulaire",
-          "page": null,
-          "questions": []
-        },
-        {
-          "type": "vocabulaire",
-          "page": null,
-          "questions": []
         }
       ]
     },

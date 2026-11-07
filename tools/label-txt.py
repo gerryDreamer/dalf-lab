@@ -1,17 +1,14 @@
 #!/usr/bin/env python3
 """
-tools/label-txt.py — Parsing du TXT Édito C1 (v4).
+tools/label-txt.py — Parsing du TXT Édito C1 (v5).
 
-Version 4 : adaptée à text-edito.txt (avec page breaks \f et séparateurs ----).
+Version 5 : corrige les bugs de détection de pages/transcriptions/corrigés.
 
-Structure détectée :
-- Pages séparées par \f ou des lignes de tirets (--------)
-- "Thème N p. XX" ou "Thème N" en début de page
-- Conteneurs A/B/C sur ligne isolée, titre sur la ligne suivante
-- Sections avec préfixe numérique collé : "1 Compréhension audiovisuelle"
-- Questions : "  1   Quel est..." (1+ espaces après le numéro)
-- Transcriptions : "Page 14, C – Titre"
-- Corrigés : "Page 17, Vocabulaire"
+Structure du TXT :
+- Pages séparées par des lignes de tirets (--------)
+- Chaque page se termine par "NNN I mot" (ex. "198 I cent quatre-vingt-dix-huit")
+- Transcriptions : "Page 14, C – Titre" (parfois fusionné avec d'autres colonnes)
+- Corrigés : "Page 17, Vocabulaire" (parfois fusionné)
 
 Usage :
     python3 tools/label-txt.py [txt_path]
@@ -33,7 +30,7 @@ THEMES = [
     {"n": 8,  "titre": "Ma belle famille !",                       "pages": [111, 126] },
     {"n": 9,  "titre": "Villes en mouvement, vies en transition",  "pages": [127, 144] },
     {"n": 10, "titre": "Santé 3.0",                                "pages": [145, 156] },
-    {"n": 11, "titre": "Solidarit頻é, un bel élan !",                "pages": [157, 168] },
+    {"n": 11, "titre": "Solidarité, un bel élan !",                "pages": [157, 168] },
     {"n": 12, "titre": "Protéger la terre, réparer le vivant",     "pages": [169, 188] },
 ]
 
@@ -43,12 +40,13 @@ RANGES = {
     "corrige":             (222, 237),
 }
 
-# ─── Regex calibrées sur le nouveau TXT ───
-RE_PAGE_SEP = re.compile(r"^-{10,}$")
-RE_THEME = re.compile(r"^Th[eè]me\s+(\d+)\s+p\.\s*(\d+)", re.I)
-RE_THEME_SIMPLE = re.compile(r"^Th[eè]me\s+(\d+)\s*$", re.I)
+# ─── Regex ───
 
-# Conteneur : ligne isolée "A", "B", "C" (pas "À", "É", etc.)
+# Marque de page : "12 I douze", "198 I cent quatre-vingt-dix-huit"
+# Accepte "12 I douze" et "12 Idouze" et "12 I  douze"
+RE_PAGE_MARK = re.compile(r"(\d{1,3})\s+I\s*\w+")
+
+# Conteneur : ligne isolée "A", "B", "C" (pas "À", "É")
 RE_CONTAINER = re.compile(r"^[A-Z]$")
 
 # Section : avec préfixe numérique collé "1 Compréhension audiovisuelle"
@@ -63,30 +61,30 @@ RE_SECTION = re.compile(
 # Question : 1+ espaces après le numéro, commence par majuscule
 RE_QUESTION = re.compile(r"^\s*(\d{1,2})\s+([A-ZÀ-Ý].{5,})$")
 
-# Transcriptions / corrigés
-RE_TRANSCRIPTION = re.compile(r"^Page\s+(\d+),\s*([A-Z])\s*[–\-]\s*(.+)$")
-RE_CORRIGE = re.compile(r"^Page\s+(\d+),\s*([A-Za-zÀ-ÿ][\w\s\-'’]+)\s*$")
+# Transcriptions : "Page 14, C – Titre" (search, pas match)
+# Capture non-greedy jusqu'à 2+ espaces ou fin de ligne
+RE_TRANSCRIPTION = re.compile(r"Page\s+(\d+),\s*([A-Z])\s*[–\-]\s*(.+?)(?:\s{2,}|$)")
 
-# Numéro de page en fin de bloc : "12 I douze"
-RE_PAGE_MARK = re.compile(r"^(\d{1,3})\s+I\s+\w+")
+# Corrigés : "Page 17, Vocabulaire" (search, pas match)
+RE_CORRIGE = re.compile(r"Page\s+(\d+),\s*([A-Za-zÀ-ÿ][\w\s\-'’]*?)(?:\s{2,}|$)")
+
+# Thème
+RE_THEME = re.compile(r"^Th[eè]me\s+(\d+)\s+p\.\s*(\d+)", re.I)
+RE_THEME_SIMPLE = re.compile(r"^Th[eè]me\s+(\d+)\s*$", re.I)
 
 
 def normalize_line(line):
     """Nettoie une ligne : espaces insécables, ligatures, apostrophes."""
     line = line.replace("\u00a0", " ").replace("\u202f", " ").replace("\u200b", " ")
-    # Ligatures typographiques
     line = line.replace("ﬁ", "fi").replace("ﬂ", "fl")
     line = line.replace("ﬀ", "ff").replace("ﬃ", "ffi").replace("ﬄ", "ffl")
-    # Apostrophes et tirets
     line = line.replace("’", "'").replace("‘", "'")
     line = line.replace("–", "-").replace("—", "-")
-    # Espaces multiples
     line = re.sub(r"[ \t]+", " ", line)
     return line.strip()
 
 
 def theme_of_page(page_n):
-    """Retourne le numéro de thème pour une page donnée, ou None."""
     if page_n is None:
         return None
     for t in THEMES:
@@ -97,7 +95,6 @@ def theme_of_page(page_n):
 
 
 def detect_range_type(page_n):
-    """Détecte le type de zone (transcription, corrigé, livre)."""
     if page_n is None:
         return "livre"
     for rtype, (a, b) in RANGES.items():
@@ -106,8 +103,19 @@ def detect_range_type(page_n):
     return "livre"
 
 
+def detect_rtype_by_content(page_lines):
+    """Fallback : détecter le type de page par le contenu."""
+    text = " ".join(page_lines).lower()
+    if "documents audios" in text or ("transcriptions" in text and "audios" in text):
+        return "transcription_audio"
+    if "documents vidéos" in text or ("transcriptions" in text and "vidéos" in text):
+        return "transcription_video"
+    if "corrigés" in text:
+        return "corrige"
+    return "livre"
+
+
 def parse_txt(txt_path):
-    """Parse le fichier TXT et retourne les structures."""
     with open(txt_path, encoding="utf-8") as f:
         raw = f.read()
 
@@ -118,17 +126,16 @@ def parse_txt(txt_path):
     raw = raw.replace("’", "'").replace("‘", "'")
     raw = raw.replace("–", "-").replace("—", "-")
 
-    # Debug : compter les lignes de transcription/corrigé
-    n_trans_lines = sum(1 for l in raw.split("\n") if re.match(r"^\s*Page\s+\d+,\s*[A-Z]\s*[–\-]", l))
-    n_corr_lines = sum(1 for l in raw.split("\n") if re.match(r"^\s*Page\s+\d+,\s*[A-Za-zÀ-ÿ]", l))
+    # Debug
+    n_trans_lines = sum(1 for l in raw.split("\n") if re.search(r"Page\s+\d+,\s*[A-Z]\s*[–\-]", l))
+    n_corr_lines = sum(1 for l in raw.split("\n") if re.search(r"Page\s+\d+,\s*[A-Za-zÀ-ÿ]", l) and not re.search(r"Page\s+\d+,\s*[A-Z]\s*[–\-]", l))
     print(f"  Lignes 'Page XX, [A-Z] - ...' : {n_trans_lines}")
     print(f"  Lignes 'Page XX, Titre'       : {n_corr_lines}")
 
-    # Découper par pages
-    pages_raw = re.split(r"\n-{10,}\n", raw.replace("\f", "\n--------PAGE--------\n"))
+    # Découper par pages : séparateur = 10+ tirets
+    pages_raw = re.split(r"-{10,}", raw.replace("\f", "\n--------PAGE--------\n"))
     print(f"  {len(pages_raw)} pages détectées")
 
-    # Structures de sortie
     themes_data = {t["n"]: {
         "n": t["n"], "titre": t["titre"], "pages": t["pages"],
         "conteneurs": [], "sections_directes": [],
@@ -168,24 +175,29 @@ def parse_txt(txt_path):
         if not page_lines:
             continue
 
-        # Détecter le numéro de page (dernières lignes)
+        # Détecter le numéro de page : chercher dans TOUTE la page, prendre le dernier
         page_n = None
-        for line in reversed(page_lines[-3:]):
-            m = RE_PAGE_MARK.match(line)
+        for line in page_lines:
+            m = RE_PAGE_MARK.search(line)
             if m:
-                page_n = int(m.group(1))
-                break
+                n = int(m.group(1))
+                if 1 <= n <= 250:
+                    page_n = n
 
-        rtype = detect_range_type(page_n)
+        # Détecter le type : par page_n si trouvé, sinon par le contenu
+        if page_n is not None:
+            rtype = detect_range_type(page_n)
+        else:
+            rtype = detect_rtype_by_content(page_lines)
+
         page_theme = theme_of_page(page_n)
 
-        # Changement de thème
         if page_theme is not None and current_theme != page_theme:
             flush_conteneur()
             current_theme = page_theme
 
         for line in page_lines:
-            # Thème explicite en début de page
+            # Thème explicite
             m = RE_THEME.match(line) or RE_THEME_SIMPLE.match(line)
             if m:
                 n = int(m.group(1))
@@ -196,17 +208,21 @@ def parse_txt(txt_path):
 
             # ── Transcriptions ──
             if rtype in ("transcription_audio", "transcription_video"):
-                m = RE_TRANSCRIPTION.match(line)
+                m = RE_TRANSCRIPTION.search(line)
                 if m:
-                    transcriptions.append({
-                        "page_livre": int(m.group(1)),
-                        "document": m.group(2),
-                        "titre": m.group(3).strip(),
-                        "page_pdf": page_n,
-                        "source": "audio" if rtype == "transcription_audio" else "video",
-                        "theme": theme_of_page(int(m.group(1))),
-                        "texte": [],
-                    })
+                    # Vérifier qu'on n'a pas déjà cette transcription
+                    page_livre = int(m.group(1))
+                    titre = m.group(3).strip()
+                    if not any(t["page_livre"] == page_livre and t["titre"] == titre for t in transcriptions):
+                        transcriptions.append({
+                            "page_livre": page_livre,
+                            "document": m.group(2),
+                            "titre": titre,
+                            "page_pdf": page_n,
+                            "source": "audio" if rtype == "transcription_audio" else "video",
+                            "theme": theme_of_page(page_livre),
+                            "texte": [],
+                        })
                     continue
                 if transcriptions and len(line) > 3 and not RE_PAGE_MARK.match(line):
                     transcriptions[-1]["texte"].append(line)
@@ -214,15 +230,18 @@ def parse_txt(txt_path):
 
             # ── Corrigés ──
             if rtype == "corrige":
-                m = RE_CORRIGE.match(line)
+                m = RE_CORRIGE.search(line)
                 if m:
-                    corriges.append({
-                        "page_livre": int(m.group(1)),
-                        "titre": m.group(2).strip(),
-                        "page_pdf": page_n,
-                        "theme": theme_of_page(int(m.group(1))),
-                        "texte": [],
-                    })
+                    page_livre = int(m.group(1))
+                    titre = m.group(2).strip()
+                    if not any(c["page_livre"] == page_livre and c["titre"] == titre for c in corriges):
+                        corriges.append({
+                            "page_livre": page_livre,
+                            "titre": titre,
+                            "page_pdf": page_n,
+                            "theme": theme_of_page(page_livre),
+                            "texte": [],
+                        })
                     continue
                 if corriges and len(line) > 3 and not RE_PAGE_MARK.match(line):
                     corriges[-1]["texte"].append(line)
@@ -232,7 +251,7 @@ def parse_txt(txt_path):
             if current_theme is None:
                 continue
 
-            # Conteneur ? (ligne isolée "A", "B", "C")
+            # Conteneur ?
             if RE_CONTAINER.match(line):
                 flush_conteneur()
                 current_conteneur = {
@@ -245,7 +264,6 @@ def parse_txt(txt_path):
 
             # Titre du conteneur en attente
             if current_conteneur and not current_conteneur["titre"]:
-                # Ignorer les artefacts
                 if line in ("À", "[]", "Documents", "A", "B", "C") or len(line) < 5:
                     continue
                 if RE_PAGE_MARK.match(line):
@@ -277,7 +295,7 @@ def parse_txt(txt_path):
                 pending_question = {"n": int(m.group(1)), "texte": m.group(2).strip()}
                 continue
 
-            # Continuation d'une question en cours
+            # Continuation
             if pending_question is not None:
                 pending_question["texte"] += " " + line
 
@@ -299,17 +317,14 @@ def main(txt_path, out_dir="data"):
 
     os.makedirs(out_dir, exist_ok=True)
 
-    # 1. manuel.json
     manuel = {"themes": [themes_data[t["n"]] for t in THEMES]}
     with open(os.path.join(out_dir, "edito-c1.manuel.json"), "w", encoding="utf-8") as f:
         json.dump(manuel, f, ensure_ascii=False, indent=2)
 
-    # 2. ressources.json
     ressources = {"transcriptions": transcriptions, "corriges": corriges}
     with open(os.path.join(out_dir, "edito-c1.ressources.json"), "w", encoding="utf-8") as f:
         json.dump(ressources, f, ensure_ascii=False, indent=2)
 
-    # 3. Rapport
     print(f"\n✅ Écrit dans {out_dir}/")
     print(f"\n📊 Statistiques :")
     for t in manuel["themes"]:
