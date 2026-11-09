@@ -29,3 +29,9 @@ __pycache__/
 tools/__pycache__/
 edito.html
 oldREADME.md
+# Outils archivés / temporaires
+tools/debug-theme.py
+tools/poc.mjs
+tools/test-layout.py
+tools/out/
+docs/*.old
