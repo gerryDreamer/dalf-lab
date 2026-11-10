@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-tools/label-txt.py — Parsing du TXT Édito C1 (v8).
+tools/label-txt.py — Parsing du TXT Édito C1 (v14).
 
-Version 8 :
-- Whitelist conteneurs (A-G) : ignore T, I, etc.
-- Filtrer les pages vides
-- Fusionner les conteneurs en double (même étiquette)
-- Dédupliquer les sections directes par type
+Version 14 :
+- Retrait de seen_questions (cassait les conteneurs)
+- T12 A retiré (absent du TXT)
+- Matching par titre exact + 3 premiers mots
+- Toutes les corrections précédentes (v12)
 
 Usage :
     python3 tools/label-txt.py [txt_path]
@@ -15,6 +15,7 @@ import json
 import re
 import sys
 import os
+import unicodedata
 
 # ─── Profil Édito C1 ───
 THEMES = [
@@ -32,18 +33,107 @@ THEMES = [
     {"n": 12, "titre": "Protéger la terre, réparer le vivant",     "pages": [169, 188] },
 ]
 
+PAGES_CAHIER = {
+    1: (17, 22), 2: (35, 38), 3: (45, 50), 4: (61, 68),
+    5: (75, 80), 6: (89, 98), 7: (105, 110), 8: (119, 126),
+    9: (133, 144), 10: (149, 156), 11: (163, 168), 12: (177, 188),
+}
+
+# Pages à ignorer : table des matières (1-10) + index (238+)
+IGNORE_PAGES = set(range(1, 11)) | set(range(238, 251))
+
+# ─── Dictionnaire des conteneurs (T12 A retiré — absent du TXT) ───
+CONTAINERS = {
+    1: [
+        {"lettre": "A", "titre": "Je verrai toujours vos visages"},
+        {"lettre": "B", "titre": "Vers un horizon d'apaisement"},
+        {"lettre": "C", "titre": "L'équithérapie en prison"},
+    ],
+    2: [
+        {"lettre": "A", "titre": "Tu voteras oui ou oui au référendum"},
+        {"lettre": "B", "titre": "Comment les populistes s'introduisent dans les démocraties"},
+        {"lettre": "C", "titre": "La crise démocratique est devenue structurelle"},
+        {"lettre": "D", "titre": "Quand les jeunes se mêlent de politique"},
+        {"lettre": "E", "titre": "Tu sais pour qui tu vas voter"},
+    ],
+    3: [
+        {"lettre": "A", "titre": "Change toujours, tu m'intéresses"},
+        {"lettre": "B", "titre": "Changer de métier, oui"},
+        {"lettre": "C", "titre": "Le changement, ça s'accompagne"},
+    ],
+    4: [
+        {"lettre": "A", "titre": "Que faire contre le gaspi"},
+        {"lettre": "B", "titre": "Mourir de chaud"},
+        {"lettre": "C", "titre": "Petite et grande histoire du chauffage"},
+        {"lettre": "D", "titre": "Kumulus, le générateur d'eau atmosphérique et solaire"},
+        {"lettre": "E", "titre": "Tahiti, l'hôpital climatisé grâce à l'eau de mer"},
+        {"lettre": "F", "titre": "Ça nous paraît aberrant d'arroser l'hiver"},
+    ],
+    5: [
+        {"lettre": "A", "titre": "Les jeunes et la culture"},
+        {"lettre": "B", "titre": "Les publics des musées, visiteurs ou acteurs"},
+        {"lettre": "C", "titre": "Liseuse versus livre, le match"},
+    ],
+    6: [
+        {"lettre": "A", "titre": "Les jouets ont-ils un genre"},
+        {"lettre": "B", "titre": "C'est quoi, le féminisme"},
+        {"lettre": "C", "titre": "Une bibliothèque féministe"},
+        {"lettre": "D", "titre": "Être un homme aujourd'hui"},
+        {"lettre": "E", "titre": "Vie commune"},
+        {"lettre": "F", "titre": "On ne peut plus rien dire"},
+    ],
+    7: [
+        {"lettre": "A", "titre": "Requiem pour un joueur"},
+        {"lettre": "B", "titre": "Jouer pour guérir"},
+        {"lettre": "C", "titre": "Le jeu des 1 000 euros"},
+    ],
+    8: [
+        {"lettre": "A", "titre": "Mode d'emploi pour les grands-parents"},
+        {"lettre": "B", "titre": "Alors, cette rentrée"},
+        {"lettre": "C", "titre": "Ils ont un enfant à trois et ne vivent pas ensemble"},
+        {"lettre": "D", "titre": "Belles-mères, les grandes invisibles"},
+        {"lettre": "E", "titre": "Belles-mères au bord de la crise de nerfs"},
+        {"lettre": "F", "titre": "Sous contrôle parental"},
+    ],
+    9: [
+        {"lettre": "A", "titre": "Vieillir sans en avoir le droit"},
+        {"lettre": "B", "titre": "Le sentiment de l'âge"},
+        {"lettre": "C", "titre": "C'est pas tous les jours qu'on prend sa retraite"},
+    ],
+    10: [
+        {"lettre": "A", "titre": "Science friction"},
+        {"lettre": "B", "titre": "Résistance 2050"},
+        {"lettre": "C", "titre": "SonarVision, un guide pour les personnes déficientes visuelles"},
+        {"lettre": "D", "titre": "Quand marcher redevient possible"},
+        {"lettre": "E", "titre": "Les technologies de la santé au service des soins à domicile"},
+        {"lettre": "F", "titre": "Je n'arrive pas à faire mon choix"},
+    ],
+    11: [
+        {"lettre": "A", "titre": "Les bienfaits des comportements de solidarité"},
+        {"lettre": "B", "titre": "Poursuivi pour délit de solidarité"},
+        {"lettre": "C", "titre": "Tu souhaites t'engager toi aussi"},
+    ],
+    12: [
+        # T12 A ("Le vivant entre dans le champ politique") absent du TXT et du PDF.
+        # {"lettre": "A", "titre": "Le vivant entre dans le champ politique"},
+        {"lettre": "B", "titre": "Pour une nouvelle conception des animaux"},
+        {"lettre": "C", "titre": "Loup, comment vivre avec"},
+        {"lettre": "D", "titre": "Madagascar : à la découverte du parc d'Andasibe-Mantadia"},
+        {"lettre": "E", "titre": "Une forêt primaire en Europe de l'Ouest"},
+        {"lettre": "F", "titre": "Je m'émerveille de voir un animal sauvage, mais"},
+    ],
+}
+
 RANGES = {
     "transcription_audio": (198, 217),
     "transcription_video": (218, 221),
     "corrige":             (222, 237),
 }
 
-# Conteneurs valides : A, B, C, D, E, F, G (pas T, I, etc.)
-VALID_CONTAINERS = {"A", "B", "C", "D", "E", "F", "G"}
-
 # ─── Regex ───
+#RE_PAGE_MARK = re.compile(r"(\d{1,3})\s+I\s*\w+")
 RE_PAGE_MARK = re.compile(r"(\d{1,3})\s+I\s*\w+")
-RE_CONTAINER = re.compile(r"^([A-Z])$")
+RE_PAGE_MARK_INV = re.compile(r"\w+\s+I\s+(\d{1,3})")
 RE_SECTION = re.compile(
     r"^\s*(?:\d+\s+)?(Compréhension audiovisuelle|Compréhension orale|Compréhension écrite|"
     r"Production orale|Production écrite|Grammaire|Vocabulaire|Francophonie|"
@@ -63,7 +153,21 @@ RE_THEME = re.compile(r"^Th[eè]me\s+(\d+)\s+p\.\s*(\d+)", re.I)
 RE_THEME_SIMPLE = re.compile(r"^Th[eè]me\s+(\d+)\s*$", re.I)
 
 
+def nz(s):
+    """Normalise une chaîne : minuscules, sans accents, sans ponctuation."""
+    s = s.lower()
+    s = unicodedata.normalize("NFD", s)
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
+    s = s.replace("œ", "oe").replace("æ", "ae")
+    s = s.replace("’", "'").replace("‘", "'")
+    s = s.replace("–", "-").replace("—", "-")
+    s = re.sub(r"[^a-z0-9' ]", " ", s)
+    s = re.sub(r"\s+", " ", s).strip()
+    return s
+
+
 def normalize_line(line):
+    """Nettoie une ligne : espaces insécables, ligatures, apostrophes."""
     line = line.replace("\u00a0", " ").replace("\u202f", " ").replace("\u200b", " ")
     line = line.replace("ﬁ", "fi").replace("ﬂ", "fl")
     line = line.replace("ﬀ", "ff").replace("ﬃ", "ffi").replace("ﬄ", "ffl")
@@ -83,6 +187,33 @@ def theme_of_page(page_n):
     return None
 
 
+def match_container(line, theme_n):
+    """Cherche si la ligne contient le titre d'un conteneur du thème donné.
+    Le titre doit être en début de ligne (ou précédé de A-G).
+    """
+    if theme_n is None or theme_n not in CONTAINERS:
+        return None
+    line_stripped = line.strip()
+    line_nz = nz(line_stripped)
+    if len(line_nz) < 5 or len(line_nz) > 100:
+        return None
+
+    for c in CONTAINERS[theme_n]:
+        titre_nz = nz(c["titre"])
+        # 1. Match exact en début de ligne
+        if line_nz.startswith(titre_nz):
+            return (c["lettre"], c["titre"])
+        # 2. Match avec lettre devant (A Titre)
+        if re.match(rf"^[a-g]\s+{re.escape(titre_nz)}", line_nz):
+            return (c["lettre"], c["titre"])
+        # 3. Match partiel (3 premiers mots) en début de ligne
+        mots = titre_nz.split()
+        if len(mots) >= 3:
+            prefix = " ".join(mots[:3])
+            if len(prefix) >= 10 and line_nz.startswith(prefix):
+                return (c["lettre"], c["titre"])
+    return None
+    
 def parse_txt(txt_path):
     with open(txt_path, encoding="utf-8") as f:
         raw = f.read()
@@ -99,7 +230,6 @@ def parse_txt(txt_path):
     print(f"  Lignes 'Page XX, Titre'       : {n_corr_lines}")
 
     pages_raw = re.split(r"-{10,}", raw.replace("\f", "\n--------PAGE--------\n"))
-    # Filtrer les pages vides
     pages_raw = [p for p in pages_raw if p.strip()]
     print(f"  {len(pages_raw)} pages détectées (non vides)")
 
@@ -116,6 +246,8 @@ def parse_txt(txt_path):
     current_section = None
     pending_question = None
     last_page_n = None
+    in_cahier = False
+    seen_containers = set()
 
     def flush_question():
         nonlocal pending_question
@@ -133,19 +265,7 @@ def parse_txt(txt_path):
         flush_section()
         if current_conteneur and current_conteneur["sections"]:
             if current_theme is not None:
-                # Fusionner avec un conteneur existant de même étiquette
-                existing = None
-                for c in themes_data[current_theme]["conteneurs"]:
-                    if c["etiquette"] == current_conteneur["etiquette"]:
-                        existing = c
-                        break
-                if existing:
-                    # Fusionner les sections
-                    for s in current_conteneur["sections"]:
-                        existing["sections"].append(s)
-                    if not existing.get("titre") and current_conteneur.get("titre"):
-                        existing["titre"] = current_conteneur["titre"]
-                else:
+                if current_conteneur not in themes_data[current_theme]["conteneurs"]:
                     themes_data[current_theme]["conteneurs"].append(current_conteneur)
         current_conteneur = None
 
@@ -156,6 +276,7 @@ def parse_txt(txt_path):
         if not page_lines:
             continue
 
+        # Détection du numéro de page (deux formats : "12 I douze" et "douze I 12")
         page_n = None
         for line in page_lines:
             m = RE_PAGE_MARK.search(line)
@@ -163,24 +284,40 @@ def parse_txt(txt_path):
                 n = int(m.group(1))
                 if 1 <= n <= 250 and (page_n is None or n > page_n):
                     page_n = n
+            else:
+                m = RE_PAGE_MARK_INV.search(line)
+                if m:
+                    n = int(m.group(1))
+                    if 1 <= n <= 250 and (page_n is None or n > page_n):
+                        page_n = n
 
         if page_n is None and last_page_n is not None:
             page_n = last_page_n + 1
         if page_n is not None:
             last_page_n = page_n
 
+        if page_n is not None and page_n in IGNORE_PAGES:
+            continue
+
         page_theme = theme_of_page(page_n)
         if page_theme is not None and current_theme != page_theme:
             flush_conteneur()
             current_theme = page_theme
+            in_cahier = False
+
+        if current_theme and page_n:
+            cahier_start, cahier_end = PAGES_CAHIER.get(current_theme, (999, 999))
+            in_cahier = cahier_start <= page_n <= cahier_end
 
         for line in page_lines:
+            # Thème explicite
             m = RE_THEME.match(line) or RE_THEME_SIMPLE.match(line)
             if m:
                 n = int(m.group(1))
                 if n in themes_data:
                     flush_conteneur()
                     current_theme = n
+                    in_cahier = False
                 continue
 
             # Transcription
@@ -188,9 +325,7 @@ def parse_txt(txt_path):
             if m and len(m.group(3)) > 3:
                 page_livre = int(m.group(1))
                 titre = m.group(3).strip()
-                source = "audio"
-                if page_n and 218 <= page_n <= 221:
-                    source = "video"
+                source = "video" if page_n and 218 <= page_n <= 221 else "audio"
                 if not any(t["page_livre"] == page_livre and t["titre"] == titre for t in transcriptions):
                     transcriptions.append({
                         "page_livre": page_livre,
@@ -221,62 +356,64 @@ def parse_txt(txt_path):
             if current_theme is None:
                 continue
 
-            # Conteneur ? (whitelist A-G)
-            if RE_CONTAINER.match(line) and line.strip() in VALID_CONTAINERS:
-                flush_conteneur()
-                current_conteneur = {
-                    "etiquette": line.strip(),
-                    "titre": "",
-                    "page": page_n,
-                    "sections": [],
-                }
+            # Conteneur (matching par titre, même dans le cahier)
+            matched = match_container(line, current_theme)
+            if matched:
+                lettre, titre = matched
+                if current_conteneur and current_conteneur["etiquette"] == lettre:
+                    continue
+                key = (current_theme, lettre)
+                if key in seen_containers:
+                    flush_conteneur()
+                    for c in themes_data[current_theme]["conteneurs"]:
+                        if c["etiquette"] == lettre:
+                            current_conteneur = c
+                            break
+                    current_section = None
+                else:
+                    seen_containers.add(key)
+                    flush_conteneur()
+                    current_conteneur = {
+                        "etiquette": lettre,
+                        "titre": titre,
+                        "page": page_n,
+                        "sections": [],
+                    }
                 continue
 
-            # Titre du conteneur
-            if current_conteneur and not current_conteneur["titre"]:
-                if line in ("À", "[]", "Documents", "A", "B", "C") or len(line) < 5:
-                    continue
-                if RE_PAGE_MARK.match(line):
-                    continue
-                if not RE_SECTION.match(line) and not RE_QUESTION.match(line):
-                    current_conteneur["titre"] = line
-                    continue
+            # Section (ignorer dans le cahier)
+            if in_cahier:
+                continue
 
-            # Section
             m = RE_SECTION.match(line)
-            if m:
+            if m and current_conteneur is not None:
                 flush_section()
                 sec_name = m.group(1).lower().replace(" ", "_")
-                target = (current_conteneur["sections"]
-                          if current_conteneur
-                          else themes_data[current_theme]["sections_directes"])
-                target.append({"type": sec_name, "page": page_n, "questions": []})
-                current_section = target[-1]
+                target = current_conteneur["sections"]
+                existing = None
+                for s in target:
+                    if s["type"] == sec_name:
+                        existing = s
+                        break
+                if existing:
+                    current_section = existing
+                else:
+                    target.append({"type": sec_name, "page": page_n, "questions": []})
+                    current_section = target[-1]
                 continue
 
             # Question
             m = RE_QUESTION.match(line)
             if m and current_section is not None:
                 flush_question()
-                pending_question = {"n": int(m.group(1)), "texte": m.group(2).strip()}
+                n = len(current_section["questions"]) + 1
+                pending_question = {"n": n, "texte": m.group(2).strip()}
                 continue
 
             if pending_question is not None:
                 pending_question["texte"] += " " + line
 
     flush_conteneur()
-
-    # Dédupliquer les sections directes par type (fusionner les questions)
-    for th_n, th_data in themes_data.items():
-        seen = {}
-        deduped = []
-        for s in th_data["sections_directes"]:
-            if s["type"] in seen:
-                seen[s["type"]]["questions"].extend(s["questions"])
-            else:
-                seen[s["type"]] = s
-                deduped.append(s)
-        th_data["sections_directes"] = deduped
 
     for t in transcriptions + corriges:
         t["texte"] = "\n".join(t["texte"]).strip()
@@ -306,20 +443,19 @@ def main(txt_path, out_dir="data"):
     print(f"\n📊 Statistiques :")
     total_q = 0
     total_c = 0
-    total_s = 0
     for t in manuel["themes"]:
         nq = sum(len(s["questions"]) for c in t["conteneurs"] for s in c["sections"])
         nq += sum(len(s["questions"]) for s in t["sections_directes"])
-        ns = sum(len(c["sections"]) for c in t["conteneurs"]) + len(t["sections_directes"])
         nc = len(t["conteneurs"])
+        attendu = len(CONTAINERS[t["n"]])
         total_q += nq
         total_c += nc
-        total_s += ns
-        print(f"  Thème {t['n']:2} : {nc} conteneurs, {ns} sections, {nq} questions")
+        check = "✅" if nc == attendu else f"⚠️ (attendu {attendu})"
+        print(f"  Thème {t['n']:2} : {nc} conteneurs {check}, {nq} questions")
 
     print(f"\n  Transcriptions : {len(transcriptions)}")
     print(f"  Corrigés       : {len(corriges)}")
-    print(f"  Total          : {total_c} conteneurs, {total_s} sections, {total_q} questions")
+    print(f"  Total          : {total_c} conteneurs, {total_q} questions")
 
 
 if __name__ == "__main__":

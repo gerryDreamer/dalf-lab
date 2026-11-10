@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>DALF Lab — Atelier</title>
+<style>
+:root { --bg:#f3f6f6; --cd:#fff; --tx:#14302f; --mu:#587170; --ac:#0b7a82; --ok:#237a4b; --ko:#b73a3a; --ln:#cfdddc; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--tx); font:16px/1.5 system-ui,-apple-system,sans-serif; }
+header { background:var(--cd); padding:12px 20px; border-bottom:2px solid var(--ln); display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:10; }
+h1 { margin:0; font-size:1.2rem; }
+.header-actions { display:flex; gap:8px; }
+button { padding:8px 14px; border:1.5px solid var(--ln); background:var(--cd); color:var(--tx); border-radius:6px; font:inherit; cursor:pointer; }
+button:hover { background:var(--bg); }
+button.primary { background:var(--ac); color:#fff; border-color:var(--ac); }
+button.danger { background:var(--ko); color:#fff; border-color:var(--ko); }
+nav.tabs { display:flex; gap:4px; padding:10px 20px; background:var(--cd); border-bottom:1px solid var(--ln); overflow-x:auto; }
+nav.tabs button { border-radius:0; border-bottom:3px solid transparent; }
+nav.tabs button.on { border-bottom-color:var(--ac); color:var(--ac); font-weight:700; }
+main { max-width:1100px; margin:0 auto; padding:20px; }
+.stats { background:var(--cd); padding:12px 16px; border-radius:6px; margin-bottom:16px; border:1.5px solid var(--ln); display:flex; gap:20px; flex-wrap:wrap; }
+.stats div { display:flex; gap:6px; }
+.stats b { color:var(--ac); }
+.conteneur { background:var(--cd); border:1.5px solid var(--ln); border-radius:6px; margin-bottom:16px; overflow:hidden; }
+.conteneur-header { padding:12px 16px; background:#e8f0ef; display:flex; justify-content:space-between; align-items:center; }
+.conteneur-header h2 { margin:0; font-size:1.1rem; }
+.section { padding:12px 16px; border-top:1px solid var(--ln); }
+.section-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.section-header h3 { margin:0; font-size:0.95rem; color:var(--ac); }
+.question { background:#fafcfc; border:1px solid var(--ln); border-radius:4px; padding:12px; margin-bottom:10px; }
+.question-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; gap:10px; }
+.question-id { font-size:0.8rem; color:var(--mu); font-family:monospace; }
+.question-texte { font-weight:600; flex:1; }
+.qcm-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.qcm-choix { display:flex; gap:6px; align-items:center; }
+.qcm-choix input[type=text] { flex:1; padding:6px 10px; border:1px solid var(--ln); border-radius:4px; font:inherit; font-size:0.9rem; }
+.qcm-choix input[type=radio] { cursor:pointer; }
+.qcm-actions { margin-top:10px; display:flex; gap:8px; }
+.saved { color:var(--ok); font-size:0.85rem; }
+.empty { color:var(--mu); font-style:italic; padding:12px; text-align:center; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🛠️ Atelier — Édito C1</h1>
+  <div class="header-actions">
+    <span id="save-status" class="saved"></span>
+    <button onclick="document.getElementById('import-file').click()">📤 Importer QCM auto</button>
+<input type="file" id="import-file" accept=".json" style="display:none" onchange="importAuto(this)">
+    <button onclick="exportJSON()">📥 Exporter lecons.json</button>
+    <button class="danger" onclick="resetAll()">🗑️ Tout réinitialiser</button>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs"></nav>
+
+<main>
+  <div class="stats" id="stats"></div>
+  <div id="content"></div>
+</main>
+
+<script>
+// ─── État ───
+let LECONS = null;
+let currentTheme = 1;
+let EDITS = {};  // { question_id: { choix: [...], bonne: int } }
+
+// ─── Chargement ───
+async function load() {
+  try {
+    const r = await fetch("/data/edito-c1.lecons-v2.json");
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    LECONS = await r.json();
+  } catch (e) {
+    document.getElementById("content").innerHTML = `<p class="empty">❌ Impossible de charger lecons.json : ${e.message}</p>
+      <p class="empty">Lancez <code>python3 -m http.server 8000</code> dans ~/dalf-lab, puis ouvrez <a href="http://localhost:8000/tools/atelier.html">http://localhost:8000/tools/atelier.html</a></p>`;
+    return;
+  }
+  
+  // Charger les éditions sauvegardées
+  try {
+    EDITS = JSON.parse(localStorage.getItem("dalf-atelier-edits") || "{}");
+  } catch (e) { EDITS = {}; }
+  
+  renderTabs();
+  renderTheme();
+}
+
+// ─── Sauvegarde ───
+function save() {
+  localStorage.setItem("dalf-atelier-edits", JSON.stringify(EDITS));
+  const s = document.getElementById("save-status");
+  s.textContent = "✅ Sauvegardé " + new Date().toLocaleTimeString();
+  setTimeout(() => { s.textContent = ""; }, 3000);
+}
+
+// ─── Tabs ───
+function renderTabs() {
+  const tabs = document.getElementById("tabs");
+  tabs.innerHTML = LECONS.themes.map(t => 
+    `<button class="${t.n === currentTheme ? 'on' : ''}" onclick="selectTheme(${t.n})">T${t.n} — ${escapeHtml(t.titre.slice(0, 30))}…</button>`
+  ).join("");
+}
+
+function selectTheme(n) {
+  currentTheme = n;
+  renderTabs();
+  renderTheme();
+}
+
+// ─── Stats ───
+function countAll() {
+  let total = 0, done = 0;
+  LECONS.themes.forEach(t => {
+    t.conteneurs.forEach(c => {
+      c.sections.forEach(s => {
+        s.questions.forEach(q => {
+          total++;
+          if (EDITS[q.id] && EDITS[q.id].choix && EDITS[q.id].choix.filter(x => x).length === 4) done++;
+        });
+      });
+    });
+  });
+  return { total, done };
+}
+
+// ─── Rendu du thème ───
+function renderTheme() {
+  const theme = LECONS.themes.find(t => t.n === currentTheme);
+  if (!theme) return;
+
+  // Stats
+  const { total, done } = countAll();
+  document.getElementById("stats").innerHTML = `
+    <div><b>${LECONS.themes.length}</b> thèmes</div>
+    <div><b>${LECONS.themes.reduce((s, t) => s + t.conteneurs.length, 0)}</b> conteneurs</div>
+    <div><b>${total}</b> questions</div>
+    <div><b>${done}</b> QCM remplis</div>
+    <div><b>${Math.round(done / total * 100)}%</b> progression</div>
+  `;
+
+  // Conteneurs
+  let html = "";
+  if (theme.conteneurs.length === 0) {
+    html = `<p class="empty">Aucun conteneur pour ce thème.</p>`;
+  } else {
+    theme.conteneurs.forEach(c => {
+      html += `<div class="conteneur">
+        <div class="conteneur-header">
+          <h2>${c.etiquette} — ${escapeHtml(c.titre || "(sans titre)")}</h2>
+          <span class="mu">page ${c.page || "?"}</span>
+        </div>`;
+      
+      if (c.sections.length === 0) {
+        html += `<p class="empty">Aucune section (conteneur vide)</p>`;
+      } else {
+        c.sections.forEach(s => {
+          html += `<div class="section">
+            <div class="section-header">
+              <h3>${escapeHtml(s.type)}</h3>
+              <span class="mu">${s.questions.length} question(s)</span>
+            </div>`;
+          
+          if (s.questions.length === 0) {
+            html += `<p class="empty">Aucune question</p>`;
+          } else {
+            s.questions.forEach(q => {
+              html += renderQuestion(q);
+            });
+          }
+          html += `</div>`;
+        });
+      }
+      html += `</div>`;
+    });
+  }
+  
+  document.getElementById("content").innerHTML = html;
+}
+
+// ─── Rendu d'une question ───
+function renderQuestion(q) {
+  // 1. Si c'est un texte à lire
+  if (q.type === "texte") {
+    return `<div class="question" style="background:#f0f8ff; border-left:4px solid var(--ac);">
+      <div class="question-header">
+        <span class="question-id">${q.id} (TEXTE À LIRE)</span>
+      </div>
+      <div style="font-family:Georgia, serif; line-height:1.6; padding:10px; white-space:pre-wrap;">${escapeHtml(q.texte)}</div>
+    </div>`;
+  }
+
+  // 2. Si c'est une tâche ouverte (Prod Orale / Prod Écrite)
+  if (q.type === "tache_ouverte") {
+    return `<div class="question" style="background:#fffaf0; border-left:4px solid #d97706;">
+      <div class="question-header">
+        <span class="question-id" style="color:#b45309;">${q.id} (TÂCHE OUVERTE)</span>
+        <span class="question-texte">${escapeHtml(q.texte)}</span>
+      </div>
+      <div style="margin-top:10px; background:#fff; padding:10px; border-radius:4px;">
+        <b>💡 Indices pour vous aider :</b>
+        <ul style="margin:5px 0 0 20px;">
+          ${(q.indices || []).map(i => `<li>${escapeHtml(i)}</li>`).join("") || "<li><i>Aucun indice généré</i></li>"}
+        </ul>
+      </div>
+    </div>`;
+  }
+
+  // 3. Si c'est un QCM normal (on garde le code existant)
+  const edit = EDITS[q.id] || { choix: ["", "", "", ""], bonne: 0 };
+  
+  return `<div class="question">
+    <div class="question-header">
+      <span class="question-id">${q.id}</span>
+      <span class="question-texte">${escapeHtml(q.texte)}</span>
+    </div>
+    <div class="qcm-grid">
+      ${[0,1,2,3].map(i => `
+        <div class="qcm-choix">
+          <input type="radio" name="radio-${q.id}" 
+            ${edit.bonne === i ? "checked" : ""} 
+            onchange="setBonne('${q.id}', ${i})"
+            title="Bonne réponse">
+          <input type="text" 
+            placeholder="Choix ${i+1}"
+            value="${escapeHtml(edit.choix[i] || "")}"
+            oninput="setChoix('${q.id}', ${i}, this.value)">
+        </div>
+      `).join("")}
+    </div>
+    <div class="qcm-actions">
+      <button onclick="clearQuestion('${q.id}')">Effacer</button>
+    </div>
+  </div>`;
+}
+// ─── Éditions ───
+function ensureEdit(id) {
+  if (!EDITS[id]) EDITS[id] = { choix: ["", "", "", ""], bonne: 0 };
+  return EDITS[id];
+}
+
+function setChoix(id, i, val) {
+  const e = ensureEdit(id);
+  e.choix[i] = val;
+  save();
+}
+
+function setBonne(id, i) {
+  const e = ensureEdit(id);
+  e.bonne = i;
+  save();
+}
+
+function clearQuestion(id) {
+  delete EDITS[id];
+  save();
+  renderTheme();
+}
+
+// ─── Export ───
+function exportJSON() {
+  // Injecter les éditions dans LECONS
+  const copy = JSON.parse(JSON.stringify(LECONS));
+  copy.themes.forEach(t => {
+    t.conteneurs.forEach(c => {
+      c.sections.forEach(s => {
+        s.questions.forEach(q => {
+          const edit = EDITS[q.id];
+          if (edit && edit.choix.filter(x => x).length === 4) {
+            q.qcm = {
+              choix: edit.choix,
+              bonne: edit.bonne
+            };
+          } else {
+            q.qcm = [];
+          }
+        });
+      });
+    });
+  });
+  
+  const blob = new Blob([JSON.stringify(copy, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "edito-c1.lecons.json";
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function resetAll() {
+  if (!confirm("Supprimer toutes les éditions ?")) return;
+  EDITS = {};
+  localStorage.removeItem("dalf-atelier-edits");
+  renderTheme();
+}
+
+// ─── Utils ───
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+
+async function importAuto(input) {
+  const file = input.files[0];
+  if (!file) return;
+  try {
+    const text = await file.text();
+    const auto = JSON.parse(text);
+    
+    let imported = 0;
+    for (const [qid, qcm] of Object.entries(auto)) {
+      EDITS[qid] = {
+        choix: qcm.choix,
+        bonne: qcm.bonne
+      };
+      imported++;
+    }
+    save();
+    renderTheme();
+    alert(`✅ ${imported} QCM importés avec succès !`);
+  } catch (e) {
+    alert("❌ Erreur lors de l'import : " + e.message);
+  }
+}
+
+// ─── Démarrage ───
+load();
+</script>
+
+</body>
+</html>

@@ -225,7 +225,9 @@ def gen_lecons(manuel, ressources):
         "themes": [],
     }
 
-    seen_ids = set()  # ← AJOUTER
+   # seen_ids = set()  # ← AJOUTER
+    seen_ids = set()
+    seen_texts = set()  # dédup par texte
 
     for t in themes:
         n = t["n"]
@@ -260,16 +262,19 @@ def gen_lecons(manuel, ressources):
                 questions = []
                 for q in sec.get("questions", []):
                     q_id = f"{sec_id}-q{q.get('n', 0)}"
-                    if q_id in seen_ids:  # ← AJOUTER
+                    texte = q.get("texte", "").strip().lower()
+                    # Dédup par id ET par texte (évite les doublons entre conteneurs et sections directes)
+                    if q_id in seen_ids or texte in seen_texts:
                         continue
                     seen_ids.add(q_id)
+                    seen_texts.add(texte)
                     questions.append({
                         "id": q_id,
                         "n": q.get("n"),
                         "texte": q.get("texte", ""),
                         "qcm": [],
                     })
-
+                    
                 if questions:  # ← ne garder que les sections non vides
                     sec_data = {
                         "id": sec_id,

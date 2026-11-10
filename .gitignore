@@ -35,3 +35,6 @@ tools/poc.mjs
 tools/test-layout.py
 tools/out/
 docs/*.old
+docs/parser.txt
+IA/gemini
+IA/
