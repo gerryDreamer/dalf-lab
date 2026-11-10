@@ -42,3 +42,4 @@ audios/*.mp3
 images/*.jpg
 images/*.png
 images/*.jpeg
+*~
