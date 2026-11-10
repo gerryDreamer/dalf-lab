@@ -1,0 +1,101 @@
+{
+  "theme": 4,
+  "titre": "Souffler le chaud et le froid",
+  "parties": {
+    "manuel": {
+      "conteneurs": [
+        {
+          "type": "objectifs",
+          "items": [
+            "Appréhender les défis actuels liés à l’environnement",
+            "Identifier des pistes de solutions face à la crise environnementale",
+            "Distinguer les différentes valeurs de si de chaleur"
+          ]
+        },
+        {
+          "type": "documents",
+          "items": [
+            {
+              "id": "A",
+              "titre": "Que faire contre le gaspillage d’eau ?",
+              "extrait": "Extraits sur la consommation d’eau domestique, gestes d’économie, etc."
+            }
+          ]
+        },
+        {
+          "type": "questions",
+          "items": [
+            {
+              "c": "C",
+              "t": "En groupes ! Au fait… Situation : Dans vos bureaux, les services généraux ont d"
+            },
+            {
+              "c": "C",
+              "t": "Le chauffage occupe en France une place importante dans les émissions de gaz à e"
+            },
+            {
+              "c": "E",
+              "t": "Quelle spécifi cité permet à l'hôpital de Papeete d'utiliser le système de clima"
+            },
+            {
+              "c": "E",
+              "t": "Pourquoi faut-il nettoyer fréquemment les filtres ? a. Pour éviter le mélange d"
+            },
+            {
+              "c": "E",
+              "t": "En quoi la situation géologique de l'île favorise-t-elle le travail des ingénieu"
+            },
+            {
+              "c": "E",
+              "t": "Qu'est ce qui coûte le plus cher dans la mise en place d'un SWAC ? cinquante-sep"
+            },
+            {
+              "c": "E",
+              "t": "Quelle ressource est utilisée pour produire de l'électricité à Tahiti ?"
+            },
+            {
+              "c": "E",
+              "t": "Quels sont les avantages du SWAC évoqués par les personnes interrogées à l'hôpit"
+            },
+            {
+              "c": "E",
+              "t": "Monologue suivi C1 Avec la multiplication des vagues de chaleur, les ventes de c"
+            },
+            {
+              "c": "F",
+              "t": "Quels sont les avantages et inconvénients des AMAP… de l'agriculture paysanne (A"
+            },
+            {
+              "c": "F",
+              "t": "En groupes ! Choisissez un des points de vue, faites des recherches, puis direct"
+            },
+            {
+              "c": "F",
+              "t": "À deux ! Identifi ez ensemble la valeur de si, puis dites chacun(e) ce que vous "
+            },
+            {
+              "c": "F",
+              "t": "Observez les énoncés suivants. Quel est le rôle de la proposition introduite par"
+            }
+          ]
+        }
+      ]
+    },
+    "cahier": {
+      "sections": [
+        {
+          "titre": "Objectifs",
+          "contenu": "Appréhender les défis actuels liés à l’environnement; Identifier des pistes de solutions face à la crise environnementale; Distinguer les différentes valeurs de si de chaleur"
+        },
+        {
+          "titre": "Documents",
+          "contenu": "Document A – Que faire contre le gaspillage d’eau ? (extraits sur la consommation d’eau domestique, gestes d’économie, etc.)"
+        },
+        {
+          "titre": "Questions d’entraînement",
+          "contenu": "Liste des questions C, E, F telles que présentées dans le manuel"
+        }
+      ]
+    }
+  }
+}

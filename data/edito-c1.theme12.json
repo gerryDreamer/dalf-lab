@@ -1,0 +1,70 @@
+{
+  "theme": 12,
+  "titre": "Vous réglez en espèce(s) ?",
+  "parties": {
+    "manuel": {
+      "conteneurs": [
+        "Reconsidérer notre rapport au vivant",
+        "Synthèse rédiger une",
+        "Décrire un milieu naturel",
+        "Former un groupe nominal avec de, des ou d’ + nom sur notre relation au vivant"
+      ]
+    },
+    "cahier": {
+      "sections": [
+        {
+          "code": "B",
+          "texte": "En groupes ! Faites des recherches sur d'autres types de communication développé"
+        },
+        {
+          "code": "B",
+          "texte": "Débat DALF C1 Pensez-vous que l'établissement d'un rapport différent de l'être h"
+        },
+        {
+          "code": "C",
+          "texte": "Vous souhaitez devenir bénévole dans l'association OPPAL. Rédigez votre lettre d"
+        },
+        {
+          "code": "C",
+          "texte": "À deux ! Situation : Un nouveau Plan loup va être adopté au Parlement pour perme"
+        },
+        {
+          "code": "C",
+          "texte": "Monologue suivi C1 Selon vous, la chasse est-elle une pratique bénéfi que ou néf"
+        },
+        {
+          "code": "D",
+          "texte": "Relevez les expressions permettant d'évoquer la Pensez à recourir à des métaphor"
+        },
+        {
+          "code": "D",
+          "texte": "Quelle expression signifi e « ressentir une faim sens (vue, ouïe, odorat…). subi"
+        },
+        {
+          "code": "D",
+          "texte": "Quel est le meilleur moment pour visiter le parc ? Production orale"
+        },
+        {
+          "code": "D",
+          "texte": "Quels sont les avantages de la visite guidée ?"
+        },
+        {
+          "code": "D",
+          "texte": "Dans cette chronique, à quels sens Maurice 8 Monologue suivi DALF C1 Coulibaly f"
+        },
+        {
+          "code": "E",
+          "texte": "Observez les énoncés suivants. De ou des introduisent-ils un complément de nom,"
+        },
+        {
+          "code": "E",
+          "texte": "Complétez avec des exemples de l'échauffement. Exemples Règles de magnifiques pa"
+        },
+        {
+          "code": "E",
+          "texte": "Rédigez un petit article consacré à un parc naturel pour un guide de voyage en l"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "theme": 2,
+  "titre": "SOS démocratie",
+  "parties": {
+    "manuel": {
+      "conteneurs": [
+        {
+          "type": "Objectifs",
+          "items": [
+            "Appréhender les défis actuels de la démocratie",
+            "Rédiger un essai argumenté",
+            "Identifier des pistes de ressourcement démocratique",
+            "Assurer la cohérence et la cohésion d’un texte avec des connecteurs logiques"
+          ]
+        },
+        {
+          "type": "Documents",
+          "items": [
+            "Tu voteras oui ou oui au référendum (audio RFI)",
+            "Le monde en questions (audio RFI)"
+          ]
+        },
+        {
+          "type": "Activités",
+          "items": [
+            "Compréhension orale 3 (questions 1‑6)",
+            "Production orale (chronique d’une minute)",
+            "Analyse d’infographie sur le ressenti des Français envers la politique",
+            "Production écrite (enquête imaginaire dans le pays)",
+            "Compréhension orale 4 (populisme et démocratie)"
+          ]
+        }
+      ]
+    },
+    "cahier": {
+      "sections": [
+        {
+          "code": "A",
+          "questions": [
+            "Choisissez un sujet politique à la une de l'actualité de votre pays. À la manière",
+            "Et vous, que ressentez-vous par rapport à la politique ? Partagez vos réponses",
+            "Découvrez à présent le ressenti des Français. Regardez l'infographie. Qu'est-ce qui vous frappe le plus ?",
+            "À votre avis, si l'on réalisait cette même enquête dans votre pays, quels en seraient les résultats ?"
+          ]
+        },
+        {
+          "code": "B",
+          "questions": [
+            "Dans sa chronique, Bruno Daroux souligne que les valeurs des dirigeants populistes",
+            "Monologue suivi DALF C1 : D'après vous, nos sociétés sont‑elles en voie de décadence ?",
+            "À la veille d'un scrutin important, vous décidez de sensibiliser vos concitoyens"
+          ]
+        },
+        {
+          "code": "C",
+          "questions": [
+            "Selon Bruno Cautrès, que reprochent les Français au monde politique ?",
+            "En quoi le deuxième paragraphe du texte explique‑t‑il bien le titre choisi ?",
+            "À deux ! Discutez de la perception actuelle du monde politique. Aidez‑vous des questions",
+            "Monologue suivi DALF C1 : On entend souvent parler dans les médias de « politique »",
+            "Vous êtes membre d'un parti politique. Vous rédigez une charte en 10 points"
+          ]
+        },
+        {
+          "code": "D",
+          "questions": [
+            "Échangez vos points de vue sur l'évolution actuelle de l'engagement politique",
+            "Débat DALF C1 : Vote obligatoire ou vote facultatif ? En 1893, lors de la première...",
+            "Vous venez d'écouter une politologue et un homme politique parler de l'attitude"
+          ]
+        },
+        {
+          "code": "E",
+          "questions": [
+            "Que pensez‑vous de ce document (pertinence des propos échangés, registre linguistique)",
+            "On entend souvent que les jeunes ne s'intéressent plus à la politique. Êtes‑vous d'accord ?",
+            "En groupes ! Situation : Vous êtes à un repas de famille, le dimanche. Trois générations…",
+            "Préparez une courte intervention orale dans laquelle vous ferez ressortir les causes",
+            "Retrouvez les mots de la liste correspondant aux définitions suivantes",
+            "Décrivez l'organisation et le paysage politique de votre pays. Quelles seraient les principales caractéristiques ?",
+            "Écoutez à nouveau la piste 4. Grâce à quels éléments cette interview est‑elle fiable ?",
+            "Retrouvez les liens logiques. Que placez‑vous devant chaque série de connecteurs"
+          ]
+        }
+      ]
+    }
+  }
+}

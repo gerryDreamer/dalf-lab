@@ -1,0 +1,345 @@
+{
+  "theme": 1,
+  "titre": "Justice, quelles alternatives ?",
+  "objectifs": [
+    "S’informer sur la justice restaurative",
+    "Argumenter sur la place de la médiation animale en prison",
+    "Résumer un texte sur la justice restaurative",
+    "Choisir la voix active ou passive pour servir son propos"
+  ],
+  "parties": {
+    "manuel": {
+      "conteneurs": [
+        {
+          "lettre": "A",
+          "titre": "Je verrai toujours vos visages",
+          "sections": [
+            {
+              "type": "comprehension_audiovisuelle",
+              "audio": "editoc1_piste_01.mp3",
+              "encadre": {
+                "titre": "Au fait !",
+                "texte": "Durant les médiations restauratives, il est recouru au bâton de parole. Hérité des traditions amérindiennes, c’est un outil servant à réguler la parole au sein d’un groupe. Il permet à chacun de s’exprimer sans être interrompu. Quand le détenteur du bâton n’a plus rien à dire, il le passe à un autre membre du groupe qui s’exprime à son tour."
+              },
+              "questions": [
+                {
+                  "numero": 1,
+                  "texte": "Quel est le thème du film ?",
+                  "type": "tache_ouverte"
+                },
+                {
+                  "numero": 2,
+                  "texte": "Quel est l’objectif de ce type de processus ?",
+                  "type": "tache_ouverte"
+                },
+                {
+                  "numero": 3,
+                  "texte": "Quelles sont les trois « catégories » de personnes impliquées dans ce processus ?",
+                  "type": "tache_ouverte"
+                },
+                {
+                  "numero": 4,
+                  "texte": "Quelles règles les animateurs doivent-ils respecter ?",
+                  "type": "tache_ouverte"
+                },
+                {
+                  "numero": 5,
+                  "texte": "Deux façons de mettre en place ce processus sont abordées dans la bande-annonce. Lesquelles ?",
+                  "type": "tache_ouverte"
+                },
+                {
+                  "numero": 6,
+                  "texte": "Qu’est-ce qui favorise l’émergence d’une parole authentique ?",
+                  "type": "tache_ouverte"
+                },
+                {
+                  "numero": 7,
+                  "texte": "Qu’est-ce que la bande-annonce suggère des relations entre les personnes impliquées dans le processus ?",
+                  "type": "tache_ouverte"
+                }
+              ]
+            },
+            {
+              "type": "production_orale",
+              "questions": [
+                {
+                  "numero": 8,
+                  "modalite": "À deux !",
+                  "texte": "Cette bande-annonce vous a-t-elle donné envie de voir le film ? Pourquoi ?",
+                  "type": "tache_ouverte"
+                },
+                {
+                  "numero": 9,
+                  "texte": "Quels films, séries ou romans en lien avec le monde judiciaire pourriez-vous recommander et pourquoi ?",
+                  "type": "tache_ouverte"
+                },
+                {
+                  "numero": 10,
+                  "texte": "Comment les médias influencent-ils la perception de la justice dans la société, d’après vous ? Donnez des exemples.",
+                  "type": "tache_ouverte"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lettre": "B",
+          "titre": "Vers un horizon d’apaisement",
+          "sections": [
+            {
+              "type": "comprehension_ecrite",
+              "texte_lecture": "[…] Le […] film Je verrai toujours vos visages, de Jeanne Herry, offre un merveilleux coup de projecteur sur la justice restaurative. Il décrit parfaitement le parcours des personnes victimes et auteurs qui s’inscrivent dans cette démarche, pour accéder à la parole, entendre et comprendre mutuellement le pourquoi et le comment de l’infraction, quelle que soit sa nature, et pour cheminer vers un horizon d’apaisement.\nLa justice restaurative offre un espace de parole, de dialogue, voire de rencontre, sécurisé et sécurisant, aux personnes victimes et aux personnes auteurs d’infraction pénale qui le souhaitent. Strictement volontaire, une mesure de justice restaurative s’inscrit en France en complémentarité des réponses judiciaires et pénales.\nLa justice restaurative n’est pas un phénomène récent. Elle justifie de près de cinquante ans d’expérience dans le monde. En France, la première expérimentation date de 2010, mise en œuvre par France Victimes, la maison centrale de Poissy, l’École nationale d’administration pénitentiaire (ENAP) et ceux qui allaient créer en 2013 une association, l’Institut français pour la justice restaurative (IFJR). Les praticiens et praticiennes, comme les chercheurs et les chercheuses qui s’y intéressent, ont pu en mesurer les effets bénéfiques.\nLe potentiel de la justice restaurative est vaste. En 2022, près de 300 personnes (293) se sont engagées dans le processus de 173 mesures de justice restaurative. Nous estimons à plus de 900 le nombre de personnes qui y ont eu recours depuis les premières expériences. En 2022, 165 de ces mesures de justice restaurative étaient des médiations restauratives, pour des délits graves, voire des crimes : violences volontaires, y compris braquages ; violences sexuelles, y compris viols et incestes ; violences conjugales, violences routières, notamment.\nCes mesures sont généralement mises en œuvre après le procès pénal, au cours de l’exécution de la peine. Les personnes victimes y font appel, car elles n’ont pas pu accéder, à la hauteur de ce qu’elles souhaitaient, à la parole. Elles n’ont pas pu faire le récit des répercussions qu’elles ont subies à l’auteur. Lui n’a pas eu l’opportunité de les entendre, de les comprendre et d’y répondre pour les reconnaître. Ces personnes le peuvent avec la justice restaurative.\nLe potentiel de la justice restaurative est vaste. En Belgique, des processus de justice restaurative sont mis en œuvre en parallèle des procès des attentats qui ont touché la France et la Belgique. Les personnes qui font appel à la justice restaurative le font en confiance des principes que la loi leur garantit.\n\nLa justice restaurative complémentaire de la procédure pénale\nLes processus de justice restaurative sont animés par des personnes spécialement formées afin d’interdire toute forme de revictimisation (professionnels de l’administration pénitentiaire, de la Protection judiciaire de la jeunesse et des associations d’aide aux victimes). Ils sont focalisés sur les attentes de ceux et celles qui y font appel, les animateurs et les animatrices entendent concrètement ce que disent les personnes impliquées.\nCes mesures de justice restaurative appartiennent aux participants et aux participantes qui choisissent eux-mêmes d’y entrer et d’en sortir à tout moment, à tous les stades de la procédure, quelle que soit la nature de l’infraction, en toute confidentialité, sous le contrôle de conformité de l’autorité judiciaire ou, à sa demande, de l’administration pénitentiaire.\nAucun aménagement de peine ne sera automatiquement accordé à l’auteur du fait de sa participation à une mesure de justice restaurative. En conséquence, la justice restaurative, complémentaire de la procédure pénale, ne peut en aucun cas s’y substituer. […]\n\nLe lieu d’une libération par la parole\nAinsi, la médiation restaurative, complémentaire, ne peut en aucun cas être assimilée à la médiation pénale, alternative au procès pénal. La loi reconnaît aux personnes victimes et aux personnes auteurs d’infraction un droit à accéder à la justice restaurative. Pour les victimes en particulier, elle constitue un moyen d’obtenir réparation de leurs préjudices de toute nature. […] Leur permettre d’accéder effectivement à ce droit, alors que ces personnes le demandent, c’est aussi les écouter et les croire.\nCertains peuvent être surpris de voir dans le film, mais aussi dans les retours d’expérience de participants […], que les résultats permettent d'atteindre une libération par la parole. Ces principes sont parfaitement connus et maîtrisés.\nIls sont le fruit de la méthodologie mise en œuvre, caractérisée par une attention toute particulière prêtée à la préparation individuelle des participants.\nCette préparation vise à permettre aux participants de définir précisément leurs attentes, à connaître leurs limites pour assurer leur sécurité et à savoir entrer en communication l’un avec l’autre. Elle leur permet de s’approprier le processus. Cette préparation, restauratrice en elle-même, peut s’arrêter à ce stade (et malgré tout contribuer au cheminement de la personne) ou déboucher sur un processus de communication, voire de dialogue, dont la rencontre n’est qu’une modalité parmi d’autres.\n\nFaciliter le chemin de la réparation\nC’est à l’issue d’une telle préparation que la parole peut devenir un moyen de répondre et de surmonter la violence. Aujourd’hui, il convient de considérer qu’il existe de multiples espaces complémentaires pour répondre aux violences de toutes sortes : justice pénale, justice restaurative, approches thérapeutiques, notamment.\nDepuis 2010, l’IFJR et France Victimes s’engagent pour offrir l’approche de la justice restaurative aux personnes victimes qui le souhaitent. Individuellement, chacun est libre de définir le chemin par lequel il accédera à la réparation, à la restauration, voire à une certaine forme de guérison.\nNous avons toujours affirmé que la justice restaurative n’est pas la panacée et qu’elle n’a pas vocation à répondre à toutes les situations individuelles. Cependant, collectivement, nous avons le devoir de rendre chacune de ces voies la plus ouverte et accessible possible, afin de faciliter ce cheminement.",
+              "questions": [
+                {
+                  "numero": 1,
+                  "texte": "Les signataires de cette tribune…",
+                  "type": "qcm",
+                  "choix": [
+                    "a. s'interrogent sur les effets de la justice restaurative.",
+                    "b. défendent la justice restaurative : elle devrait peu à peu remplacer la justice pénale.",
+                    "c. mettent en avant les possibilités qu'offre la justice restaurative."
+                  ],
+                  "bonne": 2
+                },
+                {
+                  "numero": 2,
+                  "texte": "Qui oblige les auteurs d'infraction à entamer une démarche de justice restaurative ?",
+                  "type": "tache_ouverte"
+                },
+                {
+                  "numero": 3,
+                  "texte": "Différents acteurs en charge du milieu carcéral ont contribué à l'introduction de la justice restaurative en France.",
+                  "type": "vrai_faux",
+                  "justification_requise": true
+                },
+                {
+                  "numero": 4,
+                  "texte": "Pour les signataires de cette tribune, pourquoi la justice restaurative est-elle nécessaire à côté de la justice pénale ?",
+                  "type": "tache_ouverte"
+                },
+                {
+                  "numero": 5,
+                  "texte": "Expliquez le terme « revictimisation » (l. 53).",
+                  "type": "tache_ouverte"
+                },
+                {
+                  "numero": 6,
+                  "texte": "En quoi consiste la phase de préparation et que permet-elle ?",
+                  "type": "tache_ouverte"
+                },
+                {
+                  "numero": 7,
+                  "texte": "Les signataires de cette tribune soulignent la liberté offerte par la justice restaurative aux participants tout au long du processus. Citez une des phrases du texte qui l'illustre.",
+                  "type": "citation"
+                },
+                {
+                  "numero": 8,
+                  "texte": "Il existe en France différents dispositifs en réponse à la violence.",
+                  "type": "vrai_faux",
+                  "justification_requise": true
+                },
+                {
+                  "numero": 9,
+                  "texte": "Le mot « panacée » (l. 116) est synonyme de…",
+                  "type": "qcm",
+                  "choix": [
+                    "a. mesure alternative.",
+                    "b. meilleure solution.",
+                    "c. dangereux poison."
+                  ],
+                  "bonne": 1
+                }
+              ]
+            },
+            {
+              "type": "production_orale",
+              "questions": [
+                {
+                  "numero": 11,
+                  "texte": "Que pensez-vous de la justice restaurative ? Quels en sont, selon vous, les bénéfices pour le système judiciaire ? Dans quels cas pourrait-elle se substituer à la justice pénale ?",
+                  "type": "tache_ouverte"
+                },
+                {
+                  "numero": 12,
+                  "modalite": "À deux !",
+                  "type": "jeu_de_role",
+                  "consigne": "Lors d'un colloque, un(e) formateur(-trice) en justice restaurative rencontre un(e) magistrat(e). Le/La formateur(-trice) aimerait le/la convaincre de se former. Le/La magistrat(e) refuse. Formez des binômes. Tirez au sort votre rôle. Jouez la scène pendant 4 minutes.",
+                  "roles": {
+                    "formateur": "Vous expliquez les vertus réparatrices pour les victimes et les auteurs. Vous soulignez le rôle clé des juges dans le développement de la justice restaurative.",
+                    "magistrat": "Vous évoquez notamment le manque de moyens de la justice et la crainte de la perte d'efficacité du modèle de sanction."
+                  }
+                },
+                {
+                  "numero": 13,
+                  "titre": "Monologue suivi",
+                  "texte": "Vous vous renseignez sur le rôle de « membre de la communauté » dans des programmes de justice restaurative. En quoi cela consiste-t-il ? Aimeriez-vous le devenir ? Pourquoi ?",
+                  "type": "tache_ouverte"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "lettre": "C",
+          "titre": "La médiation animale en prison",
+          "sections": [
+            {
+              "type": "comprehension_orale",
+              "audio": "editoc1_piste_02.mp3",
+              "questions": [
+                {
+                  "numero": 1,
+                  "texte": "Selon Christine Charbonnier, pourquoi le travail sur l'altérité est essentiel pour des personnes effectuant de longues peines ?",
+                  "type": "tache_ouverte"
+                },
+                {
+                  "numero": 2,
+                  "texte": "Quelle anecdote révélatrice la directrice de prison raconte-t-elle ?",
+                  "type": "tache_ouverte"
+                },
+                {
+                  "numero": 3,
+                  "texte": "« Panser un cheval » signifie…",
+                  "type": "qcm",
+                  "choix": [
+                    "a. le nettoyer.",
+                    "b. monter dessus.",
+                    "c. le caresser."
+                  ],
+                  "bonne": 0
+                },
+                {
+                  "numero": 4,
+                  "texte": "Quel terme le présentateur emploie-t-il pour parler du moment où une réaction se déclenche ?",
+                  "type": "tache_ouverte"
+                },
+                {
+                  "numero": 5,
+                  "texte": "La chercheuse souhaitait comprendre pour quelles raisons cette journée d'activités poussait les détenus à s'investir.",
+                  "type": "tache_ouverte"
+                },
+                {
+                  "numero": 6,
+                  "texte": "La directrice a pu observer une transformation des rapports entre détenus.",
+                  "type": "vrai_faux",
+                  "justification_requise": true
+                }
+              ]
+            },
+            {
+              "type": "production_orale",
+              "questions": [
+                {
+                  "numero": 11,
+                  "modalite": "En groupes !",
+                  "texte": "Échangez à l'aide des questions suivantes :\na. Après ce type d'atelier, le psychologue de la prison est particulièrement attentif aux participants. À votre avis pourquoi ?\nb. En quoi l'interaction avec des animaux peut-elle favoriser la réinsertion sociale des détenus ?\nc. Quels autres types de projets pourraient être bénéfiques aux prisonniers ?",
+                  "type": "tache_ouverte"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "cahier": {
+      "sections": [
+        {
+          "type": "vocabulaire",
+          "flashcards": [
+            {
+              "categorie": "Les acteurs",
+              "recto": "Le/la greffier(-ière)",
+              "verso": "Assiste le magistrat et dresse les procès-verbaux."
+            },
+            {
+              "categorie": "Les acteurs",
+              "recto": "La protection judiciaire de la jeunesse (PJJ)",
+              "verso": "Prévient la récidive en accompagnant les mineurs et jeunes détenus."
+            },
+            {
+              "categorie": "Les acteurs",
+              "recto": "Le jury / Les jurés",
+              "verso": "Citoyens qui jugent les personnes accusées de crime sans être magistrats."
+            },
+            {
+              "categorie": "Les acteurs",
+              "recto": "Le/la juge de l'application des peines",
+              "verso": "Est en charge de l'exécution et de l'aménagement des peines de prison."
+            },
+            {
+              "categorie": "Expressions",
+              "recto": "Être un ténor du barreau",
+              "verso": "Désigne un avocat très expérimenté et renommé."
+            },
+            {
+              "categorie": "Expressions",
+              "recto": "Faire des effets de manche",
+              "verso": "Utiliser une rhétorique théâtrale pour convaincre lors d'un plaidoyer."
+            },
+            {
+              "categorie": "Expressions",
+              "recto": "Être juge et partie",
+              "verso": "Être à la fois celui qui décide/juge et une personne directement intéressée par l'affaire."
+            },
+            {
+              "categorie": "Expressions",
+              "recto": "Se faire l'avocat du diable",
+              "verso": "Défendre une opinion très impopulaire ou soutenir la thèse adverse pour tester un argument."
+            }
+          ]
+        },
+        {
+          "type": "grammaire",
+          "notion": "La voix active et la voix passive",
+          "echauffement": [
+            {
+              "question": "Dans la phrase 'Les processus de justice restaurative sont animés par des personnes spécialement formées', quel choix les auteurs ont-ils fait et quel effet cela produit-il ?",
+              "choix": [
+                "Choisir la voix passive permet d'insister sur le processus plutôt que sur les acteurs.",
+                "Choisir la voix active permet d'insister sur les acteurs du système judiciaire."
+              ],
+              "bonne": 0
+            },
+            {
+              "question": "Observez les phrases suivantes : 'Durant les médiations, il est recouru au bâton de parole', 'Une mesure s'inscrit en complémentarité'. Quel est leur point commun ?",
+              "reponse_attendue": "Elles expriment le sens passif par d'autres constructions (forme impersonnelle, forme pronominale)."
+            }
+          ],
+          "fonctionnement": [
+            {
+              "regle": "Seuls les verbes ayant un COD peuvent admettre la voix passive.",
+              "formation": "être + participe passé"
+            },
+            {
+              "regle": "Le complément d'agent est généralement introduit par 'par', mais il est introduit par 'de' avec les verbes d'état, de sentiment (admirer, aimer, détester) ou des verbes comme connaître, ignorer, oublier.",
+              "exemple": "L'ennemi public n°1 est connu de tous."
+            },
+            {
+              "regle": "Certains verbes pronominaux ont un sens passif (se dérouler, se vendre, s'inscrire).",
+              "exemple": "Une mesure de justice restaurative s'inscrit en France..."
+            },
+            {
+              "regle": "Les verbes pronominaux de perception (se faire, se laisser, se voir, s'entendre) + infinitif ont un sens passif.",
+              "exception": "Les participes passés de 'se laisser' et 'se faire' suivis d'un infinitif sont invariables."
+            },
+            {
+              "regle": "La forme passive impersonnelle (ex: 'il est recouru à') est principalement utilisée dans des écrits administratifs ou juridiques."
+            }
+          ],
+          "entrainement": [
+            {
+              "consigne": "Anciens délinquants, ils sont aujourd'hui réinsérés. Décrivez le processus qui leur a permis de s'en sortir. Utilisez différentes façons d'exprimer le passif.",
+              "type": "production_guidee"
+            }
+          ]
+        },
+        {
+          "type": "production_ecrite",
+          "type_activite": "canvas",
+          "titre": "Compte rendu de document",
+          "consigne": "Résumer un texte sur la justice restaurative en 250 mots. Pensez à bien structurer votre argumentation et à employer un style formel et objectif."
+        }
+      ]
+    }
+  }
+}

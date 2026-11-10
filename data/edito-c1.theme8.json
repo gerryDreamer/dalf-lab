@@ -1,0 +1,171 @@
+{
+  "theme": 8,
+  "titre": "Ma belle famille!",
+  "parties": {
+    "manuel": {
+      "conteneurs": [
+        {
+          "type": "objectifs",
+          "items": [
+            "Réévaluer le rôle des membres de la famille",
+            "Questionner les clichés sur les belles‑mères",
+            "Adapter le registre de langue des belles‑mères dans les familles",
+            "Synthèse sur la place des activités familiales"
+          ]
+        },
+        {
+          "type": "documents",
+          "liste": [
+            {
+              "ref": "A",
+              "titre": "Mode d’emploi pour les grands‑parents"
+            },
+            {
+              "ref": "B",
+              "titre": "Monologue suivi C1 – rôle et droits des grands‑parents"
+            },
+            {
+              "ref": "E",
+              "titre": "Belles‑mères – statistiques, représentations et enjeux"
+            }
+          ]
+        },
+        {
+          "type": "activites",
+          "items": [
+            {
+              "numero": 1,
+              "description": "Compréhension orale – chronique de Gwénaëlle Boulet"
+            },
+            {
+              "numero": 2,
+              "description": "Production orale – débat en groupe sur l’éducation des enfants"
+            },
+            {
+              "numero": 3,
+              "description": "Monologue suivi C1 – recherche sur le rôle des grands‑parents"
+            },
+            {
+              "numero": 4,
+              "description": "Exercices de compréhension écrite – questions sur les belles‑mères (liste C)"
+            },
+            {
+              "numero": 5,
+              "description": "Débat C1 – rôle des belles‑mères dans la famille"
+            }
+          ]
+        }
+      ]
+    },
+    "cahier": {
+      "sections": [
+        {
+          "titre": "Objectifs",
+          "contenu": [
+            "Réévaluer le rôle des membres de la famille",
+            "Questionner les clichés sur les belles‑mères",
+            "Adapter le registre de langue des belles‑mères"
+          ]
+        },
+        {
+          "titre": "Compréhension orale",
+          "exercices": [
+            {
+              "question": "1",
+              "texte": "Vrai ou faux – les grands‑parents doivent dire franchement le prénom choisi"
+            },
+            {
+              "question": "2",
+              "texte": "Surnoms désignant les petits‑enfants"
+            },
+            {
+              "question": "3",
+              "texte": "Expression désignant la première dispute"
+            },
+            {
+              "question": "4",
+              "texte": "Sens du terme « menu »"
+            },
+            {
+              "question": "5",
+              "texte": "Sentiment des jeunes parents"
+            },
+            {
+              "question": "6",
+              "texte": "Respect du gendre par l’enfant"
+            },
+            {
+              "question": "7",
+              "texte": "Vrai ou faux – rôle souple des grands‑parents"
+            },
+            {
+              "question": "8",
+              "texte": "Attentes envers les parents (a‑c)"
+            },
+            {
+              "question": "9",
+              "texte": "Raisons pour lesquelles les grands‑parents donnent plus"
+            },
+            {
+              "question": "10",
+              "texte": "Conclusion de Nicole Prieur"
+            }
+          ]
+        },
+        {
+          "titre": "Production orale",
+          "consignes": "Défendre votre point de vue en groupe sur l’éducation des enfants (parents vs grands‑parents)"
+        },
+        {
+          "titre": "Monologue suivi C1",
+          "consignes": "Faire des recherches sur le rôle et les droits des grands‑parents"
+        },
+        {
+          "titre": "Exercices écrits – belles‑mères",
+          "items": [
+            {
+              "code": "E1",
+              "question": "Combien y a‑t‑il de belles‑mères en France selon les derniers chiffres ?"
+            },
+            {
+              "code": "E2",
+              "question": "Comment la belle‑mère est‑elle traditionnellement perçue ?"
+            },
+            {
+              "code": "E3",
+              "question": "Pourquoi les belles‑mères peuvent‑elles avoir du mal à s’investir dans l’éducation ?"
+            },
+            {
+              "code": "E4",
+              "question": "Quelles images de la belle‑mère sont présentées dans les séries et films ?"
+            },
+            {
+              "code": "E5",
+              "question": "En quoi la présence d’une belle‑mère peut‑elle être vue comme une chance pour l’enfant ?"
+            },
+            {
+              "code": "E6",
+              "question": "Quelle est la vocation de l’association Le Club des marâtres de Vanves ?"
+            },
+            {
+              "code": "E7",
+              "question": "Comment, dans le texte, sont jugées les différentes options qui s’offrent aux belles‑mères ?"
+            },
+            {
+              "code": "E8",
+              "question": "Laura aurait aimé devenir mère – vrai ou faux"
+            },
+            {
+              "code": "E9",
+              "question": "Selon Laura, quel type de père est son compagnon ?"
+            },
+            {
+              "code": "E10",
+              "question": "À quoi Sylvie fait‑elle référence dans le débat sur la relation"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

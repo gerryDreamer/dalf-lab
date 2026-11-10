@@ -1,0 +1,83 @@
+{
+  "theme": 5,
+  "titre": "Les nouveaux visages de la culture",
+  "parties": {
+    "manuel": {
+      "conteneurs": [
+        {
+          "type": "objectifs",
+          "items": [
+            "Pointer les défis de la modernisation de la culture",
+            "Écriture créative",
+            "Identifier des initiatives culturelles en faveur des publics",
+            "Décrire ses pratiques culturelles avec précision",
+            "Utiliser la mise en relief pour souligner des propos"
+          ]
+        },
+        {
+          "type": "documents",
+          "liste": [
+            {
+              "titre": "Les jeunes et la culture",
+              "auteur": "Sylvie Octobre",
+              "description": "Analyse des comportements de consommation culturelle des jeunes, impact d’Internet, gratuité, inégalités culturelles."
+            }
+          ]
+        }
+      ]
+    },
+    "cahier": {
+      "sections": [
+        {
+          "type": "questions",
+          "items": [
+            {
+              "c": "B",
+              "t": "À deux ! Discutez du rôle des musées à l'aide des questions suivantes. a. Quelle"
+            },
+            {
+              "c": "B",
+              "t": "Monologue suivi DALF C1 Faites des recherches pour trouver une initiative similaire"
+            },
+            {
+              "c": "C",
+              "t": "Quels sont les reproches formulés par la jeune fille brune ? Relevez le lexique"
+            },
+            {
+              "c": "C",
+              "t": "Quel lexique est utilisé pour désigner l'utilisation de la liseuse ? Que remarqu"
+            },
+            {
+              "c": "C",
+              "t": "À deux ! Discutez des questions suivantes. a. Que pensez-vous de ce débat ? Peut"
+            },
+            {
+              "c": "C",
+              "t": "Débat DALF C1 Après avoir abordé les nouveaux visages de la culture, pensez-vous"
+            },
+            {
+              "c": "C",
+              "t": "Vous décidez de réaliser un bref discours au sujet de la modernisation des musées"
+            },
+            {
+              "c": "C",
+              "t": "Retrouvez dans la liste ci- c. Eh bien, je n'ai eu qu'à arriver • passionnant(e)"
+            },
+            {
+              "c": "C",
+              "t": "En groupes ! Vous partagez c. Relais entre le public et une • médiocre votre avis"
+            },
+            {
+              "c": "C",
+              "t": "Reformulez ces phrases plus simplement. Quel est le point commun entre elles ? a"
+            },
+            {
+              "c": "C",
+              "t": "Dans les phrases ci-dessous, quelles informations sont mises en valeur ? Repérez"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

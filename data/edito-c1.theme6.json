@@ -1,0 +1,242 @@
+{
+  "theme": 6,
+  "titre": "On ne naît pas féministe…",
+  "parties": {
+    "manuel": {
+      "conteneurs": [
+        {
+          "type": "objectifs",
+          "content": "Identifier les combats actuels et passés du féminisme; réaliser un exposé oral; appréhender le concept de déconstruction des identités de genre; maîtriser les préfixes et les suffixes de l’histoire"
+        },
+        {
+          "type": "documents",
+          "content": [
+            {
+              "id": "A",
+              "titre": "Les jouets ont-ils un genre?",
+              "description": "Compréhension audiovisuelle avec questions de compréhension et production orale/écrite"
+            },
+            {
+              "id": "B",
+              "titre": "C’est quoi, le féminisme?",
+              "description": "Petit guide pour mettre un pied dans le féminisme, définitions et notions clés"
+            }
+          ]
+        }
+      ]
+    },
+    "cahier": {
+      "sections": [
+        {
+          "lettre": "A",
+          "questions": [
+            {
+              "num": 1,
+              "texte": "Cette expérience vise à étudier… a. les attentes conscientes des jeunes enfants "
+            },
+            {
+              "num": 2,
+              "texte": "Comment est structurée cette vidéo ? Qui sont les intervenants et quels sont leu"
+            },
+            {
+              "num": 3,
+              "texte": "Trouvez un titre accrocheur pour cette expérience scientifi que."
+            },
+            {
+              "num": 4,
+              "texte": "Commentez les réactions des trois pères : quels sont les points communs et les d"
+            },
+            {
+              "num": 5,
+              "texte": "D'après la psychologue, comment les parents encouragent-ils ou découragent-ils l"
+            },
+            {
+              "num": 6,
+              "texte": "Ces pères sont-ils présentés comme machos ? Production orale Production écrite"
+            },
+            {
+              "num": 7,
+              "texte": "En groupes ! Avez-vous eu une éducation 9 Vous travaillez pour une marque de vêt"
+            },
+            {
+              "num": 8,
+              "texte": "Le sexisme est parfois inconscient. Quels genrée et cherche des arguments market"
+            }
+          ]
+        },
+        {
+          "lettre": "B",
+          "questions": [
+            {
+              "num": 1,
+              "texte": "Edwige-Renée Dro explique : « Quand on parle du féminisme, ici, on dit : “Ah non"
+            },
+            {
+              "num": 2,
+              "texte": "Monologue suivi À l'image de la marche des femmes sur Grand-Bassam en 1949, quel"
+            },
+            {
+              "num": 3,
+              "texte": "Quelles ont été les avancées féministes d. Regardez le visuel des « colleuses » "
+            },
+            {
+              "num": 4,
+              "texte": "Trouvez une expression évoquant un changement radical, un bouleversement. 9 Mono"
+            },
+            {
+              "num": 5,
+              "texte": "Sur quels sujets porte le combat féministe Depuis 2017 et la médiatisation du mo"
+            },
+            {
+              "num": 6,
+              "texte": "En quoi le mouvement #MeToo représente-t-il un intensifi és dans le monde. Chois"
+            },
+            {
+              "num": 7,
+              "texte": "Quelle est la différence entre le féminisme mené ? Qu'en pensez-vous ? I L unive"
+            },
+            {
+              "num": 8,
+              "texte": "Quel lien établissez-vous entre les expressions Production écrite 6 « vagues fém"
+            },
+            {
+              "num": 9,
+              "texte": "D'après vous, reste-t-il des luttes à mener m féministes » ? Comment les défi ni"
+            },
+            {
+              "num": 10,
+              "texte": "Quelle anecdote symbolise l'attachement d'Edwige-Renée aux bibliothèques ? Edwig"
+            },
+            {
+              "num": 11,
+              "texte": "Contre quelle idée préconçue Edwige-Renée milite-t-elle ? sa bibliothèque «1949"
+            },
+            {
+              "num": 12,
+              "texte": "La Côte d'Ivoire investit dans la construction de bibliothèques. Vrai ou faux ? "
+            },
+            {
+              "num": 13,
+              "texte": "Edwige-Renée organise des événements pour… Bassam à marcher contre l'administrat"
+            },
+            {
+              "num": 14,
+              "texte": "Elle a mis en place une activité d'analyse des titres de roman. C'est… a. la tit"
+            },
+            {
+              "num": 15,
+              "texte": "Quelles sont les ambitions féministes d'Edwige-Renée avec sa bibliothèque ? Acti"
+            },
+            {
+              "num": 16,
+              "texte": "Comment le féminisme est-il perçu en Côte d'Ivoire ?"
+            },
+            {
+              "num": 17,
+              "texte": "Quels sont les espoirs de la bibliothécaire ?"
+            }
+          ]
+        },
+        {
+          "lettre": "D",
+          "questions": [
+            {
+              "num": 1,
+              "texte": "À deux ! Regardez le dessin et discutez à l'aide des questions suivantes. a. Sur"
+            },
+            {
+              "num": 2,
+              "texte": "Quelle différence faites-vous entre « masculinité » et « virilité » ?"
+            },
+            {
+              "num": 3,
+              "texte": "Que pensez-vous du type de masculinité assumé par Rudy ?"
+            },
+            {
+              "num": 4,
+              "texte": "Débat DALF C1 Marie Morelle Dans votre entreprise, une association féministe org"
+            }
+          ]
+        },
+        {
+          "lettre": "E",
+          "questions": [
+            {
+              "num": 1,
+              "texte": "Quel portrait la narratrice dresse-t-elle de son couple au début de l'extrait ?"
+            },
+            {
+              "num": 2,
+              "texte": "Comment est formé l'adverbe « doucettement » (l. 7) ? Que signifi e-t-il ?"
+            },
+            {
+              "num": 3,
+              "texte": "Le modèle parental de la narratrice répond-il aux stéréotypes de genre ?"
+            },
+            {
+              "num": 4,
+              "texte": "Pour quelles raisons décide-t-elle fi nalement de s'occuper des tâches domestiqu"
+            },
+            {
+              "num": 5,
+              "texte": "Relevez les mots appartenant au registre familier."
+            },
+            {
+              "num": 6,
+              "texte": "La narratrice précise qu'elle n'a pas « regimbé » (l. 45). Cela signifi e qu'ell"
+            },
+            {
+              "num": 7,
+              "texte": "En 5 minutes, trouvez le maximum de conseils pratiques et concrets pour Nobel de"
+            },
+            {
+              "num": 8,
+              "texte": "À deux ! que femme dans les années Situation : Vous êtes en couple et vous venez"
+            },
+            {
+              "num": 9,
+              "texte": "Monologue suivi Faites des recherches sur la charge mentale. Retracez l'histoire"
+            }
+          ]
+        },
+        {
+          "lettre": "F",
+          "questions": [
+            {
+              "num": 1,
+              "texte": "À quelles formes de discriminations sont exposées les différentes minorités ? Di"
+            },
+            {
+              "num": 2,
+              "texte": "Quelle différence faites- Féminismes et masculinités • asexuel(le) vous entre « "
+            },
+            {
+              "num": 3,
+              "texte": "Quelle expression évoque… • la suffragette a. la transformation d'un modèle • la"
+            },
+            {
+              "num": 4,
+              "texte": "Dans ces phrases, quels sont les mots de la même famille ? a. Pourquoi vous avez"
+            },
+            {
+              "num": 5,
+              "texte": "Dans ces phrases, relevez les préfi xes et les suffixes. a. On les appelle les "
+            },
+            {
+              "num": 6,
+              "texte": "Quel est le point commun entre ces phrases ? a. J'ai honte […] d'appartenir à l'"
+            },
+            {
+              "num": 7,
+              "texte": "Observez les exemples et choisissez ou complétez les règles dans le tableau. Exe"
+            },
+            {
+              "num": 8,
+              "texte": "Vous faites partie d'une association qui lutte contre les discriminations LGBTQI"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

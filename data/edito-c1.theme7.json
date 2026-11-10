@@ -1,0 +1,106 @@
+{
+  "theme": 7,
+  "titre": "Requiem pour un joueur – Analyse et activités",
+  "parties": {
+    "manuel": {
+      "conteneurs": [
+        {
+          "type": "texte",
+          "id": "T1",
+          "titre": "A Requiem pour un joueur",
+          "source": "PDF page 2"
+        },
+        {
+          "type": "questions",
+          "id": "Q1",
+          "categorie": "A",
+          "questions": [
+            "D'après vous, quel emploi occupe le personnage de ce roman. Quel est son rapport",
+            "En explorant les sites de paris, par quoi est-il frappé ? Relevez deux phrases q",
+            "Qu'est-ce qui met le personnage en confi ance pour se lancer dans un pari ?",
+            "Qu'arrive-t-il au personnage ?",
+            "Comment le passage du jeu est-il décrit ? Qu'est-ce qu'il en ressort ?",
+            "Dans quel état se sent le personnage à la fi n de la journée ? Relevez trois mot",
+            "Qu'en est-il de l'espace-temps pendant cette phase de jeu ?",
+            "D'après vous, quel phénomène affecte le personnage ? Quels éléments du texte per",
+            "À deux ! Discutez du jeu à partir des questions suivantes. a. Quels jeux travers",
+            "Débat DALF C1 L'impôt sur les jeux d'argent rapporte plus de 3 milliards d'euros",
+            "En groupes !La France est actuellement l'un des pays à la pointe de l'e-sport (c",
+            "Quels sont les signes qui doivent alerter quant à la dépendance aux jeux d'argen"
+          ]
+        },
+        {
+          "type": "questions",
+          "id": "Q2",
+          "categorie": "B",
+          "questions": [
+            "Que révèle le témoignage d'un ancien patient ?",
+            "Quelle différence Sarah Gautré fait-elle entre un 10 Un magazine consacré au bie",
+            "Quelle précision Xavier Pommereau souhaite-t-il lecteurs de participer à la disc",
+            "En quoi réside l'aide fournie par le jeu selon présentent-ils plutôt des avantag",
+            "Qu'explique-t-il concernant les adolescentes et participer. quelle conclusion pl",
+            "À deux ! Discutez à partir des questions rompus suivantes. des 1 000 euros a. Se"
+          ]
+        },
+        {
+          "type": "questions",
+          "id": "Q3",
+          "categorie": "C",
+          "questions": [
+            "Monologue suivi C1 de l'équipe B qui ont 30 secondes pour y Le jeu peut devenir ",
+            "Expliquez la règle d'un jeu V • d'entrée de jeu • jouer (un) double jeu I que vo",
+            "Quel est le point commun entre les mots soulignés dans les phrases a, b, c, d ? ",
+            "Pour chaque mot souligné, dites s'il s'agit d'un participe présent, d'un gérondi",
+            "Dans la phrase suivante, quelle est la particularité de l'adjectif verbal ? Il s",
+            "Lisez les exemples dans le tableau puis complétez-le avec les mots proposés : di",
+            "Donnez quelques conseils à des parents pour limiter l'addiction aux jeux vidéo d"
+          ]
+        }
+      ]
+    },
+    "cahier": {
+      "sections": [
+        {
+          "type": "compréhension",
+          "titre": "Compréhension du texte",
+          "exercices": [
+            {
+              "id": "E1",
+              "consigne": "Répondez aux questions de la catégorie A"
+            }
+          ]
+        },
+        {
+          "type": "grammaire",
+          "titre": "Analyse grammaticale",
+          "exercices": [
+            {
+              "id": "E2",
+              "consigne": "Identifiez les participes présents, gérondifs et adjectifs verbaux dans les phrases proposées"
+            }
+          ]
+        },
+        {
+          "type": "débat",
+          "titre": "Débat sur les jeux d'argent",
+          "exercices": [
+            {
+              "id": "E3",
+              "consigne": "Discutez les questions des catégories A et B en groupe"
+            }
+          ]
+        },
+        {
+          "type": "production",
+          "titre": "Production écrite",
+          "exercices": [
+            {
+              "id": "E4",
+              "consigne": "Rédigez un texte argumentatif sur la dépendance aux jeux d'argent"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

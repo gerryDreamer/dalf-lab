@@ -1,0 +1,93 @@
+{
+  "theme": 10,
+  "titre": "Santé 3.0",
+  "parties": {
+    "manuel": {
+      "conteneurs": [
+        {
+          "type": "Objectifs",
+          "items": [
+            "Commenter les avancées technologiques dans le domaine de la santé",
+            "Rédiger un essai argumenté et proposer des mesures pour protéger les médecins et les patients face aux avancées technologiques",
+            "Se questionner sur l’éthique de certaines avancées scientifiques",
+            "Maîtriser les temps du récit au passé liés à la santé"
+          ]
+        },
+        {
+          "type": "Documents",
+          "items": [
+            "Science fiction",
+            "Entretien avec Amanda Sthers & Aurélie Jean"
+          ]
+        }
+      ]
+    },
+    "cahier": {
+      "sections": [
+        {
+          "lettre": "A",
+          "questions": [
+            "Choisissez et justifi ez votre choix en citant des éléments du texte. D'après vo",
+            "Que peut signifi er le terme « fl icage » (l. 22) ? Pourquoi ce mot est-il emplo",
+            "Les auteures ont choisi ces deux héroïnes parce qu'elles… a. leur ressemblent. c",
+            "En quoi la science-fi ction est-elle utile selon Aurélie Jean ?",
+            "Les auteures parlent d'un livre d'anticipation, pourquoi ce terme ?",
+            "Selon Amanda Sthers, quel a été l'apport d'Aurélie Jean en tant que scientifi qu",
+            "Pourquoi abordent-elles le sujet de la crétinisation ? De quelle manière peut-el",
+            "Quelle est la position des deux auteures sur les craintes liées à l'emploi de l'",
+            "À deux ! Discutez à l'aide des questions suivantes. a. Quelles différences y a-t",
+            "Débat DALF C1 Pensez-vous, comme dans l'article, que sans IA, sans Internet, etc"
+          ]
+        },
+        {
+          "lettre": "B",
+          "questions": [
+            "Quel était l'objectif des laboratoires Neuralink ? Par quel moyen ?",
+            "Quels efforts la Chine avait-elle entrepris pour se positionner dans le domaine ",
+            "En quoi consistait la course cognitive entreprise par les Chinois et qu'ont-ils ",
+            "Comment les entreprises françaises ont-elles réagi face à l'essor des puces céré",
+            "Pourquoi le nombre de personnes implantées a-t-il crû de 17 points ? Justifi ez.",
+            "Relevez les avantages et les inconvénients relatifs au système d'implantation de",
+            "Quelles furent les réactions de la communauté scientifi que face à cette avancée",
+            "À deux ! Discutez à l'aide des questions suivantes. a. Que ressentez-vous à la l",
+            "Monologue suivi DALF C1 Vous êtes à une conférence qui traite du sujet de ce liv"
+          ]
+        },
+        {
+          "lettre": "C",
+          "questions": [
+            "À l'occasion de la Journée mondiale de la santé, la revue de votre santé mène de",
+            "Débat C1 accueille tous les acteurs de Quelles implications liées à l'utilisatio"
+          ]
+        },
+        {
+          "lettre": "E",
+          "questions": [
+            "Quel est le principe de la plateforme utilisée par Claire Dumas ? 10",
+            "Il s'agit d'une application qui est déjà bien en place au Québec. e Vrai ou faux",
+            "Quelles sont les informations transmises et de quelles façons ? è h T Citez des ",
+            "Quel est l'apport de cette technologie pour le corps médical, le patient et sa f",
+            "Selon Philippe Voyer, pourquoi l'utilisation des applications de contrôle médica",
+            "Comment la prise de médicaments est-elle facilitée grâce à la technologie Xpill",
+            "Le Québec prévoit de lancer huit projets pilotes sur l'hospitalisation à domicil",
+            "Quelle expression employée par le journaliste traduit la satisfaction de Claire ",
+            "Vous souhaitez vous essayer au genre de la science-fi ction. Vous imaginez certa",
+            "Des médecins souhaitent accélérer la mise à disposition d'innovations technologi"
+          ]
+        },
+        {
+          "lettre": "F",
+          "questions": [
+            "À deux ! Discutez à l'aide des questions suivantes. a. Que pensez-vous de la mul",
+            "Vous passez un entretien pour réaliser votre doctorat dans l'une des écoles ment",
+            "Complétez le tableau ci-dessous avec les mots suivants : futur antérieur, fait p",
+            "Vous racontez l'histoire d'une technologie dont l'utilisation a mal tourné. Vari",
+            "Complétez ces phrases avec Les nouvelles technologies l'expression qui convient.",
+            "Retrouvez dans les trois • la réalité augmentée/virtuelle d. Ma sœur est ....., ",
+            "Défi nissez le principe la santé. propos d'une intervention du roman d'anticipat"
+          ]
+        }
+      ]
+    }
+  }
+}

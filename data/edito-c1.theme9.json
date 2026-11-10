@@ -1,0 +1,156 @@
+{
+  "theme": 9,
+  "titre": "Vieillir : une aventure",
+  "parties": {
+    "manuel": {
+      "conteneurs": [
+        {
+          "type": "objectifs",
+          "items": [
+            "Questionner la notion d’âge",
+            "S’interroger sur le vieillissement de la population et ses enjeux",
+            "Identifier des injonctions sociétales liées au vieillissement"
+          ]
+        },
+        {
+          "type": "documents",
+          "items": [
+            "A Vieillir sans en avoir le droit"
+          ]
+        },
+        {
+          "type": "activites",
+          "items": [
+            "Compréhension orale – écouter extrait de l’émission Tout un matin sur Radio-Canada",
+            "Production écrite – rédiger réponse à la question sur le mensonge d’âge",
+            "Production orale – débat sur la représentation de la vieillesse",
+            "Débat C1 – Bien vieillir est synonyme de vieillir en bonne santé"
+          ]
+        }
+      ]
+    },
+    "cahier": {
+      "sections": [
+        {
+          "titre": "Questions A",
+          "questions": [
+            {
+              "c": "A",
+              "t": "D'après l'animateur, quelles réactions suscite la couverture du magazine?"
+            },
+            {
+              "c": "A",
+              "t": "L'animateur a choisi d'inviter Jocelyne Robert pour parler du vieillissement? Si oui, pourquoi? Si non, comprenez-vous celles et ceux qui le font?"
+            },
+            {
+              "c": "A",
+              "t": "Quels termes utilisés par Jocelyne Robert montrent que, pour elle, le message véhiculé par la couverture n’est pas explicitement formulé?"
+            },
+            {
+              "c": "A",
+              "t": "À deux! Échangez sur votre représentation de la vieillesse à l’aide des questions suivantes."
+            },
+            {
+              "c": "A",
+              "t": "D'après elle, quelles sont les deux idées fausses montrées ou invisibilisées dans les médias?"
+            },
+            {
+              "c": "A",
+              "t": "À quoi Jocelyne Robert oppose-t-elle la beauté conventionnelle?"
+            },
+            {
+              "c": "A",
+              "t": "Pourquoi parle-t-elle d'un risque de « devenir schizo »?"
+            },
+            {
+              "c": "A",
+              "t": "Avez-vous peur de vieillir? Pourquoi?"
+            }
+          ]
+        },
+        {
+          "titre": "Questions B",
+          "questions": [
+            {
+              "c": "B",
+              "t": "Dans le premier paragraphe, relevez les mots utilisés pour désigner les aînés."
+            },
+            {
+              "c": "B",
+              "t": "D'après l'auteure, à quels diktats les septuagénaires sont-ils confrontés?"
+            },
+            {
+              "c": "B",
+              "t": "Laure Adler désapprouve l'effacement des différences entre les générations. Vrai ou faux?"
+            },
+            {
+              "c": "B",
+              "t": "Comment Laure Adler conçoit-elle l'âge?"
+            },
+            {
+              "c": "B",
+              "t": "Que signifie « sans coup férir » (l.71)? a. Sans difficile. b. Sans succès."
+            },
+            {
+              "c": "B",
+              "t": "Monologue suivi DALF C1 c. Sans le vouloir. Faites des recherches sur l'âgisme d..."
+            },
+            {
+              "c": "B",
+              "t": "Selon Laure Adler, à quoi le fait de vieillir... (pays de votre choix)."
+            },
+            {
+              "c": "B",
+              "t": "Quelle opportunité la vieillesse offre-t-elle et quelles discriminations touchent les aînés?"
+            },
+            {
+              "c": "B",
+              "t": "À deux! Discutez à l'aide des questions suivantes. Production écrite a. Comment..."
+            }
+          ]
+        },
+        {
+          "titre": "Questions C",
+          "questions": [
+            {
+              "c": "C",
+              "t": "Lors du pot de départ à la retraite de madame Durand, vous prenez la parole au..."
+            },
+            {
+              "c": "C",
+              "t": "Identifiez le rôle des mots soulignés issus du texte B, p.128, et leur nature."
+            },
+            {
+              "c": "C",
+              "t": "Complétez les exemples avec les phrases de l'échauffement, et les règles avec le..."
+            },
+            {
+              "c": "C",
+              "t": "En utilisant des reprises (nominales et pronominales), présentez..."
+            },
+            {
+              "c": "C",
+              "t": "Cahier, p.134 une personne célèbre âgée de plus de 70 ans. Puis lisez votre texte..."
+            },
+            {
+              "c": "C",
+              "t": "Quelles formules peuvent compléter la liste? Choisissez la bonne expression. a..."
+            },
+            {
+              "c": "C",
+              "t": "Quels autres mots sont • être malade • être dans la force de l'âge • être vulnér..."
+            },
+            {
+              "c": "C",
+              "t": "À quelle catégorie d'âge appartiennent-ils? Les ressources de la vieillesse 6 A"
+            },
+            {
+              "c": "C",
+              "t": "Quelle est la tranche d'âge correspondant à ... l'expérience..."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "theme": 3,
+  "titre": "Osé, le changement !",
+  "parties": {
+    "manuel": {
+      "conteneurs": [
+        {
+          "type": "objectifs",
+          "items": [
+            "Comprendre le concept de changement",
+            "S’interroger sur la capacité à changer",
+            "Débattre du changement",
+            "Distinguer les différentes valeurs de tout"
+          ]
+        },
+        {
+          "type": "document",
+          "titre": "A Change toujours, tu m’intéresses…",
+          "extrait": "CHANGEMENT : aucun mot n’est plus trompeur, insuffisant, ramasse‑tout – et peut‑être inutile. On ne change pas de couleur comme on change de vie, de conjoint, de métier ou de nationalité. Il y a tant de changements possibles ! Choisis ou subis (mais de tout changement, même choisi, nous aurons à subir les imprévus) ; petits ou grands …"
+        }
+      ]
+    },
+    "cahier": {
+      "sections": [
+        {
+          "type": "questions",
+          "items": [
+            "À deux ! Discutez du changement à l'aide des questions suivantes. a. Aimez-vous ",
+            "Débat DALF C1 Changer de vie pour s'épanouir, se réaliser est un luxe que tout l",
+            "Monologue suivi Présentez un livre ou un article de développement personnel sur ",
+            "Que veut dire l'auteur quand il qualifi e le terme le/la méditant(e) (tourné(e) ",
+            "Quelle suggestion émet‑il pour éviter cet écueil ?",
+            "Comment pourrait‑on caractériser l'attitude de l'être humain par rapport au chan",
+            "Comment cela se traduit‑il concrètement quand on opte pour le changement ?",
+            "Quelle relation l'auteur établit‑il entre changement de vie et bien‑être psychiq",
+            "Selon vous, pourquoi l'auteur qualifi e‑t‑il les propos de Montaigne de « malici",
+            "Quelle conclusion l'auteur tire‑t‑il sur le E changement ? R",
+            "Le titre du document fait référence à l'expression V I « cause toujours, tu m'in",
+            "Automatisation, intelligence artificielle, télétravail, apprentissage en contin",
+            "Retrouvez les mots sont les changements subis d'hypothétique. correspondant aux ",
+            "Lisez la rubrique « les personnelle accordé au salarié. E aspirations » et chois",
+            "À deux ! Qu'aimeriez‑vous voir changer ? Exprimez votre souhait en réemployant t",
+            "Iquarante‑quatre",
+            "Observez les phrases suivantes. Quelle est la nature de tout : pronom, nom, adve",
+            "Observez les phrases suivantes. Quelle est la dif",
+            "Comment s'accorde l'adverbe tout devant un adjectif féminin ? Retrouvez la règle",
+            "Observez les exemples et complétez les règles dans le tableau. Exemples Règles T"
+          ]
+        }
+      ]
+    }
+  }
+}
