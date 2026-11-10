@@ -1,5 +1,5 @@
 // Changer le numéro de version à chaque mise à jour de l'appli pour renouveler le cache.
-const C = "dalf-v6";
+const C = "dalf-v8", A = [...] // Change v7 en v8 ou v9
 const A = [
   "./",
   "index.html",

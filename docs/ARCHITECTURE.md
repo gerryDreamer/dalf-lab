@@ -1,3 +1,22 @@
+## 5. Le Pipeline de Reconstruction du Cahier (IA)
+
+Le Cahier du manuel (Vocabulaire, Grammaire, Compréhension) a été extrait de manière incomplète par le parser PDF initial. Pour corriger cela, nous avons mis en place un pipeline de reconstruction assisté par IA :
+
+### Étape 1 : Extraction par Gemini
+- Le fichier `data/edito-c1.theme1.json` a été généré par Gemini. Il sert de base (notamment pour les images Pixabay déjà récupérées).
+
+### Étape 2 : Restructuration par Groq (`tools/finalize-cahier.py`)
+- On donne le texte brut du livre (capture d'écran retranscrite) à l'IA (`openai/gpt-oss-120b`).
+- L'IA extrait **tous** les mots du lexique (ex: "Le greffier", "L'escroquerie") et rédige une définition pour chacun.
+- L'IA génère aussi les **10 QCM** de la page vocabulaire.
+
+### Étape 3 : Enrichissement Visuel (`tools/fetch_images.py`)
+- Le script parcourt les flashcards et interroge l'API Pixabay pour chaque mot.
+- Il associe l'URL de l'image (`image_url`) à la flashcard correspondante.
+- Les cartes sans résultat (ex: "le prévenu") restent simplement sans image.
+
+### Résultat
+Le fichier `data/edito-c1.structured.json` est la **source de vérité** pour le Thème 1. Il contient la structure exacte attendue par l'interface.
 # Architecture — DALF Lab
 
 Dernière mise à jour : Novembre 2026.

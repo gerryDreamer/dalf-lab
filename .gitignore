@@ -38,3 +38,7 @@ docs/*.old
 docs/parser.txt
 IA/gemini
 IA/
+audios/*.mp3
+images/*.jpg
+images/*.png
+images/*.jpeg

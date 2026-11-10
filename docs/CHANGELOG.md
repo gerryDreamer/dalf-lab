@@ -1,4 +1,35 @@
+## [0.5.0] — 2026-11-10 — `feat: Cahier interactif + Arbre Duolingo`
 
+### Ajouté
+- **Refonte de l'UI (`app.css`)** : Les sections sont désormais affichées sous forme d'un chemin vertical "serpentin" avec des bulles rondes (style Duolingo).
+- **Nouveaux moteurs de leçon (`app.js`)** :
+  - `renderGrammaire` : Parcours en 3 étapes (Échauffement → Règle → Entraînement).
+  - `renderProductionEcrite` : Éditeur de texte avec sauvegarde locale (`localStorage`).
+  - `renderFlashcards` : Gestion des images, bouton "Carte suivante", animation de flip.
+- **Moteur "À bâtons rompus"** : Nouveau type de section pour les QCM classiques.
+- **Scripts d'enrichissement** :
+  - `tools/structurer-cahier.py` : Utilise Groq (Llama 3 / GPT-OSS 120B) pour restructurer le Cahier.
+  - `tools/finalize-cahier.py` : Extrait le vocabulaire exact (60 flashcards) et les 10 QCM du livre à partir du texte brut.
+- **Images des flashcards** : `tools/fetch_images.py` télécharge les images depuis Pixabay pour chaque mot du vocabulaire.
+
+### Modifié
+- **`data/edito-c1.structured.json`** : Nouveau fichier de données de référence pour l'UI. Contient le Thème 1 avec 54 flashcards (images incluses) et 10 QCM.
+- **`app.js`** : 
+  - `escapeHtml` sécurise l'affichage des textes.
+  - `loadData` charge `structured.json`.
+  - `startLesson` route vers le bon moteur (`vocabulaire`, `grammaire`, `production_ecrite`, `a_batons_rompus`).
+
+### Corrigé
+- **Erreur "Cannot read properties of undefined (reading 'split')"** : Ajout de garde-fous (`section.type || "leçon"`) pour les sections sans type.
+- **Bug d'affichage des flashcards** : Restauration de la face "verso" (retournement 3D).
+- **Modèle IA obsolète** : Remplacement de `llama3-70b-8192` par `openai/gpt-oss-120b`.
+
+### TODO (Prochaines étapes)
+- [ ] Générer les QCM de la section Grammaire (Thème 1).
+- [ ] Ajouter les sections "À bâtons rompus" pour les Thèmes 2 à 12.
+- [ ] Implémenter un minuteur pour la Production Orale.
+- [ ] Ajouter un écran de révision (réviser uniquement les cartes ratées).
+- [ ] Corriger les sections sans `type` dans les Thèmes 2, 4, 6, 8, 9, 10.
 ---
 
 ## 📄 3. `docs/CHANGELOG.md`

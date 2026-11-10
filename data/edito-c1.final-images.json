@@ -1,0 +1,1597 @@
+{
+  "manuel": "Édito C1",
+  "themes": [
+    {
+      "theme": 1,
+      "titre": "Justice, quelles alternatives ?",
+      "objectifs": [
+        "S’informer sur la justice restaurative",
+        "Argumenter sur la place de la médiation animale en prison",
+        "Résumer un texte sur la justice restaurative",
+        "Choisir la voix active ou passive pour servir son propos"
+      ],
+      "parties": {
+        "manuel": {
+          "conteneurs": [
+            {
+              "lettre": "A",
+              "titre": "Je verrai toujours vos visages",
+              "sections": [
+                {
+                  "type": "comprehension_audiovisuelle",
+                  "audio": "editoc1_piste_01.mp3",
+                  "encadre": {
+                    "titre": "Au fait !",
+                    "texte": "Durant les médiations restauratives, il est recouru au bâton de parole. Hérité des traditions amérindiennes, c’est un outil servant à réguler la parole au sein d’un groupe. Il permet à chacun de s’exprimer sans être interrompu. Quand le détenteur du bâton n’a plus rien à dire, il le passe à un autre membre du groupe qui s’exprime à son tour."
+                  },
+                  "questions": [
+                    {
+                      "numero": 1,
+                      "texte": "Quel est le thème du film ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 2,
+                      "texte": "Quel est l’objectif de ce type de processus ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 3,
+                      "texte": "Quelles sont les trois « catégories » de personnes impliquées dans ce processus ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 4,
+                      "texte": "Quelles règles les animateurs doivent-ils respecter ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 5,
+                      "texte": "Deux façons de mettre en place ce processus sont abordées dans la bande-annonce. Lesquelles ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 6,
+                      "texte": "Qu’est-ce qui favorise l’émergence d’une parole authentique ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 7,
+                      "texte": "Qu’est-ce que la bande-annonce suggère des relations entre les personnes impliquées dans le processus ?",
+                      "type": "tache_ouverte"
+                    }
+                  ]
+                },
+                {
+                  "type": "production_orale",
+                  "questions": [
+                    {
+                      "numero": 8,
+                      "modalite": "À deux !",
+                      "texte": "Cette bande-annonce vous a-t-elle donné envie de voir le film ? Pourquoi ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 9,
+                      "texte": "Quels films, séries ou romans en lien avec le monde judiciaire pourriez-vous recommander et pourquoi ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 10,
+                      "texte": "Comment les médias influencent-ils la perception de la justice dans la société, d’après vous ? Donnez des exemples.",
+                      "type": "tache_ouverte"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "lettre": "B",
+              "titre": "Vers un horizon d’apaisement",
+              "sections": [
+                {
+                  "type": "comprehension_ecrite",
+                  "texte_lecture": "[…] Le […] film Je verrai toujours vos visages, de Jeanne Herry, offre un merveilleux coup de projecteur sur la justice restaurative. Il décrit parfaitement le parcours des personnes victimes et auteurs qui s’inscrivent dans cette démarche, pour accéder à la parole, entendre et comprendre mutuellement le pourquoi et le comment de l’infraction, quelle que soit sa nature, et pour cheminer vers un horizon d’apaisement.\nLa justice restaurative offre un espace de parole, de dialogue, voire de rencontre, sécurisé et sécurisant, aux personnes victimes et aux personnes auteurs d’infraction pénale qui le souhaitent. Strictement volontaire, une mesure de justice restaurative s’inscrit en France en complémentarité des réponses judiciaires et pénales.\nLa justice restaurative n’est pas un phénomène récent. Elle justifie de près de cinquante ans d’expérience dans le monde. En France, la première expérimentation date de 2010, mise en œuvre par France Victimes, la maison centrale de Poissy, l’École nationale d’administration pénitentiaire (ENAP) et ceux qui allaient créer en 2013 une association, l’Institut français pour la justice restaurative (IFJR). Les praticiens et praticiennes, comme les chercheurs et les chercheuses qui s’y intéressent, ont pu en mesurer les effets bénéfiques.\nLe potentiel de la justice restaurative est vaste. En 2022, près de 300 personnes (293) se sont engagées dans le processus de 173 mesures de justice restaurative. Nous estimons à plus de 900 le nombre de personnes qui y ont eu recours depuis les premières expériences. En 2022, 165 de ces mesures de justice restaurative étaient des médiations restauratives, pour des délits graves, voire des crimes : violences volontaires, y compris braquages ; violences sexuelles, y compris viols et incestes ; violences conjugales, violences routières, notamment.\nCes mesures sont généralement mises en œuvre après le procès pénal, au cours de l’exécution de la peine. Les personnes victimes y font appel, car elles n’ont pas pu accéder, à la hauteur de ce qu’elles souhaitaient, à la parole. Elles n’ont pas pu faire le récit des répercussions qu’elles ont subies à l’auteur. Lui n’a pas eu l’opportunité de les entendre, de les comprendre et d’y répondre pour les reconnaître. Ces personnes le peuvent avec la justice restaurative.\nLe potentiel de la justice restaurative est vaste. En Belgique, des processus de justice restaurative sont mis en œuvre en parallèle des procès des attentats qui ont touché la France et la Belgique. Les personnes qui font appel à la justice restaurative le font en confiance des principes que la loi leur garantit.\n\nLa justice restaurative complémentaire de la procédure pénale\nLes processus de justice restaurative sont animés par des personnes spécialement formées afin d’interdire toute forme de revictimisation (professionnels de l’administration pénitentiaire, de la Protection judiciaire de la jeunesse et des associations d’aide aux victimes). Ils sont focalisés sur les attentes de ceux et celles qui y font appel, les animateurs et les animatrices entendent concrètement ce que disent les personnes impliquées.\nCes mesures de justice restaurative appartiennent aux participants et aux participantes qui choisissent eux-mêmes d’y entrer et d’en sortir à tout moment, à tous les stades de la procédure, quelle que soit la nature de l’infraction, en toute confidentialité, sous le contrôle de conformité de l’autorité judiciaire ou, à sa demande, de l’administration pénitentiaire.\nAucun aménagement de peine ne sera automatiquement accordé à l’auteur du fait de sa participation à une mesure de justice restaurative. En conséquence, la justice restaurative, complémentaire de la procédure pénale, ne peut en aucun cas s’y substituer. […]\n\nLe lieu d’une libération par la parole\nAinsi, la médiation restaurative, complémentaire, ne peut en aucun cas être assimilée à la médiation pénale, alternative au procès pénal. La loi reconnaît aux personnes victimes et aux personnes auteurs d’infraction un droit à accéder à la justice restaurative. Pour les victimes en particulier, elle constitue un moyen d’obtenir réparation de leurs préjudices de toute nature. […] Leur permettre d’accéder effectivement à ce droit, alors que ces personnes le demandent, c’est aussi les écouter et les croire.\nCertains peuvent être surpris de voir dans le film, mais aussi dans les retours d’expérience de participants […], que les résultats permettent d'atteindre une libération par la parole. Ces principes sont parfaitement connus et maîtrisés.\nIls sont le fruit de la méthodologie mise en œuvre, caractérisée par une attention toute particulière prêtée à la préparation individuelle des participants.\nCette préparation vise à permettre aux participants de définir précisément leurs attentes, à connaître leurs limites pour assurer leur sécurité et à savoir entrer en communication l’un avec l’autre. Elle leur permet de s’approprier le processus. Cette préparation, restauratrice en elle-même, peut s’arrêter à ce stade (et malgré tout contribuer au cheminement de la personne) ou déboucher sur un processus de communication, voire de dialogue, dont la rencontre n’est qu’une modalité parmi d’autres.\n\nFaciliter le chemin de la réparation\nC’est à l’issue d’une telle préparation que la parole peut devenir un moyen de répondre et de surmonter la violence. Aujourd’hui, il convient de considérer qu’il existe de multiples espaces complémentaires pour répondre aux violences de toutes sortes : justice pénale, justice restaurative, approches thérapeutiques, notamment.\nDepuis 2010, l’IFJR et France Victimes s’engagent pour offrir l’approche de la justice restaurative aux personnes victimes qui le souhaitent. Individuellement, chacun est libre de définir le chemin par lequel il accédera à la réparation, à la restauration, voire à une certaine forme de guérison.\nNous avons toujours affirmé que la justice restaurative n’est pas la panacée et qu’elle n’a pas vocation à répondre à toutes les situations individuelles. Cependant, collectivement, nous avons le devoir de rendre chacune de ces voies la plus ouverte et accessible possible, afin de faciliter ce cheminement.",
+                  "questions": [
+                    {
+                      "numero": 1,
+                      "texte": "Les signataires de cette tribune…",
+                      "type": "qcm",
+                      "choix": [
+                        "a. s'interrogent sur les effets de la justice restaurative.",
+                        "b. défendent la justice restaurative : elle devrait peu à peu remplacer la justice pénale.",
+                        "c. mettent en avant les possibilités qu'offre la justice restaurative."
+                      ],
+                      "bonne": 2
+                    },
+                    {
+                      "numero": 2,
+                      "texte": "Qui oblige les auteurs d'infraction à entamer une démarche de justice restaurative ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 3,
+                      "texte": "Différents acteurs en charge du milieu carcéral ont contribué à l'introduction de la justice restaurative en France.",
+                      "type": "vrai_faux",
+                      "justification_requise": true
+                    },
+                    {
+                      "numero": 4,
+                      "texte": "Pour les signataires de cette tribune, pourquoi la justice restaurative est-elle nécessaire à côté de la justice pénale ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 5,
+                      "texte": "Expliquez le terme « revictimisation » (l. 53).",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 6,
+                      "texte": "En quoi consiste la phase de préparation et que permet-elle ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 7,
+                      "texte": "Les signataires de cette tribune soulignent la liberté offerte par la justice restaurative aux participants tout au long du processus. Citez une des phrases du texte qui l'illustre.",
+                      "type": "citation"
+                    },
+                    {
+                      "numero": 8,
+                      "texte": "Il existe en France différents dispositifs en réponse à la violence.",
+                      "type": "vrai_faux",
+                      "justification_requise": true
+                    },
+                    {
+                      "numero": 9,
+                      "texte": "Le mot « panacée » (l. 116) est synonyme de…",
+                      "type": "qcm",
+                      "choix": [
+                        "a. mesure alternative.",
+                        "b. meilleure solution.",
+                        "c. dangereux poison."
+                      ],
+                      "bonne": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "production_orale",
+                  "questions": [
+                    {
+                      "numero": 11,
+                      "texte": "Que pensez-vous de la justice restaurative ? Quels en sont, selon vous, les bénéfices pour le système judiciaire ? Dans quels cas pourrait-elle se substituer à la justice pénale ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 12,
+                      "modalite": "À deux !",
+                      "type": "jeu_de_role",
+                      "consigne": "Lors d'un colloque, un(e) formateur(-trice) en justice restaurative rencontre un(e) magistrat(e). Le/La formateur(-trice) aimerait le/la convaincre de se former. Le/La magistrat(e) refuse. Formez des binômes. Tirez au sort votre rôle. Jouez la scène pendant 4 minutes.",
+                      "roles": {
+                        "formateur": "Vous expliquez les vertus réparatrices pour les victimes et les auteurs. Vous soulignez le rôle clé des juges dans le développement de la justice restaurative.",
+                        "magistrat": "Vous évoquez notamment le manque de moyens de la justice et la crainte de la perte d'efficacité du modèle de sanction."
+                      }
+                    },
+                    {
+                      "numero": 13,
+                      "titre": "Monologue suivi",
+                      "texte": "Vous vous renseignez sur le rôle de « membre de la communauté » dans des programmes de justice restaurative. En quoi cela consiste-t-il ? Aimeriez-vous le devenir ? Pourquoi ?",
+                      "type": "tache_ouverte"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "lettre": "C",
+              "titre": "La médiation animale en prison",
+              "sections": [
+                {
+                  "type": "comprehension_orale",
+                  "audio": "editoc1_piste_02.mp3",
+                  "questions": [
+                    {
+                      "numero": 1,
+                      "texte": "Selon Christine Charbonnier, pourquoi le travail sur l'altérité est essentiel pour des personnes effectuant de longues peines ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 2,
+                      "texte": "Quelle anecdote révélatrice la directrice de prison raconte-t-elle ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 3,
+                      "texte": "« Panser un cheval » signifie…",
+                      "type": "qcm",
+                      "choix": [
+                        "a. le nettoyer.",
+                        "b. monter dessus.",
+                        "c. le caresser."
+                      ],
+                      "bonne": 0
+                    },
+                    {
+                      "numero": 4,
+                      "texte": "Quel terme le présentateur emploie-t-il pour parler du moment où une réaction se déclenche ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 5,
+                      "texte": "La chercheuse souhaitait comprendre pour quelles raisons cette journée d'activités poussait les détenus à s'investir.",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 6,
+                      "texte": "La directrice a pu observer une transformation des rapports entre détenus.",
+                      "type": "vrai_faux",
+                      "justification_requise": true
+                    }
+                  ]
+                },
+                {
+                  "type": "production_orale",
+                  "questions": [
+                    {
+                      "numero": 11,
+                      "modalite": "En groupes !",
+                      "texte": "Échangez à l'aide des questions suivantes :\na. Après ce type d'atelier, le psychologue de la prison est particulièrement attentif aux participants. À votre avis pourquoi ?\nb. En quoi l'interaction avec des animaux peut-elle favoriser la réinsertion sociale des détenus ?\nc. Quels autres types de projets pourraient être bénéfiques aux prisonniers ?",
+                      "type": "tache_ouverte"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "cahier": {
+          "sections": [
+            {
+              "type": "vocabulaire",
+              "flashcards": [
+                {
+                  "categorie": "Les acteurs",
+                  "recto": "Le/la greffier(-ière)",
+                  "verso": "Assiste le magistrat et dresse les procès-verbaux.",
+                  "image_url": "https://pixabay.com/get/g564a9cd8ec6e9707f54539fe9af280fca7d9f9e13e524fb5e120a218e12d51c8c2ce2464b55ace3b3751be1757597ad3_640.jpg"
+                },
+                {
+                  "categorie": "Les acteurs",
+                  "recto": "La protection judiciaire de la jeunesse (PJJ)",
+                  "verso": "Prévient la récidive en accompagnant les mineurs et jeunes détenus.",
+                  "image_url": "https://pixabay.com/get/gc97810f06568dd42ebbfc99d10cc4f4d12c5f3be4be5f5952f373a4cac5e5e42e8160911ce3b1d776dadabd68ca4c587574eabcb7e79ef343662e8dd0ac5720d_640.jpg"
+                },
+                {
+                  "categorie": "Les acteurs",
+                  "recto": "Le jury / Les jurés",
+                  "verso": "Citoyens qui jugent les personnes accusées de crime sans être magistrats.",
+                  "image_url": "https://pixabay.com/get/g9e23dff83e500c6ee6e1157824ad94e764a408c97255d0eeeb356074718450c8ee32c4df96a39c8e640bba7ec1407534_640.jpg"
+                },
+                {
+                  "categorie": "Les acteurs",
+                  "recto": "Le/la juge de l'application des peines",
+                  "verso": "Est en charge de l'exécution et de l'aménagement des peines de prison.",
+                  "image_url": "https://pixabay.com/get/g0819d79e86b9ac60fd603240b602c09b84e5f61e016b9dbe04c228a9ac2f366a20d1de363b8d08e5a39c496da230d3f6d19366290ab4b0416fb5d266b4619433_640.jpg"
+                },
+                {
+                  "categorie": "Expressions",
+                  "recto": "Être un ténor du barreau",
+                  "verso": "Désigne un avocat très expérimenté et renommé."
+                },
+                {
+                  "categorie": "Expressions",
+                  "recto": "Faire des effets de manche",
+                  "verso": "Utiliser une rhétorique théâtrale pour convaincre lors d'un plaidoyer.",
+                  "image_url": "https://pixabay.com/get/g59f5c28707fea2f626e465c28280ea9c998aa367de5427a1dee5c517b832818305be16605cea6f59e87a8477218f744fb146e0b46bc1344f4e86a1dce8b7c4e4_640.jpg"
+                },
+                {
+                  "categorie": "Expressions",
+                  "recto": "Être juge et partie",
+                  "verso": "Être à la fois celui qui décide/juge et une personne directement intéressée par l'affaire.",
+                  "image_url": "https://pixabay.com/get/gbd16a40650716b3a6270b4a55f22ed04378116c74e7a74f38c6da1d058d587231b7fca4ebbebc17a2b06821d3ef6a66c2de2e9a80aa31f1b3b8e4eccafd8b072_640.jpg"
+                },
+                {
+                  "categorie": "Expressions",
+                  "recto": "Se faire l'avocat du diable",
+                  "verso": "Défendre une opinion très impopulaire ou soutenir la thèse adverse pour tester un argument.",
+                  "image_url": "https://pixabay.com/get/g0466bf55127e7586bb22e6bbe409c6aa0a1857171a8208c5e3560b895e76a88f5174767580825600aa09eeb2171ce762_640.jpg"
+                }
+              ]
+            },
+            {
+              "type": "grammaire",
+              "notion": "La voix active et la voix passive",
+              "echauffement": [
+                {
+                  "question": "Dans la phrase 'Les processus de justice restaurative sont animés par des personnes spécialement formées', quel choix les auteurs ont-ils fait et quel effet cela produit-il ?",
+                  "choix": [
+                    "Choisir la voix passive permet d'insister sur le processus plutôt que sur les acteurs.",
+                    "Choisir la voix active permet d'insister sur les acteurs du système judiciaire."
+                  ],
+                  "bonne": 0
+                },
+                {
+                  "question": "Observez les phrases suivantes : 'Durant les médiations, il est recouru au bâton de parole', 'Une mesure s'inscrit en complémentarité'. Quel est leur point commun ?",
+                  "reponse_attendue": "Elles expriment le sens passif par d'autres constructions (forme impersonnelle, forme pronominale)."
+                }
+              ],
+              "fonctionnement": [
+                {
+                  "regle": "Seuls les verbes ayant un COD peuvent admettre la voix passive.",
+                  "formation": "être + participe passé"
+                },
+                {
+                  "regle": "Le complément d'agent est généralement introduit par 'par', mais il est introduit par 'de' avec les verbes d'état, de sentiment (admirer, aimer, détester) ou des verbes comme connaître, ignorer, oublier.",
+                  "exemple": "L'ennemi public n°1 est connu de tous."
+                },
+                {
+                  "regle": "Certains verbes pronominaux ont un sens passif (se dérouler, se vendre, s'inscrire).",
+                  "exemple": "Une mesure de justice restaurative s'inscrit en France..."
+                },
+                {
+                  "regle": "Les verbes pronominaux de perception (se faire, se laisser, se voir, s'entendre) + infinitif ont un sens passif.",
+                  "exception": "Les participes passés de 'se laisser' et 'se faire' suivis d'un infinitif sont invariables."
+                },
+                {
+                  "regle": "La forme passive impersonnelle (ex: 'il est recouru à') est principalement utilisée dans des écrits administratifs ou juridiques."
+                }
+              ],
+              "entrainement": [
+                {
+                  "consigne": "Anciens délinquants, ils sont aujourd'hui réinsérés. Décrivez le processus qui leur a permis de s'en sortir. Utilisez différentes façons d'exprimer le passif.",
+                  "type": "production_guidee"
+                }
+              ]
+            },
+            {
+              "type": "production_ecrite",
+              "type_activite": "canvas",
+              "titre": "Compte rendu de document",
+              "consigne": "Résumer un texte sur la justice restaurative en 250 mots. Pensez à bien structurer votre argumentation et à employer un style formel et objectif."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "theme": 2,
+      "titre": "SOS démocratie",
+      "parties": {
+        "manuel": {
+          "conteneurs": [
+            {
+              "type": "Objectifs",
+              "items": [
+                "Appréhender les défis actuels de la démocratie",
+                "Rédiger un essai argumenté",
+                "Identifier des pistes de ressourcement démocratique",
+                "Assurer la cohérence et la cohésion d’un texte avec des connecteurs logiques"
+              ]
+            },
+            {
+              "type": "Documents",
+              "items": [
+                "Tu voteras oui ou oui au référendum (audio RFI)",
+                "Le monde en questions (audio RFI)"
+              ]
+            },
+            {
+              "type": "Activités",
+              "items": [
+                "Compréhension orale 3 (questions 1‑6)",
+                "Production orale (chronique d’une minute)",
+                "Analyse d’infographie sur le ressenti des Français envers la politique",
+                "Production écrite (enquête imaginaire dans le pays)",
+                "Compréhension orale 4 (populisme et démocratie)"
+              ]
+            }
+          ]
+        },
+        "cahier": {
+          "sections": [
+            {
+              "code": "A",
+              "questions": [
+                "Choisissez un sujet politique à la une de l'actualité de votre pays. À la manière",
+                "Et vous, que ressentez-vous par rapport à la politique ? Partagez vos réponses",
+                "Découvrez à présent le ressenti des Français. Regardez l'infographie. Qu'est-ce qui vous frappe le plus ?",
+                "À votre avis, si l'on réalisait cette même enquête dans votre pays, quels en seraient les résultats ?"
+              ]
+            },
+            {
+              "code": "B",
+              "questions": [
+                "Dans sa chronique, Bruno Daroux souligne que les valeurs des dirigeants populistes",
+                "Monologue suivi DALF C1 : D'après vous, nos sociétés sont‑elles en voie de décadence ?",
+                "À la veille d'un scrutin important, vous décidez de sensibiliser vos concitoyens"
+              ]
+            },
+            {
+              "code": "C",
+              "questions": [
+                "Selon Bruno Cautrès, que reprochent les Français au monde politique ?",
+                "En quoi le deuxième paragraphe du texte explique‑t‑il bien le titre choisi ?",
+                "À deux ! Discutez de la perception actuelle du monde politique. Aidez‑vous des questions",
+                "Monologue suivi DALF C1 : On entend souvent parler dans les médias de « politique »",
+                "Vous êtes membre d'un parti politique. Vous rédigez une charte en 10 points"
+              ]
+            },
+            {
+              "code": "D",
+              "questions": [
+                "Échangez vos points de vue sur l'évolution actuelle de l'engagement politique",
+                "Débat DALF C1 : Vote obligatoire ou vote facultatif ? En 1893, lors de la première...",
+                "Vous venez d'écouter une politologue et un homme politique parler de l'attitude"
+              ]
+            },
+            {
+              "code": "E",
+              "questions": [
+                "Que pensez‑vous de ce document (pertinence des propos échangés, registre linguistique)",
+                "On entend souvent que les jeunes ne s'intéressent plus à la politique. Êtes‑vous d'accord ?",
+                "En groupes ! Situation : Vous êtes à un repas de famille, le dimanche. Trois générations…",
+                "Préparez une courte intervention orale dans laquelle vous ferez ressortir les causes",
+                "Retrouvez les mots de la liste correspondant aux définitions suivantes",
+                "Décrivez l'organisation et le paysage politique de votre pays. Quelles seraient les principales caractéristiques ?",
+                "Écoutez à nouveau la piste 4. Grâce à quels éléments cette interview est‑elle fiable ?",
+                "Retrouvez les liens logiques. Que placez‑vous devant chaque série de connecteurs"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "theme": 3,
+      "titre": "Osé, le changement !",
+      "parties": {
+        "manuel": {
+          "conteneurs": [
+            {
+              "type": "objectifs",
+              "items": [
+                "Comprendre le concept de changement",
+                "S’interroger sur la capacité à changer",
+                "Débattre du changement",
+                "Distinguer les différentes valeurs de tout"
+              ]
+            },
+            {
+              "type": "document",
+              "titre": "A Change toujours, tu m’intéresses…",
+              "extrait": "CHANGEMENT : aucun mot n’est plus trompeur, insuffisant, ramasse‑tout – et peut‑être inutile. On ne change pas de couleur comme on change de vie, de conjoint, de métier ou de nationalité. Il y a tant de changements possibles ! Choisis ou subis (mais de tout changement, même choisi, nous aurons à subir les imprévus) ; petits ou grands …"
+            }
+          ]
+        },
+        "cahier": {
+          "sections": [
+            {
+              "type": "questions",
+              "items": [
+                "À deux ! Discutez du changement à l'aide des questions suivantes. a. Aimez-vous ",
+                "Débat DALF C1 Changer de vie pour s'épanouir, se réaliser est un luxe que tout l",
+                "Monologue suivi Présentez un livre ou un article de développement personnel sur ",
+                "Que veut dire l'auteur quand il qualifi e le terme le/la méditant(e) (tourné(e) ",
+                "Quelle suggestion émet‑il pour éviter cet écueil ?",
+                "Comment pourrait‑on caractériser l'attitude de l'être humain par rapport au chan",
+                "Comment cela se traduit‑il concrètement quand on opte pour le changement ?",
+                "Quelle relation l'auteur établit‑il entre changement de vie et bien‑être psychiq",
+                "Selon vous, pourquoi l'auteur qualifi e‑t‑il les propos de Montaigne de « malici",
+                "Quelle conclusion l'auteur tire‑t‑il sur le E changement ? R",
+                "Le titre du document fait référence à l'expression V I « cause toujours, tu m'in",
+                "Automatisation, intelligence artificielle, télétravail, apprentissage en contin",
+                "Retrouvez les mots sont les changements subis d'hypothétique. correspondant aux ",
+                "Lisez la rubrique « les personnelle accordé au salarié. E aspirations » et chois",
+                "À deux ! Qu'aimeriez‑vous voir changer ? Exprimez votre souhait en réemployant t",
+                "Iquarante‑quatre",
+                "Observez les phrases suivantes. Quelle est la nature de tout : pronom, nom, adve",
+                "Observez les phrases suivantes. Quelle est la dif",
+                "Comment s'accorde l'adverbe tout devant un adjectif féminin ? Retrouvez la règle",
+                "Observez les exemples et complétez les règles dans le tableau. Exemples Règles T"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "theme": 4,
+      "titre": "Souffler le chaud et le froid",
+      "parties": {
+        "manuel": {
+          "conteneurs": [
+            {
+              "type": "objectifs",
+              "items": [
+                "Appréhender les défis actuels liés à l’environnement",
+                "Identifier des pistes de solutions face à la crise environnementale",
+                "Distinguer les différentes valeurs de si de chaleur"
+              ]
+            },
+            {
+              "type": "documents",
+              "items": [
+                {
+                  "id": "A",
+                  "titre": "Que faire contre le gaspillage d’eau ?",
+                  "extrait": "Extraits sur la consommation d’eau domestique, gestes d’économie, etc."
+                }
+              ]
+            },
+            {
+              "type": "questions",
+              "items": [
+                {
+                  "c": "C",
+                  "t": "En groupes ! Au fait… Situation : Dans vos bureaux, les services généraux ont d"
+                },
+                {
+                  "c": "C",
+                  "t": "Le chauffage occupe en France une place importante dans les émissions de gaz à e"
+                },
+                {
+                  "c": "E",
+                  "t": "Quelle spécifi cité permet à l'hôpital de Papeete d'utiliser le système de clima"
+                },
+                {
+                  "c": "E",
+                  "t": "Pourquoi faut-il nettoyer fréquemment les filtres ? a. Pour éviter le mélange d"
+                },
+                {
+                  "c": "E",
+                  "t": "En quoi la situation géologique de l'île favorise-t-elle le travail des ingénieu"
+                },
+                {
+                  "c": "E",
+                  "t": "Qu'est ce qui coûte le plus cher dans la mise en place d'un SWAC ? cinquante-sep"
+                },
+                {
+                  "c": "E",
+                  "t": "Quelle ressource est utilisée pour produire de l'électricité à Tahiti ?"
+                },
+                {
+                  "c": "E",
+                  "t": "Quels sont les avantages du SWAC évoqués par les personnes interrogées à l'hôpit"
+                },
+                {
+                  "c": "E",
+                  "t": "Monologue suivi C1 Avec la multiplication des vagues de chaleur, les ventes de c"
+                },
+                {
+                  "c": "F",
+                  "t": "Quels sont les avantages et inconvénients des AMAP… de l'agriculture paysanne (A"
+                },
+                {
+                  "c": "F",
+                  "t": "En groupes ! Choisissez un des points de vue, faites des recherches, puis direct"
+                },
+                {
+                  "c": "F",
+                  "t": "À deux ! Identifi ez ensemble la valeur de si, puis dites chacun(e) ce que vous "
+                },
+                {
+                  "c": "F",
+                  "t": "Observez les énoncés suivants. Quel est le rôle de la proposition introduite par"
+                }
+              ]
+            }
+          ]
+        },
+        "cahier": {
+          "sections": [
+            {
+              "titre": "Objectifs",
+              "contenu": "Appréhender les défis actuels liés à l’environnement; Identifier des pistes de solutions face à la crise environnementale; Distinguer les différentes valeurs de si de chaleur"
+            },
+            {
+              "titre": "Documents",
+              "contenu": "Document A – Que faire contre le gaspillage d’eau ? (extraits sur la consommation d’eau domestique, gestes d’économie, etc.)"
+            },
+            {
+              "titre": "Questions d’entraînement",
+              "contenu": "Liste des questions C, E, F telles que présentées dans le manuel"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "theme": 5,
+      "titre": "Les nouveaux visages de la culture",
+      "parties": {
+        "manuel": {
+          "conteneurs": [
+            {
+              "type": "objectifs",
+              "items": [
+                "Pointer les défis de la modernisation de la culture",
+                "Écriture créative",
+                "Identifier des initiatives culturelles en faveur des publics",
+                "Décrire ses pratiques culturelles avec précision",
+                "Utiliser la mise en relief pour souligner des propos"
+              ]
+            },
+            {
+              "type": "documents",
+              "liste": [
+                {
+                  "titre": "Les jeunes et la culture",
+                  "auteur": "Sylvie Octobre",
+                  "description": "Analyse des comportements de consommation culturelle des jeunes, impact d’Internet, gratuité, inégalités culturelles."
+                }
+              ]
+            }
+          ]
+        },
+        "cahier": {
+          "sections": [
+            {
+              "type": "questions",
+              "items": [
+                {
+                  "c": "B",
+                  "t": "À deux ! Discutez du rôle des musées à l'aide des questions suivantes. a. Quelle"
+                },
+                {
+                  "c": "B",
+                  "t": "Monologue suivi DALF C1 Faites des recherches pour trouver une initiative similaire"
+                },
+                {
+                  "c": "C",
+                  "t": "Quels sont les reproches formulés par la jeune fille brune ? Relevez le lexique"
+                },
+                {
+                  "c": "C",
+                  "t": "Quel lexique est utilisé pour désigner l'utilisation de la liseuse ? Que remarqu"
+                },
+                {
+                  "c": "C",
+                  "t": "À deux ! Discutez des questions suivantes. a. Que pensez-vous de ce débat ? Peut"
+                },
+                {
+                  "c": "C",
+                  "t": "Débat DALF C1 Après avoir abordé les nouveaux visages de la culture, pensez-vous"
+                },
+                {
+                  "c": "C",
+                  "t": "Vous décidez de réaliser un bref discours au sujet de la modernisation des musées"
+                },
+                {
+                  "c": "C",
+                  "t": "Retrouvez dans la liste ci- c. Eh bien, je n'ai eu qu'à arriver • passionnant(e)"
+                },
+                {
+                  "c": "C",
+                  "t": "En groupes ! Vous partagez c. Relais entre le public et une • médiocre votre avis"
+                },
+                {
+                  "c": "C",
+                  "t": "Reformulez ces phrases plus simplement. Quel est le point commun entre elles ? a"
+                },
+                {
+                  "c": "C",
+                  "t": "Dans les phrases ci-dessous, quelles informations sont mises en valeur ? Repérez"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "theme": 6,
+      "titre": "On ne naît pas féministe…",
+      "parties": {
+        "manuel": {
+          "conteneurs": [
+            {
+              "type": "objectifs",
+              "content": "Identifier les combats actuels et passés du féminisme; réaliser un exposé oral; appréhender le concept de déconstruction des identités de genre; maîtriser les préfixes et les suffixes de l’histoire"
+            },
+            {
+              "type": "documents",
+              "content": [
+                {
+                  "id": "A",
+                  "titre": "Les jouets ont-ils un genre?",
+                  "description": "Compréhension audiovisuelle avec questions de compréhension et production orale/écrite"
+                },
+                {
+                  "id": "B",
+                  "titre": "C’est quoi, le féminisme?",
+                  "description": "Petit guide pour mettre un pied dans le féminisme, définitions et notions clés"
+                }
+              ]
+            }
+          ]
+        },
+        "cahier": {
+          "sections": [
+            {
+              "lettre": "A",
+              "questions": [
+                {
+                  "num": 1,
+                  "texte": "Cette expérience vise à étudier… a. les attentes conscientes des jeunes enfants "
+                },
+                {
+                  "num": 2,
+                  "texte": "Comment est structurée cette vidéo ? Qui sont les intervenants et quels sont leu"
+                },
+                {
+                  "num": 3,
+                  "texte": "Trouvez un titre accrocheur pour cette expérience scientifi que."
+                },
+                {
+                  "num": 4,
+                  "texte": "Commentez les réactions des trois pères : quels sont les points communs et les d"
+                },
+                {
+                  "num": 5,
+                  "texte": "D'après la psychologue, comment les parents encouragent-ils ou découragent-ils l"
+                },
+                {
+                  "num": 6,
+                  "texte": "Ces pères sont-ils présentés comme machos ? Production orale Production écrite"
+                },
+                {
+                  "num": 7,
+                  "texte": "En groupes ! Avez-vous eu une éducation 9 Vous travaillez pour une marque de vêt"
+                },
+                {
+                  "num": 8,
+                  "texte": "Le sexisme est parfois inconscient. Quels genrée et cherche des arguments market"
+                }
+              ]
+            },
+            {
+              "lettre": "B",
+              "questions": [
+                {
+                  "num": 1,
+                  "texte": "Edwige-Renée Dro explique : « Quand on parle du féminisme, ici, on dit : “Ah non"
+                },
+                {
+                  "num": 2,
+                  "texte": "Monologue suivi À l'image de la marche des femmes sur Grand-Bassam en 1949, quel"
+                },
+                {
+                  "num": 3,
+                  "texte": "Quelles ont été les avancées féministes d. Regardez le visuel des « colleuses » "
+                },
+                {
+                  "num": 4,
+                  "texte": "Trouvez une expression évoquant un changement radical, un bouleversement. 9 Mono"
+                },
+                {
+                  "num": 5,
+                  "texte": "Sur quels sujets porte le combat féministe Depuis 2017 et la médiatisation du mo"
+                },
+                {
+                  "num": 6,
+                  "texte": "En quoi le mouvement #MeToo représente-t-il un intensifi és dans le monde. Chois"
+                },
+                {
+                  "num": 7,
+                  "texte": "Quelle est la différence entre le féminisme mené ? Qu'en pensez-vous ? I L unive"
+                },
+                {
+                  "num": 8,
+                  "texte": "Quel lien établissez-vous entre les expressions Production écrite 6 « vagues fém"
+                },
+                {
+                  "num": 9,
+                  "texte": "D'après vous, reste-t-il des luttes à mener m féministes » ? Comment les défi ni"
+                },
+                {
+                  "num": 10,
+                  "texte": "Quelle anecdote symbolise l'attachement d'Edwige-Renée aux bibliothèques ? Edwig"
+                },
+                {
+                  "num": 11,
+                  "texte": "Contre quelle idée préconçue Edwige-Renée milite-t-elle ? sa bibliothèque «1949"
+                },
+                {
+                  "num": 12,
+                  "texte": "La Côte d'Ivoire investit dans la construction de bibliothèques. Vrai ou faux ? "
+                },
+                {
+                  "num": 13,
+                  "texte": "Edwige-Renée organise des événements pour… Bassam à marcher contre l'administrat"
+                },
+                {
+                  "num": 14,
+                  "texte": "Elle a mis en place une activité d'analyse des titres de roman. C'est… a. la tit"
+                },
+                {
+                  "num": 15,
+                  "texte": "Quelles sont les ambitions féministes d'Edwige-Renée avec sa bibliothèque ? Acti"
+                },
+                {
+                  "num": 16,
+                  "texte": "Comment le féminisme est-il perçu en Côte d'Ivoire ?"
+                },
+                {
+                  "num": 17,
+                  "texte": "Quels sont les espoirs de la bibliothécaire ?"
+                }
+              ]
+            },
+            {
+              "lettre": "D",
+              "questions": [
+                {
+                  "num": 1,
+                  "texte": "À deux ! Regardez le dessin et discutez à l'aide des questions suivantes. a. Sur"
+                },
+                {
+                  "num": 2,
+                  "texte": "Quelle différence faites-vous entre « masculinité » et « virilité » ?"
+                },
+                {
+                  "num": 3,
+                  "texte": "Que pensez-vous du type de masculinité assumé par Rudy ?"
+                },
+                {
+                  "num": 4,
+                  "texte": "Débat DALF C1 Marie Morelle Dans votre entreprise, une association féministe org"
+                }
+              ]
+            },
+            {
+              "lettre": "E",
+              "questions": [
+                {
+                  "num": 1,
+                  "texte": "Quel portrait la narratrice dresse-t-elle de son couple au début de l'extrait ?"
+                },
+                {
+                  "num": 2,
+                  "texte": "Comment est formé l'adverbe « doucettement » (l. 7) ? Que signifi e-t-il ?"
+                },
+                {
+                  "num": 3,
+                  "texte": "Le modèle parental de la narratrice répond-il aux stéréotypes de genre ?"
+                },
+                {
+                  "num": 4,
+                  "texte": "Pour quelles raisons décide-t-elle fi nalement de s'occuper des tâches domestiqu"
+                },
+                {
+                  "num": 5,
+                  "texte": "Relevez les mots appartenant au registre familier."
+                },
+                {
+                  "num": 6,
+                  "texte": "La narratrice précise qu'elle n'a pas « regimbé » (l. 45). Cela signifi e qu'ell"
+                },
+                {
+                  "num": 7,
+                  "texte": "En 5 minutes, trouvez le maximum de conseils pratiques et concrets pour Nobel de"
+                },
+                {
+                  "num": 8,
+                  "texte": "À deux ! que femme dans les années Situation : Vous êtes en couple et vous venez"
+                },
+                {
+                  "num": 9,
+                  "texte": "Monologue suivi Faites des recherches sur la charge mentale. Retracez l'histoire"
+                }
+              ]
+            },
+            {
+              "lettre": "F",
+              "questions": [
+                {
+                  "num": 1,
+                  "texte": "À quelles formes de discriminations sont exposées les différentes minorités ? Di"
+                },
+                {
+                  "num": 2,
+                  "texte": "Quelle différence faites- Féminismes et masculinités • asexuel(le) vous entre « "
+                },
+                {
+                  "num": 3,
+                  "texte": "Quelle expression évoque… • la suffragette a. la transformation d'un modèle • la"
+                },
+                {
+                  "num": 4,
+                  "texte": "Dans ces phrases, quels sont les mots de la même famille ? a. Pourquoi vous avez"
+                },
+                {
+                  "num": 5,
+                  "texte": "Dans ces phrases, relevez les préfi xes et les suffixes. a. On les appelle les "
+                },
+                {
+                  "num": 6,
+                  "texte": "Quel est le point commun entre ces phrases ? a. J'ai honte […] d'appartenir à l'"
+                },
+                {
+                  "num": 7,
+                  "texte": "Observez les exemples et choisissez ou complétez les règles dans le tableau. Exe"
+                },
+                {
+                  "num": 8,
+                  "texte": "Vous faites partie d'une association qui lutte contre les discriminations LGBTQI"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "theme": 7,
+      "titre": "Requiem pour un joueur – Analyse et activités",
+      "parties": {
+        "manuel": {
+          "conteneurs": [
+            {
+              "type": "texte",
+              "id": "T1",
+              "titre": "A Requiem pour un joueur",
+              "source": "PDF page 2"
+            },
+            {
+              "type": "questions",
+              "id": "Q1",
+              "categorie": "A",
+              "questions": [
+                "D'après vous, quel emploi occupe le personnage de ce roman. Quel est son rapport",
+                "En explorant les sites de paris, par quoi est-il frappé ? Relevez deux phrases q",
+                "Qu'est-ce qui met le personnage en confi ance pour se lancer dans un pari ?",
+                "Qu'arrive-t-il au personnage ?",
+                "Comment le passage du jeu est-il décrit ? Qu'est-ce qu'il en ressort ?",
+                "Dans quel état se sent le personnage à la fi n de la journée ? Relevez trois mot",
+                "Qu'en est-il de l'espace-temps pendant cette phase de jeu ?",
+                "D'après vous, quel phénomène affecte le personnage ? Quels éléments du texte per",
+                "À deux ! Discutez du jeu à partir des questions suivantes. a. Quels jeux travers",
+                "Débat DALF C1 L'impôt sur les jeux d'argent rapporte plus de 3 milliards d'euros",
+                "En groupes !La France est actuellement l'un des pays à la pointe de l'e-sport (c",
+                "Quels sont les signes qui doivent alerter quant à la dépendance aux jeux d'argen"
+              ]
+            },
+            {
+              "type": "questions",
+              "id": "Q2",
+              "categorie": "B",
+              "questions": [
+                "Que révèle le témoignage d'un ancien patient ?",
+                "Quelle différence Sarah Gautré fait-elle entre un 10 Un magazine consacré au bie",
+                "Quelle précision Xavier Pommereau souhaite-t-il lecteurs de participer à la disc",
+                "En quoi réside l'aide fournie par le jeu selon présentent-ils plutôt des avantag",
+                "Qu'explique-t-il concernant les adolescentes et participer. quelle conclusion pl",
+                "À deux ! Discutez à partir des questions rompus suivantes. des 1 000 euros a. Se"
+              ]
+            },
+            {
+              "type": "questions",
+              "id": "Q3",
+              "categorie": "C",
+              "questions": [
+                "Monologue suivi C1 de l'équipe B qui ont 30 secondes pour y Le jeu peut devenir ",
+                "Expliquez la règle d'un jeu V • d'entrée de jeu • jouer (un) double jeu I que vo",
+                "Quel est le point commun entre les mots soulignés dans les phrases a, b, c, d ? ",
+                "Pour chaque mot souligné, dites s'il s'agit d'un participe présent, d'un gérondi",
+                "Dans la phrase suivante, quelle est la particularité de l'adjectif verbal ? Il s",
+                "Lisez les exemples dans le tableau puis complétez-le avec les mots proposés : di",
+                "Donnez quelques conseils à des parents pour limiter l'addiction aux jeux vidéo d"
+              ]
+            }
+          ]
+        },
+        "cahier": {
+          "sections": [
+            {
+              "type": "compréhension",
+              "titre": "Compréhension du texte",
+              "exercices": [
+                {
+                  "id": "E1",
+                  "consigne": "Répondez aux questions de la catégorie A"
+                }
+              ]
+            },
+            {
+              "type": "grammaire",
+              "titre": "Analyse grammaticale",
+              "exercices": [
+                {
+                  "id": "E2",
+                  "consigne": "Identifiez les participes présents, gérondifs et adjectifs verbaux dans les phrases proposées"
+                }
+              ]
+            },
+            {
+              "type": "débat",
+              "titre": "Débat sur les jeux d'argent",
+              "exercices": [
+                {
+                  "id": "E3",
+                  "consigne": "Discutez les questions des catégories A et B en groupe"
+                }
+              ]
+            },
+            {
+              "type": "production",
+              "titre": "Production écrite",
+              "exercices": [
+                {
+                  "id": "E4",
+                  "consigne": "Rédigez un texte argumentatif sur la dépendance aux jeux d'argent"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "theme": 8,
+      "titre": "Ma belle famille!",
+      "parties": {
+        "manuel": {
+          "conteneurs": [
+            {
+              "type": "objectifs",
+              "items": [
+                "Réévaluer le rôle des membres de la famille",
+                "Questionner les clichés sur les belles‑mères",
+                "Adapter le registre de langue des belles‑mères dans les familles",
+                "Synthèse sur la place des activités familiales"
+              ]
+            },
+            {
+              "type": "documents",
+              "liste": [
+                {
+                  "ref": "A",
+                  "titre": "Mode d’emploi pour les grands‑parents"
+                },
+                {
+                  "ref": "B",
+                  "titre": "Monologue suivi C1 – rôle et droits des grands‑parents"
+                },
+                {
+                  "ref": "E",
+                  "titre": "Belles‑mères – statistiques, représentations et enjeux"
+                }
+              ]
+            },
+            {
+              "type": "activites",
+              "items": [
+                {
+                  "numero": 1,
+                  "description": "Compréhension orale – chronique de Gwénaëlle Boulet"
+                },
+                {
+                  "numero": 2,
+                  "description": "Production orale – débat en groupe sur l’éducation des enfants"
+                },
+                {
+                  "numero": 3,
+                  "description": "Monologue suivi C1 – recherche sur le rôle des grands‑parents"
+                },
+                {
+                  "numero": 4,
+                  "description": "Exercices de compréhension écrite – questions sur les belles‑mères (liste C)"
+                },
+                {
+                  "numero": 5,
+                  "description": "Débat C1 – rôle des belles‑mères dans la famille"
+                }
+              ]
+            }
+          ]
+        },
+        "cahier": {
+          "sections": [
+            {
+              "titre": "Objectifs",
+              "contenu": [
+                "Réévaluer le rôle des membres de la famille",
+                "Questionner les clichés sur les belles‑mères",
+                "Adapter le registre de langue des belles‑mères"
+              ]
+            },
+            {
+              "titre": "Compréhension orale",
+              "exercices": [
+                {
+                  "question": "1",
+                  "texte": "Vrai ou faux – les grands‑parents doivent dire franchement le prénom choisi"
+                },
+                {
+                  "question": "2",
+                  "texte": "Surnoms désignant les petits‑enfants"
+                },
+                {
+                  "question": "3",
+                  "texte": "Expression désignant la première dispute"
+                },
+                {
+                  "question": "4",
+                  "texte": "Sens du terme « menu »"
+                },
+                {
+                  "question": "5",
+                  "texte": "Sentiment des jeunes parents"
+                },
+                {
+                  "question": "6",
+                  "texte": "Respect du gendre par l’enfant"
+                },
+                {
+                  "question": "7",
+                  "texte": "Vrai ou faux – rôle souple des grands‑parents"
+                },
+                {
+                  "question": "8",
+                  "texte": "Attentes envers les parents (a‑c)"
+                },
+                {
+                  "question": "9",
+                  "texte": "Raisons pour lesquelles les grands‑parents donnent plus"
+                },
+                {
+                  "question": "10",
+                  "texte": "Conclusion de Nicole Prieur"
+                }
+              ]
+            },
+            {
+              "titre": "Production orale",
+              "consignes": "Défendre votre point de vue en groupe sur l’éducation des enfants (parents vs grands‑parents)"
+            },
+            {
+              "titre": "Monologue suivi C1",
+              "consignes": "Faire des recherches sur le rôle et les droits des grands‑parents"
+            },
+            {
+              "titre": "Exercices écrits – belles‑mères",
+              "items": [
+                {
+                  "code": "E1",
+                  "question": "Combien y a‑t‑il de belles‑mères en France selon les derniers chiffres ?"
+                },
+                {
+                  "code": "E2",
+                  "question": "Comment la belle‑mère est‑elle traditionnellement perçue ?"
+                },
+                {
+                  "code": "E3",
+                  "question": "Pourquoi les belles‑mères peuvent‑elles avoir du mal à s’investir dans l’éducation ?"
+                },
+                {
+                  "code": "E4",
+                  "question": "Quelles images de la belle‑mère sont présentées dans les séries et films ?"
+                },
+                {
+                  "code": "E5",
+                  "question": "En quoi la présence d’une belle‑mère peut‑elle être vue comme une chance pour l’enfant ?"
+                },
+                {
+                  "code": "E6",
+                  "question": "Quelle est la vocation de l’association Le Club des marâtres de Vanves ?"
+                },
+                {
+                  "code": "E7",
+                  "question": "Comment, dans le texte, sont jugées les différentes options qui s’offrent aux belles‑mères ?"
+                },
+                {
+                  "code": "E8",
+                  "question": "Laura aurait aimé devenir mère – vrai ou faux"
+                },
+                {
+                  "code": "E9",
+                  "question": "Selon Laura, quel type de père est son compagnon ?"
+                },
+                {
+                  "code": "E10",
+                  "question": "À quoi Sylvie fait‑elle référence dans le débat sur la relation"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "theme": 9,
+      "titre": "Vieillir : une aventure",
+      "parties": {
+        "manuel": {
+          "conteneurs": [
+            {
+              "type": "objectifs",
+              "items": [
+                "Questionner la notion d’âge",
+                "S’interroger sur le vieillissement de la population et ses enjeux",
+                "Identifier des injonctions sociétales liées au vieillissement"
+              ]
+            },
+            {
+              "type": "documents",
+              "items": [
+                "A Vieillir sans en avoir le droit"
+              ]
+            },
+            {
+              "type": "activites",
+              "items": [
+                "Compréhension orale – écouter extrait de l’émission Tout un matin sur Radio-Canada",
+                "Production écrite – rédiger réponse à la question sur le mensonge d’âge",
+                "Production orale – débat sur la représentation de la vieillesse",
+                "Débat C1 – Bien vieillir est synonyme de vieillir en bonne santé"
+              ]
+            }
+          ]
+        },
+        "cahier": {
+          "sections": [
+            {
+              "titre": "Questions A",
+              "questions": [
+                {
+                  "c": "A",
+                  "t": "D'après l'animateur, quelles réactions suscite la couverture du magazine?"
+                },
+                {
+                  "c": "A",
+                  "t": "L'animateur a choisi d'inviter Jocelyne Robert pour parler du vieillissement? Si oui, pourquoi? Si non, comprenez-vous celles et ceux qui le font?"
+                },
+                {
+                  "c": "A",
+                  "t": "Quels termes utilisés par Jocelyne Robert montrent que, pour elle, le message véhiculé par la couverture n’est pas explicitement formulé?"
+                },
+                {
+                  "c": "A",
+                  "t": "À deux! Échangez sur votre représentation de la vieillesse à l’aide des questions suivantes."
+                },
+                {
+                  "c": "A",
+                  "t": "D'après elle, quelles sont les deux idées fausses montrées ou invisibilisées dans les médias?"
+                },
+                {
+                  "c": "A",
+                  "t": "À quoi Jocelyne Robert oppose-t-elle la beauté conventionnelle?"
+                },
+                {
+                  "c": "A",
+                  "t": "Pourquoi parle-t-elle d'un risque de « devenir schizo »?"
+                },
+                {
+                  "c": "A",
+                  "t": "Avez-vous peur de vieillir? Pourquoi?"
+                }
+              ]
+            },
+            {
+              "titre": "Questions B",
+              "questions": [
+                {
+                  "c": "B",
+                  "t": "Dans le premier paragraphe, relevez les mots utilisés pour désigner les aînés."
+                },
+                {
+                  "c": "B",
+                  "t": "D'après l'auteure, à quels diktats les septuagénaires sont-ils confrontés?"
+                },
+                {
+                  "c": "B",
+                  "t": "Laure Adler désapprouve l'effacement des différences entre les générations. Vrai ou faux?"
+                },
+                {
+                  "c": "B",
+                  "t": "Comment Laure Adler conçoit-elle l'âge?"
+                },
+                {
+                  "c": "B",
+                  "t": "Que signifie « sans coup férir » (l.71)? a. Sans difficile. b. Sans succès."
+                },
+                {
+                  "c": "B",
+                  "t": "Monologue suivi DALF C1 c. Sans le vouloir. Faites des recherches sur l'âgisme d..."
+                },
+                {
+                  "c": "B",
+                  "t": "Selon Laure Adler, à quoi le fait de vieillir... (pays de votre choix)."
+                },
+                {
+                  "c": "B",
+                  "t": "Quelle opportunité la vieillesse offre-t-elle et quelles discriminations touchent les aînés?"
+                },
+                {
+                  "c": "B",
+                  "t": "À deux! Discutez à l'aide des questions suivantes. Production écrite a. Comment..."
+                }
+              ]
+            },
+            {
+              "titre": "Questions C",
+              "questions": [
+                {
+                  "c": "C",
+                  "t": "Lors du pot de départ à la retraite de madame Durand, vous prenez la parole au..."
+                },
+                {
+                  "c": "C",
+                  "t": "Identifiez le rôle des mots soulignés issus du texte B, p.128, et leur nature."
+                },
+                {
+                  "c": "C",
+                  "t": "Complétez les exemples avec les phrases de l'échauffement, et les règles avec le..."
+                },
+                {
+                  "c": "C",
+                  "t": "En utilisant des reprises (nominales et pronominales), présentez..."
+                },
+                {
+                  "c": "C",
+                  "t": "Cahier, p.134 une personne célèbre âgée de plus de 70 ans. Puis lisez votre texte..."
+                },
+                {
+                  "c": "C",
+                  "t": "Quelles formules peuvent compléter la liste? Choisissez la bonne expression. a..."
+                },
+                {
+                  "c": "C",
+                  "t": "Quels autres mots sont • être malade • être dans la force de l'âge • être vulnér..."
+                },
+                {
+                  "c": "C",
+                  "t": "À quelle catégorie d'âge appartiennent-ils? Les ressources de la vieillesse 6 A"
+                },
+                {
+                  "c": "C",
+                  "t": "Quelle est la tranche d'âge correspondant à ... l'expérience..."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "theme": 10,
+      "titre": "Santé 3.0",
+      "parties": {
+        "manuel": {
+          "conteneurs": [
+            {
+              "type": "Objectifs",
+              "items": [
+                "Commenter les avancées technologiques dans le domaine de la santé",
+                "Rédiger un essai argumenté et proposer des mesures pour protéger les médecins et les patients face aux avancées technologiques",
+                "Se questionner sur l’éthique de certaines avancées scientifiques",
+                "Maîtriser les temps du récit au passé liés à la santé"
+              ]
+            },
+            {
+              "type": "Documents",
+              "items": [
+                "Science fiction",
+                "Entretien avec Amanda Sthers & Aurélie Jean"
+              ]
+            }
+          ]
+        },
+        "cahier": {
+          "sections": [
+            {
+              "lettre": "A",
+              "questions": [
+                "Choisissez et justifi ez votre choix en citant des éléments du texte. D'après vo",
+                "Que peut signifi er le terme « fl icage » (l. 22) ? Pourquoi ce mot est-il emplo",
+                "Les auteures ont choisi ces deux héroïnes parce qu'elles… a. leur ressemblent. c",
+                "En quoi la science-fi ction est-elle utile selon Aurélie Jean ?",
+                "Les auteures parlent d'un livre d'anticipation, pourquoi ce terme ?",
+                "Selon Amanda Sthers, quel a été l'apport d'Aurélie Jean en tant que scientifi qu",
+                "Pourquoi abordent-elles le sujet de la crétinisation ? De quelle manière peut-el",
+                "Quelle est la position des deux auteures sur les craintes liées à l'emploi de l'",
+                "À deux ! Discutez à l'aide des questions suivantes. a. Quelles différences y a-t",
+                "Débat DALF C1 Pensez-vous, comme dans l'article, que sans IA, sans Internet, etc"
+              ]
+            },
+            {
+              "lettre": "B",
+              "questions": [
+                "Quel était l'objectif des laboratoires Neuralink ? Par quel moyen ?",
+                "Quels efforts la Chine avait-elle entrepris pour se positionner dans le domaine ",
+                "En quoi consistait la course cognitive entreprise par les Chinois et qu'ont-ils ",
+                "Comment les entreprises françaises ont-elles réagi face à l'essor des puces céré",
+                "Pourquoi le nombre de personnes implantées a-t-il crû de 17 points ? Justifi ez.",
+                "Relevez les avantages et les inconvénients relatifs au système d'implantation de",
+                "Quelles furent les réactions de la communauté scientifi que face à cette avancée",
+                "À deux ! Discutez à l'aide des questions suivantes. a. Que ressentez-vous à la l",
+                "Monologue suivi DALF C1 Vous êtes à une conférence qui traite du sujet de ce liv"
+              ]
+            },
+            {
+              "lettre": "C",
+              "questions": [
+                "À l'occasion de la Journée mondiale de la santé, la revue de votre santé mène de",
+                "Débat C1 accueille tous les acteurs de Quelles implications liées à l'utilisatio"
+              ]
+            },
+            {
+              "lettre": "E",
+              "questions": [
+                "Quel est le principe de la plateforme utilisée par Claire Dumas ? 10",
+                "Il s'agit d'une application qui est déjà bien en place au Québec. e Vrai ou faux",
+                "Quelles sont les informations transmises et de quelles façons ? è h T Citez des ",
+                "Quel est l'apport de cette technologie pour le corps médical, le patient et sa f",
+                "Selon Philippe Voyer, pourquoi l'utilisation des applications de contrôle médica",
+                "Comment la prise de médicaments est-elle facilitée grâce à la technologie Xpill",
+                "Le Québec prévoit de lancer huit projets pilotes sur l'hospitalisation à domicil",
+                "Quelle expression employée par le journaliste traduit la satisfaction de Claire ",
+                "Vous souhaitez vous essayer au genre de la science-fi ction. Vous imaginez certa",
+                "Des médecins souhaitent accélérer la mise à disposition d'innovations technologi"
+              ]
+            },
+            {
+              "lettre": "F",
+              "questions": [
+                "À deux ! Discutez à l'aide des questions suivantes. a. Que pensez-vous de la mul",
+                "Vous passez un entretien pour réaliser votre doctorat dans l'une des écoles ment",
+                "Complétez le tableau ci-dessous avec les mots suivants : futur antérieur, fait p",
+                "Vous racontez l'histoire d'une technologie dont l'utilisation a mal tourné. Vari",
+                "Complétez ces phrases avec Les nouvelles technologies l'expression qui convient.",
+                "Retrouvez dans les trois • la réalité augmentée/virtuelle d. Ma sœur est ....., ",
+                "Défi nissez le principe la santé. propos d'une intervention du roman d'anticipat"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "theme": 11,
+      "titre": "Solidarité, un bel élan",
+      "parties": {
+        "manuel": {
+          "conteneurs": [
+            {
+              "type": "document",
+              "titre": "Les bienfaits des comportements de solidarité",
+              "extraits": [
+                "Vous la connaissez sans doute, cette satisfaction que l’on ressent quand on a réalisé un geste désintéressé.",
+                "Les comportements prosociaux favorisent ainsi la proximité avec les autres, les réactions positives des autres et la cohésion sociale.",
+                "Le lien positif entre les comportements d’entraide crée un sentiment d’être reconnu, important et d’être une personne sur laquelle on peut compter, ce qui améliore le bien‑être.",
+                "Les recherches en psychologie positive montrent que ces comportements satisfont les trois besoins fondamentaux d’autonomie, de compétence et d’appartenance."
+              ]
+            }
+          ]
+        },
+        "cahier": {
+          "sections": [
+            {
+              "type": "questions",
+              "items": [
+                {
+                  "c": "A",
+                  "t": "En quoi cette démarche s'opposerait-elle à selon les lieux et les époques. Aujou"
+                },
+                {
+                  "c": "A",
+                  "t": "Que signifi e « autrui », utilisé quatre fois par matérielles) et dites pourquoi"
+                },
+                {
+                  "c": "B",
+                  "t": "Quelle solution va-t-il mettre en place ? 12 Vous avez appris que de plus en plu"
+                },
+                {
+                  "c": "B",
+                  "t": "Que pensez-vous des choix de Cédric rédiger une lettre ouverte aux autorités com"
+                },
+                {
+                  "c": "C",
+                  "t": "Selon vous, pourquoi est-il important de mettre l'association, exprimez votre en"
+                },
+                {
+                  "c": "C",
+                  "t": "En France, le bénévolat est en mutation : Rôle du / de la responsable : Vous rec"
+                },
+                {
+                  "c": "C",
+                  "t": "Comparez les phrases a et b. Dans quelle phrase le point de vue est-il le plus p"
+                },
+                {
+                  "c": "C",
+                  "t": "Observez et comparez les phrases ci-dessous. Dans les phrases b et d, relevez le"
+                },
+                {
+                  "c": "C",
+                  "t": "Complétez le tableau avec les procédés de modalisation suivants : choix du lexiq"
+                },
+                {
+                  "c": "C",
+                  "t": "Rédigez un appel à la solidarité à l'adresse de celles et ceux qui sont peu enga"
+                },
+                {
+                  "c": "C",
+                  "t": "Retrouvez les mots • adopter un comportement • le/la volontaire correspondant au"
+                },
+                {
+                  "c": "C",
+                  "t": "En fi n d'année, sur les réseaux • le besoin de compétence / suivantes. sociaux "
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "theme": 12,
+      "titre": "Vous réglez en espèce(s) ?",
+      "parties": {
+        "manuel": {
+          "conteneurs": [
+            "Reconsidérer notre rapport au vivant",
+            "Synthèse rédiger une",
+            "Décrire un milieu naturel",
+            "Former un groupe nominal avec de, des ou d’ + nom sur notre relation au vivant"
+          ]
+        },
+        "cahier": {
+          "sections": [
+            {
+              "code": "B",
+              "texte": "En groupes ! Faites des recherches sur d'autres types de communication développé"
+            },
+            {
+              "code": "B",
+              "texte": "Débat DALF C1 Pensez-vous que l'établissement d'un rapport différent de l'être h"
+            },
+            {
+              "code": "C",
+              "texte": "Vous souhaitez devenir bénévole dans l'association OPPAL. Rédigez votre lettre d"
+            },
+            {
+              "code": "C",
+              "texte": "À deux ! Situation : Un nouveau Plan loup va être adopté au Parlement pour perme"
+            },
+            {
+              "code": "C",
+              "texte": "Monologue suivi C1 Selon vous, la chasse est-elle une pratique bénéfi que ou néf"
+            },
+            {
+              "code": "D",
+              "texte": "Relevez les expressions permettant d'évoquer la Pensez à recourir à des métaphor"
+            },
+            {
+              "code": "D",
+              "texte": "Quelle expression signifi e « ressentir une faim sens (vue, ouïe, odorat…). subi"
+            },
+            {
+              "code": "D",
+              "texte": "Quel est le meilleur moment pour visiter le parc ? Production orale"
+            },
+            {
+              "code": "D",
+              "texte": "Quels sont les avantages de la visite guidée ?"
+            },
+            {
+              "code": "D",
+              "texte": "Dans cette chronique, à quels sens Maurice 8 Monologue suivi DALF C1 Coulibaly f"
+            },
+            {
+              "code": "E",
+              "texte": "Observez les énoncés suivants. De ou des introduisent-ils un complément de nom,"
+            },
+            {
+              "code": "E",
+              "texte": "Complétez avec des exemples de l'échauffement. Exemples Règles de magnifiques pa"
+            },
+            {
+              "code": "E",
+              "texte": "Rédigez un petit article consacré à un parc naturel pour un guide de voyage en l"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,3 +1,9 @@
+## État actuel
+- ✅ **Extraction** : 12 thèmes, 53 conteneurs, 337 questions extraites.
+- ✅ **QCM** : 335 questions enrichies avec 4 choix par l'IA.
+- ✅ **Cahier Thème 1** : Restructuré par l'IA (54 flashcards avec images + 10 QCM).
+- ✅ **UI** : Arbre de compétences style Duolingo, Moteurs de leçons (Flashcards, Grammaire, Production Écrite, QCM), Flashcard 3D avec images.
+- 🚧 **Pipeline** : En cours pour les Thèmes 2 à 12.
 # DALF Lab — L'apprentissage du DALF C1 façon Duolingo
 
 DALF Lab transforme vos manuels (Édito C1) en une application interactive. 
