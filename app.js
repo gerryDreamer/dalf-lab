@@ -19,15 +19,15 @@ let currentFlashcardIndex = 0;
 // Petit utilitaire pour sécuriser l'affichage du texte
 window.escapeHtml = function(text) {
   if (!text) return "";
-  return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+  return String(text).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
 };
 
 // Chargement des données
 async function loadData() {
   app.innerHTML = '<p style="text-align:center; padding:40px; color:var(--mu)">Chargement du manuel...</p>';
   try {
-    const r = await fetch("data/edito-c1.structured.json");
-    if (!r.ok) throw new Error("Fichier introuvable");
+    const r = await fetch("data/edito-c1.final-tree.json");
+    if (!r.ok) throw new Error("Fichier introuvable (as-tu lancé les scripts de génération ?)");
     DATA = await r.json();
     window.showHome();
   } catch (e) {
@@ -40,56 +40,69 @@ window.showHome = function() {
   let html = `<header><h1>DALF Lab</h1><div class="xp">⭐ ${STATE.xp} XP</div></header><main><div class="unit-list">`;
 
   DATA.themes.forEach(theme => {
-    // --- PARTIE MANUEL ---
+    // --- PARTIE MANUEL (une carte par conteneur A, B, C) ---
     const manuelConteneurs = theme.parties?.manuel?.conteneurs || [];
-    if (manuelConteneurs.length > 0) {
+    manuelConteneurs.forEach(conteneur => {
+      const sections = conteneur.sections || [];
+      if (sections.length === 0) return;
+      
       html += `<div class="unit-card">
         <div class="unit-header">
-          <div><h2 class="unit-title">Thème ${theme.theme} : ${theme.titre} (Manuel)</h2><span class="unit-subtitle">${manuelConteneurs.length} conteneurs</span></div>
+          <div><h2 class="unit-title">Thème ${theme.theme} - ${conteneur.titre || 'Conteneur ' + conteneur.lettre}</h2>
+          <span class="unit-subtitle">${sections.length} sections</span></div>
         </div><div class="path-grid">`;
       
-      manuelConteneurs.forEach(conteneur => {
-        (conteneur.sections || []).forEach((section, idx) => {
-          const id = `T${theme.theme}-${conteneur.lettre}-${idx}`;
-          const isDone = STATE.completed[id];
-          const typeStr = section.type || "leçon"; // GARDE-FOU
-          let icon = "📖";
-          if (typeStr.includes("orale") || typeStr.includes("audiovisuelle")) icon = "🎧";
-          if (typeStr.includes("ecrite")) icon = "✍️";
-          if (typeStr.includes("orale")) icon = "🗣️";
-          
-          let label = typeStr.split('_')[0]; 
-          
-          html += `<div class="path-bubble ${isDone ? 'completed' : ''}" onclick="window.startLesson('${theme.theme}', '${conteneur.lettre}', ${idx}, 'manuel')">
-            <span class="icon">${icon}</span>
-            ${label}
-          </div>`;
-        });
+      sections.forEach((section, idx) => {
+        const id = `T${theme.theme}-${conteneur.lettre}-${idx}`;
+        const isDone = STATE.completed[id];
+        const typeStr = (section.type || "leçon").toLowerCase();
+        
+        let icon = "📖";
+        if (typeStr.includes("orale") || typeStr.includes("audiovisuelle")) icon = "🎧";
+        if (typeStr.includes("ecrite")) icon = "✍️";
+        if (typeStr.includes("orale")) icon = "🗣️";
+        
+        let label = typeStr.split('_')[0];
+        if (label.length > 14) label = label.substring(0, 14) + "...";
+        
+        html += `<div class="path-bubble ${isDone ? 'completed' : ''}" 
+          onclick="window.startLesson('${theme.theme}', '${conteneur.lettre}', ${idx}, 'manuel')">
+          <span class="icon">${icon}</span>${label}
+        </div>`;
       });
       html += `</div></div>`;
-    }
+    });
 
-    // --- PARTIE CAHIER ---
+    // --- PARTIE CAHIER (une carte avec les niveaux de vocab, grammaire, ABR) ---
     const cahierSections = theme.parties?.cahier?.sections || [];
     if (cahierSections.length > 0) {
       html += `<div class="unit-card" style="border-left: 6px solid #d97706;">
         <div class="unit-header">
-          <div><h2 class="unit-title">Thème ${theme.theme} : ${theme.titre} (Cahier)</h2><span class="unit-subtitle">${cahierSections.length} sections</span></div>
+          <div><h2 class="unit-title">Thème ${theme.theme} - Cahier</h2>
+          <span class="unit-subtitle">${cahierSections.length} niveaux</span></div>
         </div><div class="path-grid">`;
       
       cahierSections.forEach((section, idx) => {
         const id = `T${theme.theme}-cahier-${idx}`;
         const isDone = STATE.completed[id];
-        const typeStr = section.type || "leçon"; // GARDE-FOU
+        const typeStr = (section.type || "leçon").toLowerCase();
         
-        let icon = typeStr === "vocabulaire" ? "🃏" : typeStr === "grammaire" ? "📝" : "✍️";
-        let label = typeStr.split('_')[0];
+        let icon = "🃏";
+        if (typeStr === "grammaire") icon = "📝";
+        else if (typeStr === "a_batons_rompus") icon = "🗣️";
+        else if (typeStr === "comprehension_orale") icon = "🎧";
+        else if (typeStr === "comprehension_ecrite") icon = "📖";
+        else if (typeStr === "production_orale") icon = "🗣️";
+        else if (typeStr === "quiz_revision") icon = "🏆";
+        
+        let label = section.titre || typeStr.split('_')[0];
+        if (label.length > 16) label = label.substring(0, 16) + "...";
         
         let style = isDone ? '' : 'background: #d97706; border-color: #fef3c7; box-shadow: 0 4px 0 #92400e;';
         
-        html += `<div class="path-bubble ${isDone ? 'completed' : ''}" style="${style}" onclick="window.startLesson('${theme.theme}', 'cahier', ${idx}, 'cahier')">
-          <span class="icon">${icon}</span>
-          ${label}
+        html += `<div class="path-bubble ${isDone ? 'completed' : ''}" style="${style}"
+          onclick="window.startLesson('${theme.theme}', 'cahier', ${idx}, 'cahier')">
+          <span class="icon">${icon}</span>${label}
         </div>`;
       });
       html += `</div></div>`;
@@ -114,40 +127,35 @@ window.startLesson = function(themeId, conteneurLettre, sectionIdx, partie) {
   }
 
   currentLesson = section;
-  const typeStr = section.type || "leçon"; // GARDE-FOU
+  const typeStr = (section.type || "leçon").toLowerCase().trim();
 
-  // Routeur par type de section
-  if (typeStr === "vocabulaire" && section.flashcards) {
+  // --- CAS 1 : Vocabulaire avec flashcards (PRIORITÉ ABSOLUE) ---
+  if (section.flashcards && section.flashcards.length > 0) {
     currentFlashcardIndex = 0;
     window.renderFlashcards(section);
     return;
   }
 
+  // --- CAS 2 : Grammaire ---
   if (typeStr === "grammaire") {
     window.grammaireState = { etape: "echauffement" };
     window.renderGrammaire();
     return;
   }
 
+  // --- CAS 3 : Production écrite ---
   if (typeStr === "production_ecrite") {
     window.renderProductionEcrite();
     return;
   }
-  
-    if (typeStr === "a_batons_rompus") {
-    validQuestions = (section.questions || []).filter(q => q.texte && q.texte.trim() !== "");
-    if (validQuestions.length === 0) {
-      alert("Cette section ne contient aucune question.");
-      window.showHome();
-      return;
-    }
-    currentQuestionIndex = 0;
-    currentScore = 0;
-    window.renderQuestion();
+
+  // --- CAS 4 : Production orale (écran dédié avec minuteur) ---
+  if (typeStr === "production_orale") {
+    window.renderProductionOrale();
     return;
   }
 
-  // Fallback : QCM classique (Manuel)
+  // --- CAS 5 : QCM classique (À bâtons rompus, Compréhension, Quiz, Manuel) ---
   validQuestions = (section.questions || []).filter(q => 
     q.texte && q.texte.trim() !== "" && q.texte.toLowerCase() !== "undefined"
   );
@@ -177,7 +185,8 @@ window.renderQuestion = function() {
     <div class="progress-bar"><i style="width:${progress}%"></i></div>
     <button class="sec" onclick="window.showHome()" style="align-self:flex-start; margin-bottom:20px;">✕ Quitter</button>`;
 
-  if (currentLesson.type === "comprehension_ecrite" && currentLesson.texte_lecture) {
+  // CORRECTIF : On affiche le texte dès qu'il existe, peu importe le type
+  if (currentLesson.texte_lecture && currentLesson.texte_lecture.trim() !== "") {
     html += `<div style="background:var(--cd); padding:15px; border-radius:8px; border:1px solid var(--ln); margin-bottom:20px; max-height:200px; overflow-y:auto;">
       <p style="font-size:0.9rem; margin:0; font-family:Georgia, serif;">${window.escapeHtml(currentLesson.texte_lecture)}</p>
     </div>`;
@@ -279,7 +288,7 @@ window.renderFlashcards = function(section) {
   app.innerHTML = `<div class="player-screen">
     <div class="progress-bar"><i style="width:${progress}%"></i></div>
     <button class="sec" onclick="window.showHome()" style="align-self:flex-start; margin-bottom:20px;">✕ Quitter</button>
-    <h2 style="margin-top:20px;">🃏 Flashcards</h2>
+    <h2 style="margin-top:20px;">🃏 ${window.escapeHtml(section.titre || 'Flashcards')}</h2>
     <p style="text-align:center; color:var(--mu);">Carte ${currentFlashcardIndex + 1} sur ${cards.length}</p>
     
     <div id="flashcard" class="flashcard" onclick="window.flipCard(this)">
@@ -328,7 +337,7 @@ window.renderGrammaire = function() {
 
   let contenu = "";
 
-  // ÉTAPE 1
+  // ÉTAPE 1 : ÉCHAUFFEMENT
   if (etape === "echauffement") {
     const e = g.echauffement;
     let texte = "";
@@ -345,7 +354,7 @@ window.renderGrammaire = function() {
     `;
   }
 
-  // ÉTAPE 2
+  // ÉTAPE 2 : RÈGLE
   if (etape === "fonctionnement") {
     const f = g.fonctionnement;
     let texte = "";
@@ -362,10 +371,18 @@ window.renderGrammaire = function() {
     `;
   }
 
-  // ÉTAPE 3
+  // ÉTAPE 3 : ENTRAÎNEMENT
   if (etape === "entrainement") {
     if (g.exercices_qcm && g.exercices_qcm.length > 0) {
       validQuestions = g.exercices_qcm;
+      currentQuestionIndex = 0;
+      currentScore = 0;
+      window.renderQuestion(); 
+      return;
+    }
+
+    if (g.questions && g.questions.length > 0) {
+      validQuestions = g.questions;
       currentQuestionIndex = 0;
       currentScore = 0;
       window.renderQuestion(); 
@@ -464,6 +481,52 @@ window.saveProduction = function() {
   }
 };
 
+// --- 7b. MOTEUR PRODUCTION ORALE (avec minuteur) ---
+window.renderProductionOrale = function() {
+  const p = currentLesson;
+  
+  app.innerHTML = `<div class="player-screen">
+    <div class="progress-bar"><i style="width:100%"></i></div>
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+      <button class="sec" onclick="window.showHome()">✕ Quitter</button>
+      <span style="color:var(--mu); font-size:0.9rem;">🗣️ Production orale</span>
+    </div>
+    <h2 style="margin-top:20px;">🗣️ ${window.escapeHtml(p.titre || "Production orale")}</h2>
+    <div style="background:var(--cd); padding:15px; border-radius:10px; border-left:4px solid #d97706; margin:20px 0;">
+      <p style="margin:0 0 6px 0; font-weight:bold; color:#d97706;">Consigne</p>
+      <p style="margin:0; line-height:1.6;">${window.escapeHtml(p.consigne || "Préparez votre intervention orale.")}</p>
+    </div>
+    <div style="text-align:center; margin:30px 0;">
+      <div id="timer-display" style="font-size:4rem; font-weight:bold; color:var(--ac);">00:00</div>
+      <p style="color:var(--mu); font-size:0.9rem;">Temps de préparation</p>
+      <button id="btn-timer" class="btn-primary" style="margin-top:15px; max-width:200px;" onclick="window.toggleTimer()">Démarrer le minuteur</button>
+    </div>
+    <button class="btn-primary" style="margin-top:20px;" onclick="window.completeLesson()">Terminer</button>
+  </div>`;
+  
+  window.timerState = { active: false, seconds: 0, interval: null };
+};
+
+window.toggleTimer = function() {
+  const btn = document.getElementById("btn-timer");
+  const display = document.getElementById("timer-display");
+  
+  if (window.timerState.active) {
+    clearInterval(window.timerState.interval);
+    window.timerState.active = false;
+    btn.textContent = "Reprendre";
+  } else {
+    window.timerState.active = true;
+    btn.textContent = "Pause";
+    window.timerState.interval = setInterval(() => {
+      window.timerState.seconds++;
+      const m = String(Math.floor(window.timerState.seconds / 60)).padStart(2, '0');
+      const s = String(window.timerState.seconds % 60).padStart(2, '0');
+      display.textContent = `${m}:${s}`;
+    }, 1000);
+  }
+};
+
 // --- 8. FIN DE LEÇON ---
 window.completeLesson = function() {
   currentFlashcardIndex = 0;
@@ -474,7 +537,8 @@ window.completeLesson = function() {
   const isQcmLesson = currentLesson 
     && currentLesson.type !== "vocabulaire" 
     && currentLesson.type !== "grammaire" 
-    && currentLesson.type !== "production_ecrite";
+    && currentLesson.type !== "production_ecrite"
+    && currentLesson.type !== "production_orale";
 
   if (isQcmLesson) {
     const qcmCount = validQuestions.filter(q => q.choix && q.choix.length > 0).length;

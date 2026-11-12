@@ -1,3 +1,35 @@
+# DALF Lab
+
+Application web (PWA) pour préparer le DALF C1/C2 à partir de manuels
+(Édito C1, Cosmopolite 5…). Transforme un manuel en exercices
+interactifs, relie automatiquement les ressources (transcriptions,
+corrigés) et permet de s'entraîner hors ligne.
+
+## État actuel
+
+**Pipeline d'extraction TXT fonctionnel** ✅
+
+- 12 thèmes structurés (conteneurs, sections, questions)
+- 34 transcriptions (audio + vidéo)
+- 48 corrigés
+- 475 questions brutes (à transformer en QCM)
+- Squelette `lecons.json` généré
+
+**Application web** (prototype statique) :
+- 4 leçons interactives (QCM + textes à trous) sur Édito C1, thème 1
+- Lecteur de texte avec surlignage
+- Production écrite avec compteur de mots
+- Import PDF (pdf.js) : détection des transcriptions/corrigés
+- Études extra avec l'IA (Gemini, Mistral, Groq, OpenRouter, DeepSeek)
+- PWA installable, fonctionne hors ligne
+
+## Lancer en local
+
+```bash
+cd ~/dalf-lab
+python3 -m http.server 8000
+# puis http://localhost:8000 dans le navigateur
+
 ## État actuel
 - ✅ **Extraction** : 12 thèmes, 53 conteneurs, 337 questions extraites.
 - ✅ **QCM** : 335 questions enrichies avec 4 choix par l'IA.

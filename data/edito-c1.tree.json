@@ -1,0 +1,646 @@
+{
+  "themes": [
+    {
+      "theme": 1,
+      "titre": "Justice, quelles alternatives ?",
+      "objectifs": [
+        "S’informer sur la justice restaurative",
+        "Argumenter sur la place de la médiation animale en prison",
+        "Résumer un texte sur la justice restaurative",
+        "Choisir la voix active ou passive pour servir son propos"
+      ],
+      "parties": {
+        "manuel": {
+          "conteneurs": [
+            {
+              "lettre": "A",
+              "titre": "Conteneur A",
+              "sections": [
+                {
+                  "type": "comprehension_audiovisuelle",
+                  "questions": [
+                    {
+                      "numero": 1,
+                      "texte": "Quel est le thème du film ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 2,
+                      "texte": "Quel est l’objectif de ce type de processus ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 3,
+                      "texte": "Quelles sont les trois « catégories » de personnes impliquées dans ce processus ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 4,
+                      "texte": "Quelles règles les animateurs doivent-ils respecter ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 5,
+                      "texte": "Deux façons de mettre en place ce processus sont abordées dans la bande-annonce. Lesquelles ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 6,
+                      "texte": "Qu’est-ce qui favorise l’émergence d’une parole authentique ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 7,
+                      "texte": "Qu’est-ce que la bande-annonce suggère des relations entre les personnes impliquées dans le processus ?",
+                      "type": "tache_ouverte"
+                    }
+                  ],
+                  "titre": "Comprehension audiovisuelle"
+                },
+                {
+                  "type": "production_orale",
+                  "questions": [
+                    {
+                      "numero": 8,
+                      "modalite": "À deux !",
+                      "texte": "Cette bande-annonce vous a-t-elle donné envie de voir le film ? Pourquoi ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 9,
+                      "texte": "Quels films, séries ou romans en lien avec le monde judiciaire pourriez-vous recommander et pourquoi ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 10,
+                      "texte": "Comment les médias influencent-ils la perception de la justice dans la société, d’après vous ? Donnez des exemples.",
+                      "type": "tache_ouverte"
+                    }
+                  ],
+                  "titre": "Production orale"
+                }
+              ]
+            },
+            {
+              "lettre": "B",
+              "titre": "Conteneur B",
+              "sections": [
+                {
+                  "type": "comprehension_ecrite",
+                  "questions": [
+                    {
+                      "numero": 1,
+                      "texte": "Les signataires de cette tribune…",
+                      "type": "qcm",
+                      "choix": [
+                        "a. s'interrogent sur les effets de la justice restaurative.",
+                        "b. défendent la justice restaurative : elle devrait peu à peu remplacer la justice pénale.",
+                        "c. mettent en avant les possibilités qu'offre la justice restaurative."
+                      ],
+                      "bonne": 2
+                    },
+                    {
+                      "numero": 2,
+                      "texte": "Qui oblige les auteurs d'infraction à entamer une démarche de justice restaurative ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 3,
+                      "texte": "Différents acteurs en charge du milieu carcéral ont contribué à l'introduction de la justice restaurative en France.",
+                      "type": "vrai_faux",
+                      "justification_requise": true
+                    },
+                    {
+                      "numero": 4,
+                      "texte": "Pour les signataires de cette tribune, pourquoi la justice restaurative est-elle nécessaire à côté de la justice pénale ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 5,
+                      "texte": "Expliquez le terme « revictimisation » (l. 53).",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 6,
+                      "texte": "En quoi consiste la phase de préparation et que permet-elle ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 7,
+                      "texte": "Les signataires de cette tribune soulignent la liberté offerte par la justice restaurative aux participants tout au long du processus. Citez une des phrases du texte qui l'illustre.",
+                      "type": "citation"
+                    },
+                    {
+                      "numero": 8,
+                      "texte": "Il existe en France différents dispositifs en réponse à la violence.",
+                      "type": "vrai_faux",
+                      "justification_requise": true
+                    },
+                    {
+                      "numero": 9,
+                      "texte": "Le mot « panacée » (l. 116) est synonyme de…",
+                      "type": "qcm",
+                      "choix": [
+                        "a. mesure alternative.",
+                        "b. meilleure solution.",
+                        "c. dangereux poison."
+                      ],
+                      "bonne": 1
+                    }
+                  ],
+                  "titre": "Comprehension ecrite"
+                },
+                {
+                  "type": "production_orale",
+                  "questions": [
+                    {
+                      "numero": 11,
+                      "texte": "Que pensez-vous de la justice restaurative ? Quels en sont, selon vous, les bénéfices pour le système judiciaire ? Dans quels cas pourrait-elle se substituer à la justice pénale ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 12,
+                      "modalite": "À deux !",
+                      "type": "jeu_de_role",
+                      "consigne": "Lors d'un colloque, un(e) formateur(-trice) en justice restaurative rencontre un(e) magistrat(e). Le/La formateur(-trice) aimerait le/la convaincre de se former. Le/La magistrat(e) refuse. Formez des binômes. Tirez au sort votre rôle. Jouez la scène pendant 4 minutes.",
+                      "roles": {
+                        "formateur": "Vous expliquez les vertus réparatrices pour les victimes et les auteurs. Vous soulignez le rôle clé des juges dans le développement de la justice restaurative.",
+                        "magistrat": "Vous évoquez notamment le manque de moyens de la justice et la crainte de la perte d'efficacité du modèle de sanction."
+                      }
+                    },
+                    {
+                      "numero": 13,
+                      "titre": "Monologue suivi",
+                      "texte": "Vous vous renseignez sur le rôle de « membre de la communauté » dans des programmes de justice restaurative. En quoi cela consiste-t-il ? Aimeriez-vous le devenir ? Pourquoi ?",
+                      "type": "tache_ouverte"
+                    }
+                  ],
+                  "titre": "Production orale"
+                }
+              ]
+            },
+            {
+              "lettre": "C",
+              "titre": "Conteneur C",
+              "sections": [
+                {
+                  "type": "comprehension_orale",
+                  "questions": [
+                    {
+                      "numero": 1,
+                      "texte": "Selon Christine Charbonnier, pourquoi le travail sur l'altérité est essentiel pour des personnes effectuant de longues peines ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 2,
+                      "texte": "Quelle anecdote révélatrice la directrice de prison raconte-t-elle ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 3,
+                      "texte": "« Panser un cheval » signifie…",
+                      "type": "qcm",
+                      "choix": [
+                        "a. le nettoyer.",
+                        "b. monter dessus.",
+                        "c. le caresser."
+                      ],
+                      "bonne": 0
+                    },
+                    {
+                      "numero": 4,
+                      "texte": "Quel terme le présentateur emploie-t-il pour parler du moment où une réaction se déclenche ?",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 5,
+                      "texte": "La chercheuse souhaitait comprendre pour quelles raisons cette journée d'activités poussait les détenus à s'investir.",
+                      "type": "tache_ouverte"
+                    },
+                    {
+                      "numero": 6,
+                      "texte": "La directrice a pu observer une transformation des rapports entre détenus.",
+                      "type": "vrai_faux",
+                      "justification_requise": true
+                    }
+                  ],
+                  "titre": "Comprehension orale"
+                },
+                {
+                  "type": "production_orale",
+                  "questions": [
+                    {
+                      "numero": 11,
+                      "modalite": "En groupes !",
+                      "texte": "Échangez à l'aide des questions suivantes :\na. Après ce type d'atelier, le psychologue de la prison est particulièrement attentif aux participants. À votre avis pourquoi ?\nb. En quoi l'interaction avec des animaux peut-elle favoriser la réinsertion sociale des détenus ?\nc. Quels autres types de projets pourraient être bénéfiques aux prisonniers ?",
+                      "type": "tache_ouverte"
+                    }
+                  ],
+                  "titre": "Production orale"
+                }
+              ]
+            }
+          ]
+        },
+        "cahier": {
+          "sections": [
+            {
+              "type": "vocabulaire",
+              "titre": "Les acteurs",
+              "flashcards": [
+                {
+                  "recto": "l'administration pénitentiaire",
+                  "verso": "Service de l'État chargé de la gestion des établissements pénitentiaires et du suivi des détenus.",
+                  "categorie": "Les acteurs",
+                  "image_url": "https://pixabay.com/get/g5efc99d657dc88520740fe8c37d2c040059b10b8a95305fb4e81d5902258879ace5bcfb38a03638936593b2e1c148bfc565db142c834d745fa803b8e6a57752f_640.jpg"
+                },
+                {
+                  "recto": "l'auteur",
+                  "verso": "Personne qui a commis un acte répréhensible, souvent utilisé pour désigner le responsable d'un crime.",
+                  "categorie": "Les acteurs",
+                  "image_url": "https://pixabay.com/get/g653a1ca9f00d6cacae6744a756c10594d7f485730a679a52a120c8389ea1103bfe70ee7869917f7f58a6abfa1b4c8d53_640.jpg"
+                },
+                {
+                  "recto": "le criminel(le)",
+                  "verso": "Individu reconnu coupable d'un crime grave.",
+                  "categorie": "Les acteurs",
+                  "image_url": "https://pixabay.com/get/gabf2d444adeab04bbf92d1ad12dcc503e3c3ceaf2115dd72505ea622ff85d52939374b24072c0e26468b57978c49491a3031fb4681ebf49efde3237ac366001c_640.jpg"
+                },
+                {
+                  "recto": "la défense",
+                  "verso": "Ensemble des avocats et arguments présentés pour protéger l'accusé.",
+                  "categorie": "Les acteurs",
+                  "image_url": "https://pixabay.com/get/g0acbc78365fd39a3dcffc779e2f315c98db4e7779e6b46b3b94568bc3ae041899a2871c888b03c410ad69a101d16a1e1e2af58ae97f29293f50e7ced80b8cab5_640.jpg"
+                },
+                {
+                  "recto": "le délinquant(e)",
+                  "verso": "Personne qui a commis un délit, infraction moins grave qu'un crime.",
+                  "categorie": "Les acteurs",
+                  "image_url": "https://pixabay.com/get/gf5e949c4c1fe7974068afff0dff64c6f8112c8a43b69080198efa64f2130dfd766f83f28bd81e1e02ce10df937feb4ea990df6e987945dc2bf4b351b39ca1277_640.jpg"
+                },
+                {
+                  "recto": "la maltraitance",
+                  "verso": "Violence ou négligence infligée à une personne, souvent dans le cadre familial ou institutionnel.",
+                  "categorie": "Les acteurs",
+                  "image_url": "https://pixabay.com/get/gc6ea7cadd63baaf3e88f1f9dc98cc8ee91ebb5e7a669b51e075633aba56681466fb8f92591e4f2070d8dab0165640887_640.jpg"
+                },
+                {
+                  "recto": "la victime",
+                  "verso": "Personne qui subit les conséquences d'une infraction.",
+                  "categorie": "Les acteurs",
+                  "image_url": "https://pixabay.com/get/g1654428a3783da6cf0ee4bc486254ae4a8ac82d795373e91ed9e1da0345a4dc1cbb1377a8f6cd77ece2e97a0a718de3ad51014575f394e029c4c993fdba10fcb_640.jpg"
+                },
+                {
+                  "recto": "l'autorité judiciaire",
+                  "verso": "Ensemble des magistrats et institutions chargés d'appliquer le droit et de rendre la justice.",
+                  "categorie": "Les acteurs",
+                  "image_url": "https://pixabay.com/get/gebbfd9913a2cb2b81ea5d7d65f4d53a727e839d74b61f3362d49cb02c0641d4ced74086b8e0ffd47358ed45ca542a28139357852e8362aaa523ba217f85fbaa3_640.jpg"
+                },
+                {
+                  "recto": "le complice",
+                  "verso": "Personne qui aide ou participe à la commission d'une infraction.",
+                  "categorie": "Les acteurs",
+                  "image_url": "https://pixabay.com/get/g175160e210e08e8a8437b8f42bbe5d3b047df74617086e3745107b5406f4551f1e946b350749532631ca621bc4c2e2e1a3e5507b1671238dc1c5636b5dc587dd_640.jpg"
+                },
+                {
+                  "recto": "la cour d'appel",
+                  "verso": "Juridiction qui réexamine les décisions rendues par les tribunaux de première instance.",
+                  "categorie": "Les acteurs",
+                  "image_url": "https://pixabay.com/get/g7dbe57b0096714f24541f517597e3f3ac2b7103830e28f431afbfe803d2937c65aace77b9754c448d178ba759f3e2cad45f957b9993986d996c9f804da8dfc27_640.jpg"
+                },
+                {
+                  "recto": "le juge d'application des peines",
+                  "verso": "Magistrat chargé de surveiller l'exécution des peines et d'accorder des mesures d'aménagement.",
+                  "categorie": "Les acteurs",
+                  "image_url": "https://pixabay.com/get/g6f744f5cbf4fd967d2ae47d4d435659711a0d3bb97e68ed74cc9593ceb5ab61423fa8fafe8e911ee5244ca9cfea5cee55ef9d1221a8c06908443505752112653_640.jpg"
+                },
+                {
+                  "recto": "le détenu",
+                  "verso": "Personne privée de liberté et placée dans un établissement pénitentiaire.",
+                  "categorie": "Les acteurs",
+                  "image_url": "https://pixabay.com/get/g8d171dba19859de969d5395eefdecbd360728e721c7d56c27517f574d082779780d116e99cc40ddaba5ac52b20415ca0_640.jpg"
+                },
+                {
+                  "recto": "l'enquêteur",
+                  "verso": "Officier de police ou magistrat qui conduit les investigations sur une affaire.",
+                  "categorie": "Les acteurs",
+                  "image_url": "https://pixabay.com/get/g3bbb2d86b6294ac1a860e2e0da9c4c6271095b2247c2a2d511cd0809f0d0883ea1fd3e7a4c89239fad15a1e24662146b62b2cb3569b2ddef0eb9b8e329db4d5f_640.jpg"
+                },
+                {
+                  "recto": "les services de police",
+                  "verso": "Corps de fonctionnaires chargés de la prévention et de la répression des infractions.",
+                  "categorie": "Les acteurs",
+                  "image_url": "https://pixabay.com/get/g1cd750da656ea52a15e97dffd181ddb7b96677054b656df3327253e24a725dd0f5570eb1e87ada828939e4ce0979c9f3af6c4af407823b001bbaf34414306ebf_640.jpg"
+                },
+                {
+                  "recto": "la garde des Sceaux",
+                  "verso": "Titre officiel du ministre de la Justice en France.",
+                  "categorie": "Les acteurs",
+                  "image_url": "https://pixabay.com/get/g18b25eed7a6f287aaf8be1860d355cb4f7688fe18863f6d8c8a9fbd124e65361f5e825b10478fbac482a8e6a14efc12dc79e887a7ab26b80da41668ff22516a5_640.jpg"
+                },
+                {
+                  "recto": "le greffier",
+                  "verso": "Fonctionnaire qui assiste le magistrat, rédige les procès‑verbaux et assure la tenue des dossiers.",
+                  "categorie": "Les acteurs",
+                  "image_url": "https://pixabay.com/get/g7c2c173db30bcb14456f2b547499c9dc4d091ed35d93d88b869cc845d4f07925a73658a89343b824aa5c53a7611cd5f5_640.jpg"
+                },
+                {
+                  "recto": "le juge",
+                  "verso": "Autorité judiciaire qui tranche les litiges et rend les décisions de justice.",
+                  "categorie": "Les acteurs",
+                  "image_url": "https://pixabay.com/get/g80971341e00a90c70491e7c2f148a8e328187828798b3661237c53eaafba5e31c1f01e82dc8e63c9565a88c838b41a91d5b25041c8939bd232384028d40ab46e_640.jpg"
+                },
+                {
+                  "recto": "les jurés",
+                  "verso": "Citoyens tirés au sort pour participer à la décision de culpabilité dans un procès avec jury.",
+                  "categorie": "Les acteurs",
+                  "image_url": "https://pixabay.com/get/ga6a9b2f23335be100d02e4ff397a7398eab4ab3e679be7ab15a0330bab1fa9772d9a0f5a60d1fb4746dff9196b907c1e505f36432e36c04666869964801ab8a8_640.jpg"
+                },
+                {
+                  "recto": "le magistrat du parquet",
+                  "verso": "Fonctionnaire du ministère public chargé de poursuivre les infractions devant les juridictions.",
+                  "categorie": "Les acteurs",
+                  "image_url": "https://pixabay.com/get/geb2b72d575fede898795ee37e5dc9c60d8003706fc810cbb0ea6252775f22acdaf181e37f1dca6ed1c3ca649062f906c_640.jpg"
+                },
+                {
+                  "recto": "le procureur",
+                  "verso": "Chef du parquet dans un tribunal, il dirige l'action publique et représente l'État.",
+                  "categorie": "Les acteurs"
+                },
+                {
+                  "recto": "le ministère public",
+                  "verso": "Ensemble des magistrats du parquet qui défendent l'intérêt général devant les tribunaux.",
+                  "categorie": "Les acteurs",
+                  "image_url": "https://pixabay.com/get/g324fa9476298361ec3453db61d05c5feb5472a4e8f0710d1de35d5f39b68b811a378e07c8e64bd95ffe1c7c66462017f92064cd9c5448e03e490aa873964dbe1_640.jpg"
+                },
+                {
+                  "recto": "l'avocat",
+                  "verso": "Professionnel du droit qui représente et conseille les parties en justice.",
+                  "categorie": "Les acteurs",
+                  "image_url": "https://pixabay.com/get/g3a75bf3f0f6e05e8a7f13eb876c0a22c8990d5efae95947c0f51c206ce3621b922864022965d4f55295fd4ca1bd9b873_640.jpg"
+                },
+                {
+                  "recto": "le prévenu",
+                  "verso": "Personne mise en examen ou inculpée dans le cadre d'une procédure pénale.",
+                  "categorie": "Les acteurs"
+                },
+                {
+                  "recto": "la protection judiciaire de la jeunesse",
+                  "verso": "Service qui intervient auprès des mineurs en difficulté ou en conflit avec la loi.",
+                  "categorie": "Les acteurs",
+                  "image_url": "https://pixabay.com/get/g5153abd5587de9fb910b34a83b426bd6cb66f26c47411e3cbff3bc5e00cdb0ebae9fcb6b1f838465426c8e450c68b36129114b4d6578d534bf1adfca955c127e_640.jpg"
+                }
+              ]
+            },
+            {
+              "type": "vocabulaire",
+              "titre": "Les faits",
+              "flashcards": [
+                {
+                  "recto": "attaquer",
+                  "verso": "Commettre une agression physique ou juridique contre quelqu'un.",
+                  "categorie": "Les faits",
+                  "image_url": "https://pixabay.com/get/gebd9f4e10c652fad70dd3e576e8183f7b218037b757026fc1e7046eda11e0fba920d173d10f81c070d48f67afdce164b_640.jpg"
+                },
+                {
+                  "recto": "un attentat",
+                  "verso": "Action violente planifiée visant à terroriser ou à causer des victimes massives.",
+                  "categorie": "Les faits",
+                  "image_url": "https://pixabay.com/get/gcd74b13373d200544b64309aceb16b8ea576b67ac8e6225b6e7c69b4e8637bac51e61ac31314ce99e693afdc1723461bc7d09cf0c6fb1d41411e58471afbe7c2_640.jpg"
+                },
+                {
+                  "recto": "le blanchiment d'argent",
+                  "verso": "Procédé visant à dissimuler l'origine illicite de fonds pour les rendre légaux.",
+                  "categorie": "Les faits",
+                  "image_url": "https://pixabay.com/get/g29f42b6447c432c6c727ebe6a86cc7783c1e192a1b4f03a26dacc9d2ffd0254fda0ac7e9cbc55523a53ff835c3adc12483251d5adc581f6186515680eb9814da_640.jpg"
+                },
+                {
+                  "recto": "braquer",
+                  "verso": "Vol à main armée, généralement dans un commerce ou un véhicule.",
+                  "categorie": "Les faits",
+                  "image_url": "https://pixabay.com/get/g4cdd3dd33233494525f635073c1a6cb5417a45f43863ded6213b31b21e2ac8087404378068eab5d506761285dad41645837a8f6b48f796357f27512d52b72b57_640.jpg"
+                },
+                {
+                  "recto": "la corruption",
+                  "verso": "Abus de pouvoir pour obtenir un avantage illégal, souvent sous forme de pots‑de‑vin.",
+                  "categorie": "Les faits",
+                  "image_url": "https://pixabay.com/get/geb55d8798cb06c0b7a8b248054b68a4b8d11c410af820dbb8313f63932047e8d5575fa2ff205cc82c69b00f24954cc7fed92b848aeffb176dba2c15ca2b7f219_640.jpg"
+                },
+                {
+                  "recto": "enfreindre",
+                  "verso": "Violater une loi, un règlement ou une norme juridique.",
+                  "categorie": "Les faits"
+                },
+                {
+                  "recto": "l'enlèvement",
+                  "verso": "Privation illégale de la liberté d'une personne, souvent à des fins de rançon ou de pression.",
+                  "categorie": "Les faits",
+                  "image_url": "https://pixabay.com/get/g08f1e4960111acb3e870b0e85c5bc8e347ee16b74ea45624cadc2086693a0e55a5dc4031dbfdaef57e78843d6ad1cccb1702fa156fed3958828708bc5024fb4e_640.jpg"
+                },
+                {
+                  "recto": "l'escroquerie",
+                  "verso": "Manœuvre frauduleuse visant à soutirer de l'argent ou des biens à autrui.",
+                  "categorie": "Les faits",
+                  "image_url": "https://pixabay.com/get/g58eec9483966ad5eaab3ed5f2ea92b39d586805ae7ffbc8343ba533197224f91e1579b843010f2f528522ab8e835c78a0904032f1bebc3616d1b725de9bed7f5_640.jpg"
+                },
+                {
+                  "recto": "être impliqué(e) dans une affaire",
+                  "verso": "Participer, directement ou indirectement, à un dossier judiciaire.",
+                  "categorie": "Les faits",
+                  "image_url": "https://pixabay.com/get/g819ca227966d03bdf62824e4cde9fa86cee521cf5ec92c17e0d6fa109c1487e1ed271cc61ec92371497979c9f139bb6fcba3203f92898f141c50775419839523_640.jpg"
+                },
+                {
+                  "recto": "l'évasion fiscale",
+                  "verso": "Manœuvre illégale visant à réduire ou à éviter le paiement d'impôts.",
+                  "categorie": "Les faits",
+                  "image_url": "https://pixabay.com/get/g0e3af8c574050dbe9aef4a921c58424f9b9c593a1c7bec6ec88fdfcb2858046cc4ff2ee7a99abe32398f9eefa6c689e6987ad9d85d6a649165278b79f460872a_640.jpg"
+                },
+                {
+                  "recto": "la fraude",
+                  "verso": "Acte de tromperie destiné à obtenir un avantage économique ou juridique.",
+                  "categorie": "Les faits",
+                  "image_url": "https://pixabay.com/get/gd509004903e6c870b7fccbd3e7fce737fea78f031de30486d8f0729160d545ec6b0637b8647aeff8b8a03e4144b3a8c4b998c444fe52aff6ad1c23cec17a307f_640.png"
+                },
+                {
+                  "recto": "le meurtre avec préméditation",
+                  "verso": "Homicide volontaire planifié à l'avance, considéré comme le plus grave.",
+                  "categorie": "Les faits",
+                  "image_url": "https://pixabay.com/get/g0a35743ad7402b3f45d49883b0c6d794474d474ee8ddcb4341e2ed1112b3f49cdd307889f06794232d143e2f0cdcf925db21d46392ceee2c0045ad6e935ce4aa_640.jpg"
+                },
+                {
+                  "recto": "le passible",
+                  "verso": "Qui est passible d'une peine ou d'une sanction juridique.",
+                  "categorie": "Les faits"
+                },
+                {
+                  "recto": "la violence conjugale",
+                  "verso": "Violence physique, psychologique ou sexuelle exercée au sein du couple ou du foyer.",
+                  "categorie": "Les faits",
+                  "image_url": "https://pixabay.com/get/g6168e423f048476e1d01f0654f6355fe8ea39acedb00f86f026e488d156a2a06490afc2bef80e9dc4ee1d5a60ec82734_640.jpg"
+                },
+                {
+                  "recto": "le vol",
+                  "verso": "Déprédation illégale d'un bien appartenant à autrui.",
+                  "categorie": "Les faits",
+                  "image_url": "https://pixabay.com/get/g5f9fb9e20975a08aeac48e94d49cce13a3cd3c048c06da824fa3b355f259275ac20cf5f484142b4c19bf1a1eb3fbfd816dafc04c06b117038fb460603d047c1b_640.jpg"
+                }
+              ]
+            },
+            {
+              "type": "vocabulaire",
+              "titre": "Les lieux",
+              "flashcards": [
+                {
+                  "recto": "le cabinet d'avocats",
+                  "verso": "Lieu où exercent les avocats et où sont préparés les dossiers juridiques.",
+                  "categorie": "Les lieux",
+                  "image_url": "https://pixabay.com/get/g95cc2e90193023abf26fd3f62e2a2a494629a2441f00fe9d7b3e8ab04144b9e84aef6d82a39f1f04efa6159cb7d7930e2647cd80155f681ff201006ff2be590a_640.jpg"
+                },
+                {
+                  "recto": "la cellule",
+                  "verso": "Pièce d'un établissement pénitentiaire où sont enfermés les détenus.",
+                  "categorie": "Les lieux",
+                  "image_url": "https://pixabay.com/get/g9b0f2f1592ac41362a72a69fe498096bf01c46a009b7d847f6b48dbf9899d83b32e165f975b874ff566696abd394c4219d5450780296047fe2d8da869f280305_640.jpg"
+                },
+                {
+                  "recto": "l'établissement pénitentiaire",
+                  "verso": "Structure où sont incarcérées les personnes condamnées ou en attente de jugement.",
+                  "categorie": "Les lieux",
+                  "image_url": "https://pixabay.com/get/ga832016b30203a8b17c7c5ae61e13571f954c42738dbc3a19f3615790fe1f04b652b87ee4023e39abd92eb11d38e2b9e2949364762b06e4eb105a0f51b806c5a_640.jpg"
+                },
+                {
+                  "recto": "la maison d'arrêt",
+                  "verso": "Établissement pénitentiaire destiné à la détention provisoire et à l'exécution de courtes peines.",
+                  "categorie": "Les lieux",
+                  "image_url": "https://pixabay.com/get/gb762d05f03b177620da1f579e1e1f2fec6b3fa6311e591b01be03330d3f7d3b95d1809904c6b36d3164bacc5fe6ba4fb20b7abb63677281a52e01027c1d08069_640.jpg"
+                },
+                {
+                  "recto": "le palais de justice",
+                  "verso": "Bâtiment qui regroupe les tribunaux, les cours d'appel et les offices du ministère public.",
+                  "categorie": "Les lieux",
+                  "image_url": "https://pixabay.com/get/gcdc2a37786df229334b53288e9ef5e0bc9d66afffb4f583b414bafce60399e1669630f2db93e43fac28aaf48b90e8bf6d3f806c33f085a4411ca7352870ead3e_640.jpg"
+                },
+                {
+                  "recto": "la salle d'audience",
+                  "verso": "Espace où se déroulent les débats publics devant le juge ou le jury.",
+                  "categorie": "Les lieux",
+                  "image_url": "https://pixabay.com/get/g60c5a5acea48f38319942ba436b234dc8fa40a03f3516c70689a58fad53b015156efe4e02be51267d34179810feb8a580b49923f51a39222bd7434d2dbe3b7f3_640.jpg"
+                },
+                {
+                  "recto": "le tribunal administratif",
+                  "verso": "Juridiction qui juge les litiges entre les particuliers et l'administration.",
+                  "categorie": "Les lieux",
+                  "image_url": "https://pixabay.com/get/gf04d3315948fc67d8018231700976f11bed3de73c42415232349772935e9d6a086651a681c62ba846768e709e79466f09f180a26a63ba7795202ace0b620b7b1_640.jpg"
+                }
+              ]
+            },
+            {
+              "type": "vocabulaire",
+              "titre": "La procédure pénale",
+              "flashcards": [
+                {
+                  "recto": "accorder",
+                  "verso": "Octroyer une mesure, une peine ou un bénéfice par décision judiciaire.",
+                  "categorie": "La procédure pénale",
+                  "image_url": "https://pixabay.com/get/gad03295549cfb296d859f40b2457e8aa8fb59e7148a09d45cd44f64120483b916b559e91e6462f33a83e9ccd12cadcc4b1018ea1a8c359b298587715b2afb38f_640.jpg"
+                },
+                {
+                  "recto": "un arrangement de peine",
+                  "verso": "Accord entre le procureur et l'accusé qui fixe une peine réduite ou alternative.",
+                  "categorie": "La procédure pénale",
+                  "image_url": "https://pixabay.com/get/ga9408d6ec8922483ccd075115db4ab6197b6db868cece9120d1baee06d2bec87c837e11b6ca5eb8d33cc60f7e2efaa11b663676a783366b7a6cb69dbb5c04e27_640.jpg"
+                },
+                {
+                  "recto": "délibérer",
+                  "verso": "Réfléchir collectivement (juges ou jurés) avant de rendre un verdict ou une décision.",
+                  "categorie": "La procédure pénale"
+                },
+                {
+                  "recto": "déposer",
+                  "verso": "Soumettre officiellement un document (plainte, plainte, mémoire) auprès d'une autorité judiciaire.",
+                  "categorie": "La procédure pénale",
+                  "image_url": "https://pixabay.com/get/g4c948c52649bb74d2229d883e6d7ff10f2f995e58f0c35e84aec8174260179e47d82d0e2fd8a0c40bc2f36595294be6fd6b7285b1b5f0df07db88e57635da786_640.jpg"
+                },
+                {
+                  "recto": "juger",
+                  "verso": "Prononcer une décision de culpabilité ou d'innocence et fixer la peine éventuelle.",
+                  "categorie": "La procédure pénale",
+                  "image_url": "https://pixabay.com/get/g0be2b4cac2fb079388ae60f623b1f06ea928016cfc5ff58250e89b1e88a0da941b014e32bf00421091994fcebc7054792054134b3c7a6b76376e580b47f0a04c_640.jpg"
+                },
+                {
+                  "recto": "un procès",
+                  "verso": "Procédure judiciaire où les parties exposent leurs arguments devant le tribunal.",
+                  "categorie": "La procédure pénale",
+                  "image_url": "https://pixabay.com/get/g09d459faf4121f7c32c8688bfdb1be84b87c5bfa331b31fd47a08bd6bb50fb7e9ea171bd6ec2cbf1b4450651545350c7521ae04576784bec5d4a38f4932a1b15_640.jpg"
+                },
+                {
+                  "recto": "être acquitté(e)",
+                  "verso": "Être déclaré non coupable et libéré par le tribunal.",
+                  "categorie": "La procédure pénale",
+                  "image_url": "https://pixabay.com/get/g912fd0c48336454fda75d6106245876149362c92f0046e149a008e238655dfa48b157ffc685205a437d3413bf73f289751414f6f226d0e40c82bf088c8fbc1a5_640.jpg"
+                },
+                {
+                  "recto": "être condamné(e)",
+                  "verso": "Être déclaré coupable et soumis à une peine par le tribunal.",
+                  "categorie": "La procédure pénale",
+                  "image_url": "https://pixabay.com/get/g1b33d6e1ddb85c5bc9effb2695cbdfad05d27b284fdba5a3555652f147276347e8829eb1fd2aac8ef6d4e3c781b780d4a7d681b4b10eb1b4beae4c24a27e1006_640.jpg"
+                }
+              ]
+            },
+            {
+              "type": "vocabulaire",
+              "titre": "Les effets",
+              "flashcards": [
+                {
+                  "recto": "accéder à la restauration",
+                  "verso": "Bénéficier d'un programme de réinsertion visant à rétablir les compétences sociales et professionnelles.",
+                  "categorie": "Les effets",
+                  "image_url": "https://pixabay.com/get/g032e6d5f789e7aa0a838f305d17852ed30334b9bd229b9249d07b2837f035a9ab97cf09c2664961f41317fbc1d13330f_640.jpg"
+                },
+                {
+                  "recto": "l'apaisement",
+                  "verso": "Atténuation des tensions ou du ressentiment après un conflit judiciaire.",
+                  "categorie": "Les effets",
+                  "image_url": "https://pixabay.com/get/gf40fa7f115bfb287e9dba684d983eba6c0b0688aabe8bf74e09523193dfd04df4ef94cac7b6d3c19feee5864f00dc0f628f68145c729876a993221796cb777ba_640.jpg"
+                },
+                {
+                  "recto": "comprendre la répercussion",
+                  "verso": "Saisir les conséquences d'un acte ou d'une décision sur la victime ou la société.",
+                  "categorie": "Les effets",
+                  "image_url": "https://pixabay.com/get/g92f9a230e0dee3db8e0c892305ee1522ada3c08ffc12e058a2a5022442abba99c69e2690f02caf56dca7dd34e161c086cf09e0ab93c54b856e997d419d8a6e79_640.jpg"
+                },
+                {
+                  "recto": "entreprendre une démarche thérapeutique",
+                  "verso": "Initier un suivi psychologique ou médical pour surmonter les traumatismes liés à la justice.",
+                  "categorie": "Les effets",
+                  "image_url": "https://pixabay.com/get/g267f814c0a445b7ba13fe9e8c5080c4fd4400b726388651f18c42ea5a476fee4890581c93af5fe63b5448bcabfd807ab4d86d95520411cded9bcf6b066e96327_640.jpg"
+                },
+                {
+                  "recto": "la médiation",
+                  "verso": "Mode alternatif de résolution des conflits où un tiers neutre facilite le dialogue entre les parties.",
+                  "categorie": "Les effets",
+                  "image_url": "https://pixabay.com/get/g57aad4efc4deb7093883537b3e646dfabdc382d5aab95605131494dd8b2b7452abe47e367f6ecd0404410b09c42032752abded39f17ecb90572ff1a74693446c_640.jpg"
+                },
+                {
+                  "recto": "prévenir la récidive",
+                  "verso": "Mettre en place des mesures visant à empêcher qu'un délinquant ne commette de nouveaux crimes.",
+                  "categorie": "Les effets"
+                }
+              ]
+            },
+            {
+              "type": "grammaire",
+              "titre": "Grammaire",
+              "questions": []
+            },
+            {
+              "type": "a_batons_rompus",
+              "titre": "À bâtons rompus",
+              "questions": []
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

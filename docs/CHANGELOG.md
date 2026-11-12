@@ -1,3 +1,39 @@
+## [0.6.0] — 2026-11-12 — `feat: Arbre complet Thème 1 + sections IA + minuteur oral`
+
+### Ajouté
+- **Arbre complet du Thème 1** (`data/edito-c1.final-tree.json`) : 
+  - Manuel divisé en 3 cartes (Conteneur A, B, C).
+  - Cahier divisé en 11 sections : 5 niveaux de vocabulaire + Grammaire + Compréhension orale + Compréhension écrite + Production orale + À bâtons rompus + Quiz de révision.
+- **Moteur `renderProductionOrale`** : Écran dédié avec minuteur interactif (bouton Démarrer / Pause / Reprendre).
+- **Scripts de fusion IA** :
+  - `tools/ai-gemini-tree.py` : Analyse le PDF T1.pdf avec Gemini pour proposer un arbre.
+  - `tools/ai-groq-tree.py` : Analyse le PDF T1.pdf avec Groq pour proposer un arbre alternatif.
+  - `tools/merge-trees.py` : Fusionne les propositions Gemini/Groq avec notre structure.
+  - `tools/fill-cahier-v2.py` : Génère les QCM manquants (Grammaire, Compréhension orale, Compréhension écrite, Quiz de révision).
+  - `tools/recover-abr.py` : Récupère les 10 QCM de "À bâtons rompus" depuis `edito-c1.theme1.json`.
+  - `tools/restore-images.py` : Réinjecte les images Pixabay dans les flashcards.
+  - `tools/fix-grammaire.py` : Génère l'échauffement et la règle de grammaire.
+  - `tools/fix-comp-ecrite.py` : Génère le texte de compréhension écrite.
+  - `tools/ai-fix-tree.py` : Répare automatiquement les sections vides.
+
+### Modifié
+- **`app.js`** :
+  - `startLesson` : Routeur défensif (détecte `flashcards` avant le type, `toLowerCase().trim()` pour éviter les erreurs de casse).
+  - `renderQuestion` : Affiche `texte_lecture` dès qu'il existe (plus besoin de `type === "comprehension_ecrite"`).
+  - `showHome` : Icônes complètes pour les nouveaux types (🎧, 📖, 🗣️, 🏆).
+  - `completeLesson` : Ajout de `production_orale` dans les sections non-QCM.
+- **`data/edito-c1.final-tree.json`** : Fichier de référence pour l'UI (100 éléments interactifs).
+
+### Résultat
+- **Thème 1 complet** : 60 flashcards (avec images) + 5 QCM Grammaire + 5 QCM Compréhension orale + 5 QCM Compréhension écrite + 10 QCM À bâtons rompus + 10 QCM Quiz de révision = **95 QCM + 60 flashcards**.
+
+### 🚧 TODO (Prochaine session)
+- [ ] **Corriger l'affichage des flashcards** (données OK dans le JSON, problème dans `renderFlashcards`).
+- [ ] **Corriger l'affichage du texte de compréhension écrite** (données OK, problème dans `renderQuestion`).
+- [ ] **Ajouter les fichiers audio** dans l'arbre (associer les `.mp3` aux sections de compréhension orale).
+- [ ] **Tester le minuteur de production orale**.
+- [ ] **Passer au Thème 2** avec le pipeline validé.
+
 # Changelog — DALF Lab
 
 Toutes les évolutions notables de ce projet sont documentées dans ce fichier.

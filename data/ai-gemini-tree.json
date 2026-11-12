@@ -1,0 +1,47 @@
+{
+  "titre_theme": "Justice, quelles alternatives ?",
+  "unites": [
+    {
+      "titre": "La justice restaurative à l'écran",
+      "type": "comprehension_orale",
+      "description": "Compréhension de la bande-annonce du film 'Je verrai toujours vos visages' et analyse des interactions et non-verbaux.",
+      "nb_elements_estime": 15
+    },
+    {
+      "titre": "Vers un horizon d'apaisement",
+      "type": "comprehension_ecrite",
+      "description": "Étude d'une tribune sur les rôles, les principes et l'efficacité de la justice restaurative en complément de la procédure pénale.",
+      "nb_elements_estime": 10
+    },
+    {
+      "titre": "Débattre et convaincre sur la justice",
+      "type": "production_orale",
+      "description": "Activités de simulation, jeux de rôle entre formateur et magistrat, et expression d'un point sur la justice restaurative.",
+      "nb_elements_estime": 5
+    },
+    {
+      "titre": "L'équithérapie et la médiation animale en prison",
+      "type": "comprehension_orale",
+      "description": "Écoute d'un extrait de l'émission 'Esprit de Justice' sur l'impact de la médiation animale en milieu carcéral.",
+      "nb_elements_estime": 12
+    },
+    {
+      "titre": "L'essai argumenté DALF C1 : Médiation animale",
+      "type": "production_ecrite",
+      "description": "Rédaction d'un essai argumenté structuré de 250 mots sur la place de la médiation animale en prison.",
+      "nb_elements_estime": 1
+    },
+    {
+      "titre": "Lexique de la justice et du procès pénal",
+      "type": "vocabulaire",
+      "description": "Maîtrise du vocabulaire des acteurs, des lieux, des faits, de la procédure pénale et expressions idiomatiques.",
+      "nb_elements_estime": 10
+    },
+    {
+      "titre": "Grammaire : Voix active et voix passive",
+      "type": "grammaire",
+      "description": "Choix de la voix active ou passive, verbes pronominaux à sens passif (se voir, se laisser) et formes impersonnelles.",
+      "nb_elements_estime": 10
+    }
+  ]
+}

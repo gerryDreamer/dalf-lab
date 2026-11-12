@@ -1,0 +1,65 @@
+{
+  "titre_theme": "La Justice",
+  "unites": [
+    {
+      "titre": "Découverte de la justice restaurative",
+      "type": "vocabulaire",
+      "description": "Apprentissage du lexique clé (justice restaurative, médiation, bâton de parole, revictimisation, etc.) à partir du texte introductif et du tableau de vocabulaire.",
+      "nb_elements_estime": 20
+    },
+    {
+      "titre": "Compréhension orale – Bande‑annonce du film « Je verrai toujours vos visages »",
+      "type": "comprehension_orale",
+      "description": "Écoute de la bande‑annonce, réponses à 10 questions de compréhension (thème, objectifs, acteurs, règles, processus).",
+      "nb_elements_estime": 12
+    },
+    {
+      "titre": "Compréhension écrite – La tribune sur la justice restaurative",
+      "type": "comprehension_ecrite",
+      "description": "Lecture du texte de la tribune, exercices de vrai/faux, justification, repérage d’informations (statistiques, arguments, acteurs).",
+      "nb_elements_estime": 15
+    },
+    {
+      "titre": "Grammaire – Voix active et passive dans le contexte juridique",
+      "type": "grammaire",
+      "description": "Règles de formation du passif, identification du complément d’agent, transformation de phrases tirées du manuel (ex. « Les processus de justice restaurative sont animés… »).",
+      "nb_elements_estime": 18
+    },
+    {
+      "titre": "Production orale – Débat sur la place de la médiation",
+      "type": "production_orale",
+      "description": "Exercice en binômes : un·e formateur·trice et un·e magistrat·e débattent des avantages et limites de la justice restaurative (4 min de parole).",
+      "nb_elements_estime": 6
+    },
+    {
+      "titre": "Production écrite – Essai argumenté C1",
+      "type": "production_ecrite",
+      "description": "Rédaction d’un essai de 250 mots argumentant sur la possibilité de substitution de la justice pénale par la justice restaurative.",
+      "nb_elements_estime": 1
+    },
+    {
+      "titre": "Compréhension orale – Médiation animale en prison",
+      "type": "comprehension_orale",
+      "description": "Écoute d’un extrait de France Culture, réponses à 10 questions (participants, objectifs, effets sur la réinsertion).",
+      "nb_elements_estime": 12
+    },
+    {
+      "titre": "Vocabulaire spécialisé – Le système judiciaire français",
+      "type": "vocabulaire",
+      "description": "Correspondance des termes du tableau (juge, procureur, magistrat, etc.) avec leurs définitions et leurs fonctions dans la procédure pénale.",
+      "nb_elements_estime": 25
+    },
+    {
+      "titre": "Production orale – Jeu de rôle « Membre de la communauté »",
+      "type": "production_orale",
+      "description": "Mise en situation : chaque élève incarne un acteur du processus (victime, auteur, animateur) et explique son rôle pendant 2 minutes.",
+      "nb_elements_estime": 8
+    },
+    {
+      "titre": "Révision globale – Quiz mixte",
+      "type": "comprehension_orale",
+      "description": "Quiz combinant questions de vocabulaire, grammaire (voix active/passive), compréhension écrite et orale, et mini‑défis de production.",
+      "nb_elements_estime": 30
+    }
+  ]
+}
